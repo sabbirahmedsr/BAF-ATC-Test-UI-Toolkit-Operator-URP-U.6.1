@@ -126,4 +126,5 @@ crashlytics-build.properties
 /Assets/Textures/ # Exclude entire Textures folder
 /Assets/Audio/    # Exclude entire Audio folder
 /Assets/zTest/	  # Excdule entire zTest folder		
-.vsconfig
+/Assets/zTest/	  # Excdule entire zTest folder		
+/Assets/URP Setting/ # Excdule entire URP Setting folder	
