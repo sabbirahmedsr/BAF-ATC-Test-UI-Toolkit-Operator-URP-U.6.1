@@ -1,0 +1,15 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="ATC_Home_MainMenu" src="project://database/Assets/UI/UXML/ATC_Home/ATC_Home_MainMenu.uxml?fileID=9197481963319205126&amp;guid=2f069612eedb6164a97fa7596108dff6&amp;type=3#ATC_Home_MainMenu" />
+    <ui:Template name="ATC_Home_Setting" src="project://database/Assets/UI/UXML/ATC_Home/ATC_Home_Setting.uxml?fileID=9197481963319205126&amp;guid=803c9b686e88fe044b77ea8fb391cf42&amp;type=3#ATC_Home_Setting" />
+    <ui:Template name="ATC_Home_About" src="project://database/Assets/UI/UXML/ATC_Home/ATC_Home_About.uxml?fileID=9197481963319205126&amp;guid=b28c2bb4acbf4ac409378de73e3bee26&amp;type=3#ATC_Home_About" />
+    <ui:Template name="ATC_Home_ExitWarning" src="project://database/Assets/UI/UXML/ATC_Home/ATC_Home_ExitWarning.uxml?fileID=9197481963319205126&amp;guid=feba048c7b04ca04089b74d04cdf95f7&amp;type=3#ATC_Home_ExitWarning" />
+    <ui:Template name="ATC_Home_SceneSetup" src="project://database/Assets/UI/UXML/ATC_Home/ATC_Home_SceneSetup.uxml?fileID=9197481963319205126&amp;guid=e2fc194d945dbf845a7d7dc6aff339d6&amp;type=3#ATC_Home_SceneSetup" />
+    <Style src="project://database/Assets/UI/USS/StyleSheet_Main.uss?fileID=7433441132597879392&amp;guid=906cb49b247c32e4aac692bc29395447&amp;type=3#StyleSheet_Main" />
+    <ui:VisualElement name="root" class="bg-main" style="flex-grow: 1; -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/toxigenesis/toxigenesis%20bd.otf?fileID=12800000&amp;guid=77c0a388c36057c4981402cac962298e&amp;type=3#toxigenesis bd&quot;); align-self: center; justify-content: center; align-items: stretch; align-content: center; position: absolute; top: 0; left: 0; right: 0; bottom: 0;">
+        <ui:Instance template="ATC_Home_MainMenu" name="mainMenuRoot" style="display: flex; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" />
+        <ui:Instance template="ATC_Home_Setting" name="settingRoot" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: none;" />
+        <ui:Instance template="ATC_Home_About" name="aboutRoot" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: none;" />
+        <ui:Instance template="ATC_Home_ExitWarning" name="exitWarningRoot" style="display: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" />
+        <ui:Instance template="ATC_Home_SceneSetup" name="sceneSetupRoot" style="display: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" />
+    </ui:VisualElement>
+</ui:UXML>

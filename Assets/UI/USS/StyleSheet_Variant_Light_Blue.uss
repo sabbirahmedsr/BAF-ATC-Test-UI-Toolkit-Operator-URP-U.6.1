@@ -1,0 +1,27 @@
+:root {
+    /* Theme Colors */
+    --theme-color-main: #66B2FF; /*The main theme color - A vibrant, light blue*/
+    --theme-color-brighter: #99CCFF; /*brighter than main color, use for highlight/hover/heading*/
+    --theme-color-brightest: #CCE5FF; /*brighter than brighter color, use for supur highlight/focus/superheading*/
+    --theme-color-disabled: #337FBF; /*dissaturated main theme color, use for disabled ui interactable*/
+    /**/
+    /* Background Colors */
+    --bg-color-black: #080810; /* almost black color, with subtle blue tint, use for panel border*/
+    --bg-color-main: #10101A; /* main dark background color, consistent with theme color, use for overall background */
+    --bg-color-inputField: #161624; /*brighter than main color, use for text input_feild / slider_bg*/
+    --bg-color-card: #1C1C2E; /*brighter than text field color, use for scroll background/card etc*/
+    --bg-color-panel: #222238; /*brighter than primary color, use for panel - significantly darker*/
+    --bg-color-button: #282842; /*brighter than panel color, use for button - Adjusted to maintain step from new panel color*/
+    --bg-color-dropdown: #2E2E4C; /*brighter than button color, use for dropdown - Adjusted*/
+    --bg-color-hover: #343456; /*brighter than dropdown color, use for button/dropdown/scroll_knob hover effect - Adjusted*/
+    --bg-color-focus: #3A3A60; /*brighter than hover color, use for button/dropdown/scroll_knob focus effect - Adjusted*/
+    /* Text and border color */
+    --white-defocus: #D2D2F5; /*a off-white color to draw less attention - subtle blue tint*/
+    --white-normal: #E0E0FF; /*a white tone color, for neutral text/line/border etc - very pale blue*/
+    --white-hover: #EEEEFF; /*a blend between --theme-color-main & --white-normal to be used as hover color - brighter, very pale blue*/
+    --white-focus: #FFFFFF; /*brighter than --white-normal - pure white for strongest focus*/
+    --white-disabled: #A0A0B4; /*a gray out disabled color consistent with --white-normal - muted blue-gray*/
+    /* More Consistent color*/
+    --text-color-placeholder: #535378; /*input field placeholder color - blue tinted*/
+    --text-color-defocus: #D2D2F5; /*input field placeholder color - matches defocus white for consistency*/
+}

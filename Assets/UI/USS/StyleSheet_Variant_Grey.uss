@@ -1,0 +1,28 @@
+:root {
+    /* Theme Colors (Grayscale Accents and Contrast) */
+    --theme-color-main: #dddddd; /* A bright gray for main accents/highlights, the primary 'contrast color' */
+    --theme-color-brighter: #e9e9e9; /* Brighter gray for more intense highlights */
+    --theme-color-brightest: #FFFFFF; /* Pure white for strongest highlights/active elements */
+    --theme-color-disabled: #808080; /* Darker gray for disabled accents, consistent with Unity's muted elements */
+    /**/
+    /* Background Colors (Unity's Shades of Dark Gray - unchanged as they were already accurate) */
+    --bg-color-black: #141414; /* Deepest almost black for contrasts/borders */
+    --bg-color-main: #282828; /* Unity's general editor background color */
+    --bg-color-main-overlay: rgba(40, 40, 40, 0.80); /*main bg color with little transparency*/
+    --bg-color-inputField: #353535; /* Brighter gray for input fields */
+    --bg-color-card: #3E3E3E; /* Slightly lighter for cards/scroll backgrounds */
+    --bg-color-panel: #383838; /* Common panel/window background gray */
+    --bg-color-button: #585858; /* Button background gray */
+    --bg-color-dropdown: #5A5A5A; /* Dropdown/active background gray */
+    --bg-color-hover: #646464; /* General hover background effect */
+    --bg-color-focus: #6E6E6E; /* Focus background effect */
+    /* Text and border color (Unity's Light Grays and White - unchanged as they were already accurate) */
+    --white-defocus: #A0A0A0; /* A muted gray for secondary text/placeholder */
+    --white-normal: #CCCCCC; /* Unity's standard light gray for main text */
+    --white-hover: #E0E0E0; /* Slightly brighter for text hover effects */
+    --white-focus: #FFFFFF; /* Pure white for strongest text focus/active elements */
+    --white-disabled: #808080; /* Medium gray for disabled text */
+    /* More Consistent color (unchanged)*/
+    --text-color-placeholder: #A0A0A0; /* Input field placeholder color (matches defocus) */
+    --text-color-defocus: #A0A0A0; /* Defocus text color (matches defocus white for consistency) */
+}

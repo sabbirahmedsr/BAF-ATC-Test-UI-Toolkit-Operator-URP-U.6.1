@@ -1,0 +1,13 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="root" style="flex-grow: 1; position: absolute; top: 0; left: 0; right: 0; bottom: 0; align-self: center; justify-content: center;">
+        <ui:VisualElement name="heading" class="bg-center-popup__heading" style="align-self: center;">
+            <ui:Label text="ABOUT" class="unity-label-heading" style="-unity-font-style: normal; scale: 1.03 1.03;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="body" class="bg-center-popup__body" style="flex-grow: 0; align-self: center; align-items: stretch; width: 300px;">
+            <ui:Label text="THIS IS THE ABOUT SECTION&#10;&#10;We plane here to include&#10;- ATC Officer [Aknowledgement]&#10;- Atributes&#10;- Development notes&#10;- Helpline &amp; Contact&#10;" class="unity-label-primary" style="-unity-text-align: upper-left;" />
+            <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: space-evenly; align-items: auto;">
+                <ui:Button text="BACK" name="btnBack" style="flex-grow: 1; flex-shrink: 1;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

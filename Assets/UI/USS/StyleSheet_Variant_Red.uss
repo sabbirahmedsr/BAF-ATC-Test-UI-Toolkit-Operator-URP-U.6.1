@@ -1,0 +1,26 @@
+:root {
+    /* Theme Colors */
+    --theme-color-main: #FF0000; /*The main theme color - Adjusted to a brighter, more vibrant red for higher contrast*/
+    --theme-color-brighter: #FF3333; /*brighter than main color, use for highlight/hover/heading*/
+    --theme-color-brightest: #FF6666; /*brighter than brighter color, use for supur highlight/focus/superheading*/
+    --theme-color-disabled: #CC0000; /*dissaturated main theme color, use for disabled ui interactable*/
+    /**/
+    /* Background Colors */
+    --bg-color-black: #080000; /* almost black color, but still consistent with theme color, use for panel border*/
+    --bg-color-main: #100000; /* main dark background color, consistent with theme color, use for overall background */
+    --bg-color-inputField: #160000; /*brighter than main color, use for text input_feild / slider_bg*/
+    --bg-color-card: #1C0000; /*brighter than text field color, use for scroll background/card etc*/
+    --bg-color-panel: #220000; /*brighter than primary color, use for panel - **Made significantly darker** */
+    --bg-color-button: #280000; /*brighter than panel color, use for button - Adjusted to maintain step from new panel color*/
+    --bg-color-dropdown: #2E0000; /*brighter than button color, use for dropdown - Adjusted*/
+    --bg-color-hover: #340000; /*brighter than dropdown color, use for button/dropdown/scroll_knob hover effect - Adjusted*/
+    --bg-color-focus: #3A0000; /*brighter than hover color, use for button/dropdown/scroll_knob focus effect - Adjusted*/
+    /* Text and border color */
+    --white-defocus: #B4A0A0; /*a gray out color to draw less attention*/
+    --white-normal: #FFE0E0; /*a white tone color, for neutral text/line/border etc*/
+    --white-hover: #ffffff; /*a full white color*/
+    --white-disabled: #B4A0A0; /*a disabled color consisten with --white-normal*/
+    /* More Consistent color*/
+    --text-color-placeholder: #785353; /*input field placeholder color*/
+    --text-color-defocus: #F5D2D2; /*input field placeholder color - matches defocus white for consistency*/
+}

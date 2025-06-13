@@ -1,0 +1,27 @@
+:root {
+    /* Theme Colors */
+    --theme-color-main: #FFD700; /*The main theme color - Pure Gold*/
+    --theme-color-brighter: #FFEB33; /*brighter than main color, use for highlight/hover/heading*/
+    --theme-color-brightest: #FFF266; /*brighter than brighter color, use for supur highlight/focus/superheading*/
+    --theme-color-disabled: #B29800; /*dissaturated main theme color, use for disabled ui interactable*/
+    /**/
+    /* Background Colors */
+    --bg-color-black: #080800; /* almost black color, with subtle gold tint, use for panel border*/
+    --bg-color-main: #101000; /* main dark background color, consistent with theme color, use for overall background */
+    --bg-color-inputField: #161600; /*brighter than main color, use for text input_feild / slider_bg*/
+    --bg-color-card: #1C1C00; /*brighter than text field color, use for scroll background/card etc*/
+    --bg-color-panel: #222200; /*brighter than primary color, use for panel - significantly darker*/
+    --bg-color-button: #282800; /*brighter than panel color, use for button - Adjusted to maintain step from new panel color*/
+    --bg-color-dropdown: #2E2E00; /*brighter than button color, use for dropdown - Adjusted*/
+    --bg-color-hover: #343400; /*brighter than dropdown color, use for button/dropdown/scroll_knob hover effect - Adjusted*/
+    --bg-color-focus: #3A3A00; /*brighter than hover color, use for button/dropdown/scroll_knob focus effect - Adjusted*/
+    /* Text and border color */
+    --white-defocus: #F5F5D2; /*a off-white color to draw less attention - gold tinted*/
+    --white-normal: #FFF0E0; /*a white tone color, for neutral text/line/border etc - very pale gold*/
+    --white-hover: #FFFFEE; /*a blend between --theme-color-main & --white-normal to be used as hover color - brighter, very pale gold*/
+    --white-focus: #FFFFFF; /*brighter than --white-normal - pure white for strongest focus*/
+    --white-disabled: #B4B4A0; /*a gray out disabled color consistent with --white-normal - muted gold-gray*/
+    /* More Consistent color*/
+    --text-color-placeholder: #787853; /*input field placeholder color - gold tinted*/
+    --text-color-defocus: #F5F5D2; /*input field placeholder color - matches defocus white for consistency*/
+}

@@ -1,0 +1,27 @@
+:root {
+    /* Theme Colors */
+    --theme-color-main: #007BFF; /*The main theme color - Vibrant Blue*/
+    --theme-color-brighter: #3399FF; /*brighter than main color, use for highlight/hover/heading*/
+    --theme-color-brightest: #66B2FF; /*brighter than brighter color, use for supur highlight/focus/superheading*/
+    --theme-color-disabled: #80C0FF; /*dissaturated main theme color, use for disabled ui interactable*/
+    /**/
+    /* Background Colors */
+    --bg-color-black: #F0F8FF; /* almost white with subtle blue tint, use for overall background */
+    --bg-color-main: #E0F2FF; /* main light background color, consistent with theme color, use for overall background */
+    --bg-color-inputField: #D0ECFF; /*slightly darker than main color, use for text input_feild / slider_bg*/
+    --bg-color-card: #C0E6FF; /*slightly darker than text field color, use for scroll background/card etc*/
+    --bg-color-panel: #B0E0FF; /*slightly darker than primary color, use for panel*/
+    --bg-color-button: #A0DAFF; /*slightly darker than panel color, use for button*/
+    --bg-color-dropdown: #90D4FF; /*slightly darker than button color, use for dropdown*/
+    --bg-color-hover: #80CDFF; /*slightly darker than dropdown color, use for button/dropdown/scroll_knob hover effect*/
+    --bg-color-focus: #70C7FF; /*slightly darker than hover color, use for button/dropdown/scroll_knob focus effect*/
+    /* Text and border color */
+    --white-defocus: #607B96; /*a dark blue-gray to draw less attention*/
+    --white-normal: #305078; /*a dark blue tone color, for neutral text/line/border etc*/
+    --white-hover: #1A3A60; /*a darker blue for hover*/
+    --white-focus: #001F3F; /*very dark blue, almost black for strongest focus*/
+    --white-disabled: #A0B0C0; /*a gray out disabled color consistent with --white-normal*/
+    /* More Consistent color*/
+    --text-color-placeholder: #809BB0; /*input field placeholder color - medium blue-gray*/
+    --text-color-defocus: #607B96; /*input field placeholder color - matches defocus dark color for consistency*/
+}

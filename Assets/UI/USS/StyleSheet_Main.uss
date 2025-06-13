@@ -1,0 +1,343 @@
+:root {
+    /* Theme Colors (Grayscale Accents and Contrast) */
+    --theme-color-main: #dddddd; /* A bright gray for main accents/highlights, the primary 'contrast color' */
+    --theme-color-brighter: #e9e9e9; /* Brighter gray for more intense highlights */
+    --theme-color-brightest: #FFFFFF; /* Pure white for strongest highlights/active elements */
+    --theme-color-disabled: #808080; /* Darker gray for disabled accents, consistent with Unity's muted elements */
+    /**/
+    /* Background Colors (Unity's Shades of Dark Gray - unchanged as they were already accurate) */
+    --bg-color-black: #141414; /* Deepest almost black for contrasts/borders */
+    --bg-color-main: #282828; /* Unity's general editor background color */
+    --bg-color-main-overlay: rgba(40, 40, 40, 0.80); /*main bg color with little transparency*/
+    --bg-color-inputField: #353535; /* Brighter gray for input fields */
+    --bg-color-card: #3E3E3E; /* Slightly lighter for cards/scroll backgrounds */
+    --bg-color-panel: #383838; /* Common panel/window background gray */
+    --bg-color-button: #585858; /* Button background gray */
+    --bg-color-dropdown: #5A5A5A; /* Dropdown/active background gray */
+    --bg-color-hover: #646464; /* General hover background effect */
+    --bg-color-focus: #6E6E6E; /* Focus background effect */
+    /* Text and border color (Unity's Light Grays and White - unchanged as they were already accurate) */
+    --white-defocus: #A0A0A0; /* A muted gray for secondary text/placeholder */
+    --white-normal: #CCCCCC; /* Unity's standard light gray for main text */
+    --white-hover: #E0E0E0; /* Slightly brighter for text hover effects */
+    --white-focus: #FFFFFF; /* Pure white for strongest text focus/active elements */
+    --white-disabled: #808080; /* Medium gray for disabled text */
+    /* More Consistent color (unchanged)*/
+    --text-color-placeholder: #A0A0A0; /* Input field placeholder color (matches defocus) */
+    --text-color-defocus: #A0A0A0; /* Defocus text color (matches defocus white for consistency) */
+    /*Other Variable*/
+    --border-radius-high: 5px;
+    --border-radius-low: 3px;
+    --border-width-high: 2px;
+    --border-width-low: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.bg-main {
+    background-color: var(--bg-color-main);
+}
+
+.bg-overlay {
+    background-color: var(--bg-color-main-overlay);
+}
+
+.bg-top-panel {
+    background-color: var(--bg-color-panel);
+    border-color: var(--theme-color-main);
+    border-width: 0px 0px var(--border-width-low) 0px;
+}
+
+.bg-center-popup__body {
+    background-color: var(--bg-color-panel);
+    border-color: var(--theme-color-main);
+    border-width: var(--border-width-high);
+    border-radius: var(--border-radius-high);
+    padding: 30px;
+}
+
+.bg-center-popup__heading {
+    background-color: var(--bg-color-panel);
+    border-color: var(--theme-color-main);
+    padding: 0px 20px 0px 20px;
+    border-width: var(--border-width-high) var(--border-width-high) 0px var(--border-width-high);
+    border-radius: var(--border-radius-high) var(--border-radius-high) 0px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.unity-label-super-heading {
+    color: var(--theme-color-brightest);
+    font-size: 22px;
+}
+
+.unity-label-heading {
+    color: var(--theme-color-main);
+    font-size: 18px;
+}
+
+.unity-label-primary {
+    color: var(--white-normal:);
+    font-size: 14px;
+}
+
+.unity-label-defocus {
+    color: var(--white-defocus);
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+Button {
+    background-color: var(--bg-color-button);
+    color: var(--theme-color-main);
+    border-color: var(--theme-color-main);
+    border-width: var(--border-width-low);
+    border-radius: var(--border-radius-low);
+    max-width:200px;
+}
+
+Button:hover {
+    background-color: var(--theme-color-brighter);
+    color: var(--bg-color-button);
+    border-color: var(--theme-color-brighter);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*TextField : Label*/
+TextField .unity-base-text-field__label {
+    color: var(--white-normal);
+}
+
+TextField:hover:enabled > .unity-base-text-field__label {
+    color: var(--white-hover);
+}
+/*TextField : Input Field*/
+TextField .unity-base-text-field__input {
+    background-color: var(--bg-color-inputField);
+    color: var(--white-normal);
+    border-color: var(--white-normal);
+    border-width: var(--border-width-low);
+    border-radius: var(--border-radius-low);
+    /*default given parameter*/
+    --unity-cursor-color: var(--white-normal);
+}
+
+TextField:hover:enabled .unity-base-text-field__input {
+    border-color: var(--theme-color-brighter);
+}
+/*TextField : Other*/
+TextField .unity-base-text-field__input--placeholder {
+    color: var(--text-color-placeholder);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*DropdownField : Label*/
+DropdownField .unity-base-field__label {
+    color: var(--white-normal);
+}
+
+DropdownField:hover:enabled > .unity-base-field__label {
+    color: var(--white-hover);
+}
+
+/*DropdownField : Popup*/
+DropdownField .unity-popup-field__input {
+    background-color: var(--bg-color-button);
+    color: var(--white-normal);
+    border-color: var(--white-normal);
+    border-width: var(--border-width-low);
+    border-radius: var(--border-radius-low);
+    margin-left: 0;
+}
+
+DropdownField:hover:enabled > .unity-popup-field__input {
+    background-color: var(--bg-color-hover);
+    color: var(--white-hover);
+    border-color: var(--theme-color-brighter);
+}
+
+/*DropdownField : Arrow*/
+DropdownField .unity-base-popup-field__arrow {
+    -unity-background-image-tint-color: var(--white-normal);
+}
+
+DropdownField:hover:enabled .unity-base-popup-field__arrow {
+    -unity-background-image-tint-color: var(--theme-color-brighter);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Slider : Label*/
+Slider .unity-base-field__label {
+    color: var(--white-normal);
+}
+
+Slider:hover:enabled > .unity-base-field__label {
+    color: var(--white-hover);
+}
+/*Slider : Background*/
+Slider .unity-base-slider__tracker {
+    background-color: var(--bg-color-inputField);
+    border-color: var(--white-normal);
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+Slider:hover .unity-base-slider__tracker {
+    border-color: var(--white-hover);
+}
+/*Slider : Fill Color*/
+Slider .unity-base-slider__fill {
+    background-color: var(--white-normal);
+}
+
+Slider:hover .unity-base-slider__fill {
+    background-color: var(--white-hover);
+}
+/*Slider: Dragger*/
+Slider .unity-base-slider__dragger {
+    background-color: var(--theme-color-main);
+    border-color: var(--white-normal);
+    border-width: var(--border-width-low);
+    border-radius: var(--border-radius-low);
+    width: 15px;
+}
+
+Slider:hover:enabled .unity-base-slider__dragger {
+    /*   background-color: var(--theme-color-brighter);*/
+    border-color: var(--white-hover);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*ScrollView:Viewport*/
+ScrollView .unity-scroll-view__content-viewport {
+    background-color: var(--bg-color-main);
+    border-color: var(--bg-color-black);
+    border-width: var(--border-width-low);
+}
+
+
+
+
+
+
+
+
+
+
+/*Scroller: high button*/
+Scroller .unity-scroller__high-button {
+    background-color: var(--bg-color-button);
+    border-color: var(--white-normal);
+    -unity-background-image-tint-color: var(--white-normal);
+}
+
+Scroller:hover:enabled .unity-scroller__high-button {
+    background-color: var(--bg-color-hover);
+    border-color: var(--white-hover);
+    -unity-background-image-tint-color: var(--theme-color-brighter);
+}
+
+/*Scroller: low button*/
+Scroller .unity-scroller__low-button {
+    background-color: var(--bg-color-button);
+    border-color: var(--white-normal);
+    -unity-background-image-tint-color: var(--white-normal);
+}
+
+Scroller:hover:enabled .unity-scroller__low-button {
+    background-color: var(--bg-color-hover);
+    border-color: var(--white-hover);
+    -unity-background-image-tint-color: var(--theme-color-brighter);
+}
+
+/*Scroller: Dragger*/
+Scroller .unity-base-slider__dragger {
+    background-color: var(--theme-color-main);
+    border-color: var(--white-normal);
+    border-radius: 3px;
+}
+
+Scroller:hover .unity-base-slider__dragger {
+    border-color: var(--white-hover);
+}
+/*Scroller: Background*/
+Scroller .unity-base-slider__tracker {
+    background-color: var(--bg-color-main);
+    border-color: var(--white-normal);
+}
+
+Scroller:hover .unity-base-slider__tracker {
+    border-color: var(--white-hover);
+}

@@ -1,0 +1,27 @@
+:root {
+    /* Theme Colors */
+    --theme-color-main: #8CACC6; /*The main theme color - Brighter mid-tone desaturated blue for better contrast*/
+    --theme-color-brighter: #B7D2E6; /*brighter than main color, use for highlight/hover/heading*/
+    --theme-color-brightest: #DEEDF5; /*brighter than brighter color, use for supur highlight/focus/superheading*/
+    --theme-color-disabled: #6B747D; /*dissaturated main theme color, use for disabled ui interactable*/
+    /**/
+    /* Background Colors */
+    --bg-color-black: #131415; /* almost black, with subtle cool-gray tint, use for panel border*/
+    --bg-color-main: #1E1F21; /* main dark background color, consistent with theme color, use for overall background */
+    --bg-color-inputField: #28292B; /*brighter than main color, use for text input_feild / slider_bg*/
+    --bg-color-card: #323436; /*brighter than text field color, use for scroll background/card etc*/
+    --bg-color-panel: #3D3E40; /*brighter than primary color, use for panel - significantly darker*/
+    --bg-color-button: #47494B; /*brighter than panel color, use for button - Adjusted to maintain step from new panel color*/
+    --bg-color-dropdown: #515456; /*brighter than button color, use for dropdown - Adjusted*/
+    --bg-color-hover: #5B5E60; /*brighter than dropdown color, use for button/dropdown/scroll_knob hover effect - Adjusted*/
+    --bg-color-focus: #66686A; /*brighter than hover color, use for button/dropdown/scroll_knob focus effect - Adjusted*/
+    /* Text and border color */
+    --white-defocus: #A6ABB0; /*a off-white color to draw less attention - subtle cool-gray tint*/
+    --white-normal: #D3D8DD; /*a white tone color, for neutral text/line/border etc - very pale cool-gray*/
+    --white-hover: #E2E7EC; /*a blend between --theme-color-main & --white-normal to be used as hover color - brighter, slightly more saturated*/
+    --white-focus: #F9FBFC; /*brighter than --white-normal - almost pure white, very light cool-gray tint for strongest focus*/
+    --white-disabled: #7F8285; /*a gray out disabled color consistent with --white-normal - mid-gray*/
+    /* More Consistent color*/
+    --text-color-placeholder: #8D9399; /*input field placeholder color - subtle cool-gray*/
+    --text-color-defocus: #A6ABB0; /*input field placeholder color - matches defocus white for consistency*/
+}

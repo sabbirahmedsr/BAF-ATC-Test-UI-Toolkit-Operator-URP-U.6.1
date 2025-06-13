@@ -2,6 +2,12 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
+
+# UNITY
+/++Build++/
+/++Resource++/
+/++Resources++/
+
 .utmp/
 /[Ll]ibrary/
 /[Tt]emp/
@@ -11,6 +17,11 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 *.log
+
+/Logs/
+/MemoryCaptures/
+/Backup/
+
 
 # By default unity supports Blender asset imports, *.blend1 blender files do not need to be commited to version control.
 *.blend1
@@ -53,6 +64,18 @@ ExportedObj/
 *.opendb
 *.VC.db
 
+# Rider
+.idea/
+
+# Dotnet
+.vs/
+
+# Visual Studio Code
+.vscode/
+
+# OSX
+.DS_Store
+
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
@@ -83,3 +106,19 @@ crashlytics-build.properties
 /[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta
 /[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers
 /[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
+
+
+
+
+
+# Large Files & Assets (Add specific folders/extensions here)
+*.mp4
+*.mov
+*.wav
+*.mp3
+
+# Cusom folder choice [to ingore uploading]
+/Assets/Models/   # Exclude entire Models folder
+/Assets/Textures/ # Exclude entire Textures folder
+/Assets/Audio/    # Exclude entire Audio folder
+/Assets/zTest/	  # Excdule entire zTest folder		

@@ -1,0 +1,27 @@
+:root {
+    /* Theme Colors */
+    --theme-color-main: #00FFFF; /*The main theme color - Vibrant Aqua*/
+    --theme-color-brighter: #33FFFF; /*brighter than main color, use for highlight/hover/heading*/
+    --theme-color-brightest: #66FFFF; /*brighter than brighter color, use for supur highlight/focus/superheading*/
+    --theme-color-disabled: #00B2B2; /*dissaturated main theme color, use for disabled ui interactable*/
+    /**/
+    /* Background Colors */
+    --bg-color-black: #000808; /* almost black color, with aqua tint, use for panel border*/
+    --bg-color-main: #001010; /* main dark background color, consistent with theme color, use for overall background */
+    --bg-color-inputField: #001616; /*brighter than main color, use for text input_feild / slider_bg*/
+    --bg-color-card: #001C1C; /*brighter than text field color, use for scroll background/card etc*/
+    --bg-color-panel: #002222; /*brighter than primary color, use for panel - significantly darker*/
+    --bg-color-button: #002828; /*brighter than panel color, use for button - Adjusted to maintain step from new panel color*/
+    --bg-color-dropdown: #002E2E; /*brighter than button color, use for dropdown - Adjusted*/
+    --bg-color-hover: #003434; /*brighter than dropdown color, use for button/dropdown/scroll_knob hover effect - Adjusted*/
+    --bg-color-focus: #003A3A; /*brighter than hover color, use for button/dropdown/scroll_knob focus effect - Adjusted*/
+    /* Text and border color */
+    --white-defocus: #D2F5F5; /*a off-white color to draw less attention - aqua tinted*/
+    --white-normal: #E0FFFF; /*a white tone color, for neutral text/line/border etc - very pale aqua*/
+    --white-hover: #EEFFFF; /*a blend between --theme-color-main & --white-normal to be used as hover color - brighter, very pale aqua*/
+    --white-focus: #FFFFFF; /*brighter than --white-normal - pure white for strongest focus*/
+    --white-disabled: #A0B4B4; /*a gray out disabled color consisten with --white-normal - muted aqua-gray*/
+    /* More Consistent color*/
+    --text-color-placeholder: #537878; /*input field placeholder color - aqua tinted*/
+    --text-color-defocus: #D2F5F5; /*input field placeholder color - matches defocus white for consistency*/
+}
