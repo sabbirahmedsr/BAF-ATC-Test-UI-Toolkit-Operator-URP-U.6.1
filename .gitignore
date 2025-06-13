@@ -7,6 +7,10 @@
 /++Build++/
 /++Resource++/
 /++Resources++/
+/[Pp]rojectSettings/
+/[Pp]ackages/
+/[Uu]IElementsSchema/
+*.vsconfig
 
 .utmp/
 /[Ll]ibrary/
@@ -122,3 +126,4 @@ crashlytics-build.properties
 /Assets/Textures/ # Exclude entire Textures folder
 /Assets/Audio/    # Exclude entire Audio folder
 /Assets/zTest/	  # Excdule entire zTest folder		
+.vsconfig
