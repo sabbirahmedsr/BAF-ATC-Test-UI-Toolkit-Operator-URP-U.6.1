@@ -1,0 +1,82 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/USS/USS_zTest.uss?fileID=7433441132597879392&amp;guid=d53124e3156ec8c4e947350d9822a828&amp;type=3#USS_zTest" />
+    <ui:VisualElement name="VisualElement" class="bg-main" style="flex-grow: 1; position: absolute; top: 0; left: 0; right: 0; bottom: 0; align-self: center; justify-content: center; -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/toxigenesis/toxigenesis%20bd.otf?fileID=12800000&amp;guid=77c0a388c36057c4981402cac962298e&amp;type=3#toxigenesis bd&quot;); align-items: center; align-content: center;">
+        <ui:Label text="Label" class="asdadw asdawd" />
+        <ui:VisualElement name="topPanel" class="bg-panel__top-fixed" style="flex-grow: 1; position: absolute; top: 0; height: 40px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+            <ui:VisualElement style="height: 100%; justify-content: center; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px;">
+                <ui:Label text="SECTION NAME" class="unity-label-primary" />
+            </ui:VisualElement>
+            <ui:VisualElement name="rightSide" style="flex-direction: row-reverse; right: 0; position: absolute; height: 100%; align-self: stretch;">
+                <ui:Button text="Button" />
+                <ui:DropdownField choices="VALUE" index="0" />
+                <ui:DropdownField choices="VALUE" index="0" />
+                <ui:TextField placeholder-text="filler text" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="VisualElement">
+            <ui:Label text="ATC SIMULATOR BD" name="superHeading" class="unity-label unity-label-super-heading" style="-unity-font-style: normal; scale: 1.03 1.03; -unity-text-align: upper-center;" />
+            <ui:Label text="MAIN HEADING" name="heading" class="unity-label unity-label-heading" style="-unity-font-style: normal; scale: 1.03 1.03; -unity-text-align: upper-center;" />
+            <ui:Label text="SUB HEADING" name="subHeading" class="unity-label unity-label-sub-heading" style="-unity-font-style: normal; scale: 1.03 1.03; -unity-text-align: upper-center;" />
+            <ui:Label text="THIS IS NORMAL LABEL" name="normal" class="unity-label-primary" style="-unity-font-style: normal; scale: 1.03 1.03; -unity-text-align: upper-center;" />
+            <ui:Label text="THIS IS SUBTLE LABEL FOR PLACEHOLDER" name="subtle" class="unity-label-subtle" style="-unity-font-style: normal; scale: 1.03 1.03; -unity-text-align: upper-center; flex-direction: row-reverse;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-direction: row;">
+            <ui:VisualElement style="flex-grow: 1; flex-direction: column;">
+                <ui:VisualElement name="popupPanel" style="margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;">
+                    <ui:VisualElement name="heading" class="bg-panel__center-popup-heading">
+                        <ui:Label text="TEXT FIELD" name="heading" class="unity-label-heading" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="body" class="bg-panel__center-popup-body">
+                        <ui:Label text="THIS IS SUBHEADING" name="subheading" class="unity-label-sub-heading" />
+                        <ui:TextField label="TEXT FILED" placeholder-text="7777" name="textField" keyboard-type="NumberPad" hide-placeholder-on-focus="true" />
+                        <ui:TextField label="TEXT FILED" placeholder-text="7777" name="textField" keyboard-type="NumberPad" hide-placeholder-on-focus="true" />
+                        <ui:TextField label="TEXT FILED" placeholder-text="7777" name="textField" keyboard-type="NumberPad" hide-placeholder-on-focus="true" enabled="false" />
+                        <ui:VisualElement name="VisualElement" style="flex-direction: row;">
+                            <ui:TextField placeholder-text="filler text" />
+                            <ui:TextField placeholder-text="filler text" />
+                            <ui:TextField placeholder-text="filler text" enabled="false" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="popupPanel" style="margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;">
+                    <ui:VisualElement name="heading" class="bg-panel__center-popup-heading">
+                        <ui:Label text="DROPDOWN FIELD" name="heading" class="unity-label-heading" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="body" class="bg-panel__center-popup-body">
+                        <ui:Label text="THIS IS SUB HEADING" name="subheading" class="unity-label-sub-heading" />
+                        <ui:DropdownField label="DROPDOWN" choices="ONE,TWO,THREE,FOUR" index="0" focusable="false" />
+                        <ui:DropdownField label="DROPDOWN" choices="ONE,TWO,THREE,FOUR" index="0" />
+                        <ui:DropdownField label="DROPDOWN" choices="ONE,TWO,THREE,FOUR" index="0" />
+                        <ui:DropdownField label="DROPDOWN" choices="ONE,TWO,THREE,FOUR" index="0" enabled="false" />
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:DropdownField index="0" choices="VALUE" focusable="false" enabled="true" />
+                            <ui:DropdownField index="0" choices="VALUE" />
+                            <ui:DropdownField enabled="false" choices="VALUE" index="0" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement>
+                <ui:VisualElement name="popupPanel" style="margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;">
+                    <ui:VisualElement name="heading" class="bg-panel__center-popup-heading">
+                        <ui:Label text="SLIDER" name="heading" class="unity-label-heading" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="body" class="bg-panel__center-popup-body" style="flex-grow: 1;">
+                        <ui:Label text="THIS IS SUB HEADING" name="subheading" class="unity-label-sub-heading adwdas adawdawd" />
+                        <ui:Slider label="SLIDER" value="1" high-value="2" fill="true" show-input-field="true" inverted="false" name="sldrUIScale" low-value="1" />
+                        <ui:Slider label="SLIDER" value="1" high-value="2" fill="true" show-input-field="true" inverted="false" name="sldrUIScale" low-value="1" />
+                        <ui:Slider label="SLIDER" value="1" high-value="2" fill="true" show-input-field="true" inverted="false" name="sldrUIScale" low-value="1" />
+                        <ui:Slider label="SLIDER" value="1" high-value="2" fill="true" show-input-field="true" inverted="false" name="sldrUIScale" low-value="1" enabled="false" />
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Button text="ENABLE" name="btnConfirmSetting" style="flex-direction: row; align-self: stretch; align-content: flex-end; justify-content: space-evenly; flex-grow: 1; flex-shrink: 1;" />
+                            <ui:Button text="ENABLE" name="btnCancelSetting" style="flex-grow: 1; flex-shrink: 1;" />
+                            <ui:Button text="DISABLE" name="btnCancelSetting" enabled="false" style="flex-grow: 1; flex-shrink: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement class="zTestClass test2" />
+        </ui:VisualElement>
+        <ui:VisualElement class="sadw" />
+    </ui:VisualElement>
+</ui:UXML>

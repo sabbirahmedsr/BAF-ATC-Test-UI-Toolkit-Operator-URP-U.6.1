@@ -1,0 +1,80 @@
+:root {
+    /* Theme Colors (General color palette for the UI) */
+    --theme-color-main: #282828;            /* Primary main color for the entire theme*/
+
+    /*Background Section*/
+
+    /* Background Colors (Hierarchy of darkness for panels and containers) */
+    --bg-color-deep: #282828;                           /* Primary background for main windows and content areas */
+    --bg-color-panel: #383838;                          /* Background for sub-panels, groups, and distinct sections*/
+    --bg-color-panel-brighter: #3c3c3c;                 /* Brighter panel variant, often used for panel headers or active tabs */
+    --bg-color-field: #2a2a2a;                          /* Background for input fields and text entry areas */
+    --modal-backdrop-color: rgba(20, 20, 20, 0.90);     /* Overlay to dim content behind popups/modals */
+
+    /* Interactive Element Colors (Backgrounds for buttons, toggles, dropdowns, etc.) */
+    --interactive-bg-normal: #515151;   /* a dark background consistent with --theme-color-main*/
+    --interactive-bg-hover: #676767;    /* Significantly brighter for hover */
+    --interactive-bg-active: #46607c;   /* very BRIGHTER for active state */
+    --interactive-bg-focus: #46607c;    /* Closer to normal than hover, slightly brighter to visualize difference */
+    --interactive-bg-disabled: #4c4c4c; /* For disabled interactive elements background */
+
+    /* Selection Colors (Backgrounds for selected items in lists, trees, etc.) */
+    --selection-bg-normal: #ff0000;
+    --selection-bg-hover: #ff0000;  /* Brighter for hover */
+    --selection-bg-active: #ff0000; /* NOW EVEN BRIGHTER for active */
+    --selection-bg-focus: #ff0000;  /* Closer to normal than hover */
+    --selection-bg-disabled: #ff0000;
+
+    /*Text Section*/
+
+    /* Text Label Colors (For static text like labels, paragraphs, headings) */
+    --text-label-heading: #FFFFFF;              /* same as --theme-color-main*/
+    --text-label-sub-heading: #f2f2f2;          /* A semi white tone color, consistent with --theme-color-main, For internal heading inside panel */
+    --text-label-normal: #c2c2c2;               /* Default text for general labels and descriptions */
+    --text-label-subtle: #626262;               /* For less prominent labels, placeholders, and secondary info */
+    
+    /* Text Interactive Colors (For text within interactive elements like buttons, input fields) */
+    --text-interactive-normal: #cfcfcf;     /* A semi white tone color, consistent with --theme-color-main */
+    --text-interactive-hover: #ffffff;      /* Brighter than normal, Make Visible Contrast */
+    --text-interactive-active: #e5e5e5;     /* slightly brighter than hover */
+    --text-interactive-focus: #7baefa;      /* Closer to --text-interactive-normal, Slightly Brighter, Visible Contrast */
+    --text-interactive-disabled: #858585;   /* Less white than normal for disabled */
+
+    /*Border Section*/
+
+    /* Border Static Colors (For fixed, non-interactive panel outlines and separators) */
+    --border-static-main: #1f1f1f;          /* same as --theme-color-main*/
+    --border-static-separator: #1f1f1f;     /* For thin lines separating sections within panels, or subtle dividers */
+    --border-deep-separator: #141414;       /* Very deep, subtle separator for strong visual breaks or deepest outlines */
+
+    /* Border Interactive Colors (For borders of interactive elements like buttons, fields) */
+    --border-interactive-normal: #242424;   /* same as --text-interactive-normal */
+    --border-interactive-field:  #191919;   /* slight brighter than --border-deep-separator, consistent with --bg-color-field */
+    --border-interactive-hover: #656565;    /* same as --text-interactive-hover */
+    --border-interactive-active: #242424;   /* same as --text-interactive-active */
+    --border-interactive-focus: #7baefa;    /* same as --text-interactive-focus */
+    --border-interactive-disabled: #3e3e3e; /* same as --text-interactive-disabled */
+
+    /* State Section */
+
+    /* State Colors (Feedback colors for user actions, errors, warnings, etc.) */
+    --state-color-error: #FF0000;   /* Red for errors and critical warnings - Intense Red */
+    --state-color-warning: #FFCC00; /* Amber/Yellow for warnings and cautions - Bright Yellow */
+    --state-color-success: #33FF33; /* Green for success and positive feedback - Bright Green */
+    --state-color-info: #33CCFF;    /* Blue for general information and non-critical messages - Bright Blue */
+
+    /* Icon & Thumb */
+
+    /* Icon Colors (For monochromatic icons used throughout the UI) */
+    --icon-color-normal: #cfcfcf;   /* Matching "less white" theme */
+    --icon-color-hover: #e2e2e2;    /* Brighter for hover */
+    --icon-color-active: #cbd1d7;   /* Even brighter for active */
+    --icon-color-focus: #efefef;    /* Closer to normal for focus */
+    --icon-color-disabled: #858585; /* Less white for disabled */
+
+    /* Scrollbar Colors */
+    --scrollbar-thumb-normal: #ff0000;
+    --scrollbar-thumb-hover: #ff0000;   /* Brighter for hover */
+    --scrollbar-thumb-active: #ff0000;  /* Even Brighter for active */
+    --scrollbar-track: #181818;         /* Matches --bg-color-deep for a cohesive look */
+}

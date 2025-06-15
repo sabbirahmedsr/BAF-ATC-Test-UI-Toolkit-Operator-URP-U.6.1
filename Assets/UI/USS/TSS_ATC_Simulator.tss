@@ -1,0 +1,137 @@
+
+@import url("Theme_Style/USS_01_Background.uss");
+@import url("Theme_Style/USS_02_Border.uss");
+@import url("Theme_Style/USS_03_Label.uss");
+@import url("Theme_Style/USS_04_A_Button_Default.uss");
+@import url("Theme_Style/USS_04_C_Button_Variation.uss");
+@import url("Theme_Style/USS_05_Base_Field.uss");
+@import url("Theme_Style/USS_06_TextField.uss");
+@import url("Theme_Style/USS_07_Dropdown.uss");
+@import url("Theme_Style/USS_08_Slider.uss");
+
+
+
+
+
+
+
+
+
+
+
+/*Key notes
+    1. The theme style would be a scifi style, high contrast and eye catching
+    2. --theme-color-main would be the primary color and every color will be consisten with it
+    3. The main color would be the main thin line color of the theme
+    3. The --text-interactive color should be a semi white version consistent with theme color
+    4. The border-interactive color should be same as --text-interactive color
+    5. --border-static-main should be --theme-color-main
+    6. the normal and hover state should have high contrast to ensure visible difference
+*/
+
+:root {
+    /* Theme Colors (General color palette for the UI) */
+    --theme-color-main: #282828;            /* Primary main color for the entire theme*/
+
+    /*Background Section*/
+
+    /* Background Colors (Hierarchy of darkness for panels and containers) */
+    --bg-color-deep: #282828;                           /* Primary background for main windows and content areas */
+    --bg-color-panel: #383838;                          /* Background for sub-panels, groups, and distinct sections*/
+    --bg-color-panel-brighter: #3c3c3c;                 /* Brighter panel variant, often used for panel headers or active tabs */
+    --bg-color-field: #2a2a2a;                          /* Background for input fields and text entry areas */
+    --modal-backdrop-color: rgba(20, 20, 20, 0.90);     /* Overlay to dim content behind popups/modals */
+
+    /* Interactive Element Colors (Backgrounds for buttons, toggles, dropdowns, etc.) */
+    --interactive-bg-normal: #515151;   /* a dark background consistent with --theme-color-main*/
+    --interactive-bg-hover: #676767;    /* Significantly brighter for hover */
+    --interactive-bg-active: #46607c;   /* very BRIGHTER for active state */
+    --interactive-bg-focus: #46607c;    /* Closer to normal than hover, slightly brighter to visualize difference */
+    --interactive-bg-disabled: #4c4c4c; /* For disabled interactive elements background */
+
+    /* Selection Colors (Backgrounds for selected items in lists, trees, etc.) */
+    --selection-bg-normal: #ff0000;
+    --selection-bg-hover: #ff0000;  /* Brighter for hover */
+    --selection-bg-active: #ff0000; /* NOW EVEN BRIGHTER for active */
+    --selection-bg-focus: #ff0000;  /* Closer to normal than hover */
+    --selection-bg-disabled: #ff0000;
+
+    /*Text Section*/
+
+    /* Text Label Colors (For static text like labels, paragraphs, headings) */
+    --text-label-heading: #FFFFFF;              /* same as --theme-color-main*/
+    --text-label-sub-heading: #f2f2f2;          /* A semi white tone color, consistent with --theme-color-main, For internal heading inside panel */
+    --text-label-normal: #c2c2c2;               /* Default text for general labels and descriptions */
+    --text-label-subtle: #626262;               /* For less prominent labels, placeholders, and secondary info */
+    
+    /* Text Interactive Colors (For text within interactive elements like buttons, input fields) */
+    --text-interactive-normal: #cfcfcf;     /* A semi white tone color, consistent with --theme-color-main */
+    --text-interactive-hover: #ffffff;      /* Brighter than normal, Make Visible Contrast */
+    --text-interactive-active: #e5e5e5;     /* slightly brighter than hover */
+    --text-interactive-focus: #7baefa;      /* Closer to --text-interactive-normal, Slightly Brighter, Visible Contrast */
+    --text-interactive-disabled: #858585;   /* Less white than normal for disabled */
+
+    /*Border Section*/
+
+    /* Border Static Colors (For fixed, non-interactive panel outlines and separators) */
+    --border-static-main: #1f1f1f;          /* same as --theme-color-main*/
+    --border-static-separator: #1f1f1f;     /* For thin lines separating sections within panels, or subtle dividers */
+    --border-deep-separator: #141414;       /* Very deep, subtle separator for strong visual breaks or deepest outlines */
+
+    /* Border Interactive Colors (For borders of interactive elements like buttons, fields) */
+    --border-interactive-normal: #242424;   /* same as --text-interactive-normal */
+    --border-interactive-field:  #191919;   /* slight brighter than --border-deep-separator, consistent with --bg-color-field */
+    --border-interactive-hover: #656565;    /* same as --text-interactive-hover */
+    --border-interactive-active: #242424;   /* same as --text-interactive-active */
+    --border-interactive-focus: #7baefa;    /* same as --text-interactive-focus */
+    --border-interactive-disabled: #3e3e3e; /* same as --text-interactive-disabled */
+
+    /* State Section */
+
+    /* State Colors (Feedback colors for user actions, errors, warnings, etc.) */
+    --state-color-error: #FF0000;   /* Red for errors and critical warnings - Intense Red */
+    --state-color-warning: #FFCC00; /* Amber/Yellow for warnings and cautions - Bright Yellow */
+    --state-color-success: #33FF33; /* Green for success and positive feedback - Bright Green */
+    --state-color-info: #33CCFF;    /* Blue for general information and non-critical messages - Bright Blue */
+
+    /* Icon & Thumb */
+
+    /* Icon Colors (For monochromatic icons used throughout the UI) */
+    --icon-color-normal: #cfcfcf;   /* Matching "less white" theme */
+    --icon-color-hover: #e2e2e2;    /* Brighter for hover */
+    --icon-color-active: #cbd1d7;   /* Even brighter for active */
+    --icon-color-focus: #efefef;    /* Closer to normal for focus */
+    --icon-color-disabled: #858585; /* Less white for disabled */
+
+    /* Scrollbar Colors */
+    --scrollbar-thumb-normal: #faf77b;
+    --scrollbar-thumb-hover: #ff0000;   /* Brighter for hover */
+    --scrollbar-thumb-active: #c600ff;  /* Even Brighter for active */
+    --scrollbar-track: #181818;         /* Matches --bg-color-deep for a cohesive look */
+
+
+    /* Utilities & Measurements (Spacing, Radius, Widths, Font Sizes) */
+    --spacing-xs: 2px;      /* Extra small spacing, minimal separation */
+    --spacing-sm: 4px;      /* Small spacing, common for padding and gaps */
+    --spacing-md: 8px;      /* Medium spacing, for standard component separation */
+    --spacing-lg: 12px;     /* Large spacing, for section breaks or major padding */
+    --spacing-xl: 16px;     /* Extra large spacing, for significant layout separation */
+
+    /* Border Radius */
+    --border-radius-high: 5px;  /* Larger border radius for softer corners */
+    --border-radius-low: 3px;   /* Smaller border radius for sharper corners */
+
+    /* Border Widths */
+    --border-width-high: 2px;   /* Thicker border width for emphasis */
+    --border-width-low: 1px;    /* Thinner border width for subtle lines */
+
+    /* Font Sizes */
+    --font-size-base: 14px;         /* Standard text for most UI elements (labels, interactive text) */
+    --font-size-sm: 12px;           /* Smaller text for less important info, sub-labels, tooltips */
+    --font-size-lg: 16px;           /* Larger text, e.g., for section titles or important labels */
+    --font-size-xl: 18px;           /* Medium headings, major section titles */
+    --font-size-xxl: 24px;          /* Large headings, main window titles */
+
+    /* Icon Reference */
+    --dropdown-arrow: url("project://database/Assets/UI/Icon/UI_Icon.psd?fileID=-395398485&guid=29e9d7c1a6896f7429165ae478fad548&type=3#UI_ICN_Dropdown_Arrow");
+}

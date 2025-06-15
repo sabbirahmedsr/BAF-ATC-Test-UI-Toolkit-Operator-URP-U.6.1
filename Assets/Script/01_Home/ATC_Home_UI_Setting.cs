@@ -1,5 +1,4 @@
-using System;
-using System.Reflection;
+using ATC.Data;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -65,11 +64,11 @@ namespace ATC.Home.UI {
 
 
         internal void ChangeUITheme(int rIndex) {
-            StyleSheet themeStyleSheet = uiThemeData.GetStyleSheet(rIndex);
+            uiThemeData.chosenThemeStyle = uiThemeData.GetStyleSheet(rIndex);
             uiManager.rootVisualElement.styleSheets.Clear();
             uiManager.rootVisualElement.styleSheets.Add(uiThemeData.mainStyleSheet);
-            uiManager.rootVisualElement.styleSheets.Add(themeStyleSheet);
-            PlayerPrefs.SetInt(drdUITheme.name, rIndex);
+            uiManager.rootVisualElement.styleSheets.Add(uiThemeData.chosenThemeStyle);
+            PlayerPrefs.SetInt(nameof(drdUITheme), rIndex);
         }
         internal void ChangeUIScale(float rValue) {
             uiManager.uiDocument.panelSettings.scale = rValue;

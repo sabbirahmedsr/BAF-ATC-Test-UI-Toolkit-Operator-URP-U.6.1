@@ -1,0 +1,4 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="ATC_Radar_Map" src="project://database/Assets/UI/UXML/ATC_Operator/ATC_Radar_Map.uxml?fileID=9197481963319205126&amp;guid=9ad29fac894959a4f82c1851afb94bc9&amp;type=3#ATC_Radar_Map" />
+    <ui:Instance template="ATC_Radar_Map" name="radarMapRoot" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 50%;" />
+</ui:UXML>

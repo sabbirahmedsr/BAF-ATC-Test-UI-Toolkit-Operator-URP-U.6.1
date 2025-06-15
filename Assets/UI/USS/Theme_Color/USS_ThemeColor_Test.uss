@@ -1,0 +1,89 @@
+:root {
+    /* Key Notes:
+     * 1. Sci-fi style, high contrast, eye-catching.
+     * 2. --theme-color-main is primary, all colors consistent with it.
+     * 3. Main color is the main thin line color of the theme.
+     * 4. --text-interactive should be a semi-white version consistent with theme color.
+     * 5. --border-interactive color should be same as --text-interactive color.
+     * 6. --border-static-main should be --theme-color-main.
+     * 7. Normal and hover states should have high contrast for visible difference.
+    */
+
+    /* Theme Colors (General color palette for the UI) */
+    --theme-color-main: #FF004D;             /* Primary main color for the entire theme (Vibrant Red)*/
+
+    /*Background Section*/
+
+    /* Background Colors (Hierarchy of darkness for panels and containers) */
+    --bg-color-deep: #1A000A;                  /* Primary background for main windows and content areas (Deepest Red-Black) */
+    --bg-color-panel: #2A0014;                  /* Background for sub-panels, groups, and distinct sections (Slightly lighter Red-Black)*/
+    --bg-color-panel-brighter: #38001D;         /* Brighter panel variant, often used for panel headers or active tabs (Noticeably brighter Red-Black) */
+    --bg-color-field: #1F000F;                  /* Background for input fields and text entry areas (Dark Red-Black for contrast) */
+    --modal-backdrop-color: rgba(10, 0, 5, 0.95); /* Overlay to dim content behind popups/modals (Very dark, almost black with a hint of red) */
+
+    /* Interactive Element Colors (Backgrounds for buttons, toggles, dropdowns, etc.) */
+    --interactive-bg-normal: #3F0020;    /* Dark red-black background, consistent with theme */
+    --interactive-bg-hover: #7F0040;     /* Significantly brighter for hover (More saturated red-black) */
+    --interactive-bg-active: #BF0060;    /* Very BRIGHTER for active state (Intense red-black) */
+    --interactive-bg-focus: #5F0030;     /* Closer to normal than hover, slightly brighter to visualize difference */
+    --interactive-bg-disabled: #2F0018;  /* For disabled interactive elements background (Desaturated dark red) */
+
+    /* Selection Colors (Backgrounds for selected items in lists, trees, etc.) */
+    --selection-bg-normal: #FF004D;
+    --selection-bg-hover: #FF3377;   /* Brighter for hover */
+    --selection-bg-active: #FF66AA;  /* NOW EVEN BRIGHTER for active */
+    --selection-bg-focus: #FF1A66;   /* Closer to normal than hover */
+    --selection-bg-disabled: #660026;
+
+    /*Text Section*/
+
+    /* Text Label Colors (For static text like labels, paragraphs, headings) */
+    --text-label-heading: #FF004D;              /* same as --theme-color-main (Vibrant Red)*/
+    --text-label-sub-heading: #FFF0F5;          /* A semi white tone color, consistent with --theme-color-main, For internal heading inside panel (Reddish White) */
+    --text-label-normal: #FFD9E6;               /* Default text for general labels and descriptions (Softer Red-White) */
+    --text-label-subtle: #8A002A;               /* For less prominent labels, placeholders, and secondary info (Darker, muted red) */
+    
+    /* Text Interactive Colors (For text within interactive elements like buttons, input fields) */
+    --text-interactive-normal: #FFD9E6;     /* A semi white tone color, consistent with --theme-color-main */
+    --text-interactive-hover: #FFFFFF;      /* Brighter than normal, Make Visible Contrast (Pure White) */
+    --text-interactive-active: #FFCCCC;     /* slightly brighter than hover (Light Reddish White) */
+    --text-interactive-focus: #FFF5FA;      /* Closer to --text-interactive-normal, Slightly Brighter, Visible Contrast (Off-White with a hint of red) */
+    --text-interactive-disabled: #8A002A;   /* Less white than normal for disabled (Muted Red) */
+
+    /*Border Section*/
+
+    /* Border Static Colors (For fixed, non-interactive panel outlines and separators) */
+    --border-static-main: #FF004D;          /* same as --theme-color-main (Vibrant Red)*/
+    --border-static-separator: #4D001A;     /* For thin lines separating sections within panels, or subtle dividers (Dark Red) */
+    --border-deep-separator: #2A000F;        /* Very deep, subtle separator for strong visual breaks or deepest outlines (Very Dark Red) */
+
+    /* Border Interactive Colors (For borders of interactive elements like buttons, fields) */
+    --border-interactive-normal: #FFD9E6;    /* same as --text-interactive-normal */
+    --border-interactive-hover: #FFFFFF;     /* same as --text-interactive-hover */
+    --border-interactive-active: #FFCCCC;    /* same as --text-interactive-active */
+    --border-interactive-focus: #FFF5FA;     /* same as --text-interactive-focus */
+    --border-interactive-disabled: #8A002A;  /* same as --text-interactive-disabled */
+
+    /* State Section */
+
+    /* State Colors (Feedback colors for user actions, errors, warnings, etc.) */
+    --state-color-error: #FF0000;    /* Red for errors and critical warnings - Intense Red */
+    --state-color-warning: #FFCC00;  /* Amber/Yellow for warnings and cautions - Bright Yellow */
+    --state-color-success: #33FF33;  /* Green for success and positive feedback - Bright Green */
+    --state-color-info: #33CCFF;     /* Blue for general information and non-critical messages - Bright Blue */
+
+    /* Icon & Thumb */
+
+    /* Icon Colors (For monochromatic icons used throughout the UI) */
+    --icon-color-normal: #FFD9E6;    /* Matching "less white" theme (Reddish White) */
+    --icon-color-hover: #FFFFFF;     /* Brighter for hover (Pure White) */
+    --icon-color-active: #FFCCCC;    /* Even brighter for active (Light Reddish White) */
+    --icon-color-focus: #FFF5FA;     /* Closer to normal for focus (Off-White with a hint of red) */
+    --icon-color-disabled: #8A002A;  /* Less white for disabled (Muted Red) */
+
+    /* Scrollbar Colors */
+    --scrollbar-thumb-normal: #FF004D;
+    --scrollbar-thumb-hover: #FF3377;    /* Brighter for hover */
+    --scrollbar-thumb-active: #FF66AA;   /* Even Brighter for active */
+    --scrollbar-track: #140007;          /* Matches --bg-color-deep for a cohesive look (Very dark red-black) */
+}

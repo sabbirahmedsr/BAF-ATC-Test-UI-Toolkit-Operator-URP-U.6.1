@@ -1,0 +1,29 @@
+.asdawd {
+    flex-grow: 1;
+    width: 20px;
+    height: 20px;
+    background-image: url("project://database/Assets/UI/USS%20Old/UI_Theme_Default.tss?fileID=-4521532143779581420&guid=70da5c3174f4b7a438f702ced53263ea&type=3#arrow-right");
+    background-color: rgb(255, 255, 255);
+    -unity-background-image-tint-color: rgb(255, 0, 0);
+}
+
+.sadw {
+    flex-grow: 1;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+}
+
+.asdawd {
+    text-overflow: clip;
+}
+
+.adwdas {
+    overflow: hidden;
+}
+
+.adawdawd {
+    -unity-text-align: upper-left;
+    white-space: nowrap;
+}

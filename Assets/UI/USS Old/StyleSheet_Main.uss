@@ -10,8 +10,8 @@
     --bg-color-main: #282828; /* Unity's general editor background color */
     --bg-color-main-overlay: rgba(40, 40, 40, 0.80); /*main bg color with little transparency*/
     --bg-color-inputField: #353535; /* Brighter gray for input fields */
-    --bg-color-card: #3E3E3E; /* Slightly lighter for cards/scroll backgrounds */
     --bg-color-panel: #383838; /* Common panel/window background gray */
+    --bg-color-panel-brighter: #3E3E3E; /* Slightly lighter for cards/scroll backgrounds */
     --bg-color-button: #585858; /* Button background gray */
     --bg-color-dropdown: #5A5A5A; /* Dropdown/active background gray */
     --bg-color-hover: #646464; /* General hover background effect */

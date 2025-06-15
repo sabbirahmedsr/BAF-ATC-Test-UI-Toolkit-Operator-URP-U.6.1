@@ -1,0 +1,28 @@
+.unity-button-special {
+    /* Background & Borders */
+    background-color: var(--interactive-bg-normal);
+    border-color: var(--theme-color-main);
+    border-width: var(--border-width-low);
+    border-radius: var(--border-radius-low);
+    /* Text */
+    color: var(--theme-color-main);
+    font-size: var(--font-size-base);
+    -unity-text-align: middle-center;
+    /* Size and Spacing */
+    min-width: 5px;
+    max-width: 200px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    margin: var(--spacing-xs);
+}
+
+.unity-button-special:hover {
+    background-color: var(--theme-color-main);
+    color: var(--interactive-bg-hover);
+    border-color: var(--theme-color-main);
+}
+
+.unity-button-special:active:enabled {
+    background-color: var(--theme-color-main-hover);
+    color: var(--interactive-bg-hover);
+    border-color: var(--theme-color-main-hover);
+}

@@ -1,0 +1,6 @@
+.separator-bottom-small{    
+    border-color: var(--border-static-deep);
+}
+.separtor-bottom-small{
+
+}

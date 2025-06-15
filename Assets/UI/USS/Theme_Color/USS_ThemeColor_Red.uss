@@ -1,0 +1,91 @@
+@import url("USS_03_Button.uss");
+
+:root {
+    /* Theme Colors (General color palette for the UI) */
+    --theme-color-main: #dddddd; /* Primary light color for major elements and default text */
+    --theme-color-highlight: #64B5FF; /* Prominent color for highlights, accents, and focused states */
+    --theme-color-disabled: #808080; /* Universal color for disabled elements and text */
+    /**/
+    /* Background Colors (Hierarchy of darkness for panels and containers) */
+    --bg-color-deep: #282828;               /* Primary background for main windows and content areas */
+    --bg-color-panel: #383838;              /* Background for sub-panels, groups, and distinct sections */
+    --bg-color-panel-brighter: #3E3E3E;     /* Brighter panel variant, often used for panel headers or active tabs */
+    --bg-color-field: #202020;              /* Background for input fields and text entry areas */
+    --modal-backdrop-color: rgba(40, 40, 40, 0.80); /* Overlay to dim content behind popups/modals */
+    /**/
+    /* Interactive Element Colors (Backgrounds for buttons, toggles, dropdowns, etc.) */
+    --interactive-bg-normal: #585858;
+    --interactive-bg-hover: #646464;
+    --interactive-bg-active: #646464;   /* Often same as hover, or slightly darker */
+    --interactive-bg-focus: #6E6E6E;
+    --interactive-bg-disabled: #404040; /* For disabled interactive elements background */
+    /**/
+    /* Selection Colors (Backgrounds for selected items in lists, trees, etc.) */
+    --selection-bg-normal: #525252;
+    --selection-bg-hover: #606060;
+    --selection-bg-active: #606060;
+    --selection-bg-focus: #6A6A6A;
+    --selection-bg-disabled: #484848;
+    /**/
+    /* Text Label Colors (For static text like labels, paragraphs, headings) */
+    --text-label-normal: #CCCCCC;       /* Default text for general labels and descriptions */
+    --text-label-subtle: #A0A0A0;       /* For less prominent labels, placeholders, and secondary info */
+    --text-label-heading: #E0E0E0;      /* For titles and section headings */
+    --text-label-disabled: #808080;     /* Text for disabled labels and non-interactive states */
+    /**/
+    /* Text Interactive Colors (For text within interactive elements like buttons, input fields) */
+    --text-interactive-normal: #CCCCCC; /* Text on interactive elements in their normal state */
+    --text-interactive-hover: #E0E0E0;
+    --text-interactive-active: #E0E0E0;
+    --text-interactive-focus: #FFFFFF;
+    --text-interactive-disabled: #A0A0A0;
+    /**/
+    /* Border Static Colors (For fixed, non-interactive panel outlines and separators) */
+    --border-static-normal: #484848;    /* Border for fixed panels and general non-interactive outlines */
+    --border-static-separator: #383838; /* For thin lines separating sections within panels, or subtle dividers */
+    --border-deep-separator: #141414;   /* Very deep, subtle separator for strong visual breaks or deepest outlines */
+    /**/
+    /* Border Interactive Colors (For borders of interactive elements like buttons, fields) */
+    --border-interactive-normal: #585858;   /* Normal state border for buttons, dropdowns, etc. */
+    --border-interactive-hover: #525252;    /* Slightly lighter border on hover */
+    --border-interactive-active: #525252;   /* Active state border */
+    --border-interactive-focus: #64B5F6;    /* Accent color for focused interactive elements */
+    --border-interactive-disabled: #303030; /* Border for disabled interactive elements */
+    /**/
+    /* State Colors (Feedback colors for user actions, errors, warnings, etc.) */
+    --state-color-error: #F44336;   /* Red for errors and critical warnings */
+    --state-color-warning: #FFC107; /* Amber/Yellow for warnings and cautions */
+    --state-color-success: #4CAF50; /* Green for success and positive feedback */
+    --state-color-info: #2196F3;    /* Blue for general information and non-critical messages */
+    /**/
+    /* Icon Colors (For monochromatic icons used throughout the UI) */
+    --icon-color-normal: #CCCCCC;
+    --icon-color-hover: #E0E0E0;
+    --icon-color-active: #FFFFFF;
+    --icon-color-focus: #FFFFFF;
+    --icon-color-disabled: #808080;
+    /**/
+    /* Scrollbar Colors */
+    --scrollbar-thumb-normal: #606060;
+    --scrollbar-thumb-hover: #707070;
+    --scrollbar-thumb-active: #808080;
+    --scrollbar-track: #282828; /* Matches --bg-color-deep for a cohesive look */
+    /**/
+    /* Utilities & Measurements (Spacing, Radius, Widths, Font Sizes) */
+    --spacing-xs: 4px; /* Extra small spacing, minimal separation */
+    --spacing-sm: 8px; /* Small spacing, common for padding and gaps */
+    --spacing-md: 12px; /* Medium spacing, for standard component separation */
+    --spacing-lg: 16px; /* Large spacing, for section breaks or major padding */
+    --spacing-xl: 24px; /* Extra large spacing, for significant layout separation */
+    /**/
+    --border-radius-high: 5px; /* Larger border radius for softer corners */
+    --border-radius-low: 3px; /* Smaller border radius for sharper corners */
+    --border-width-high: 2px; /* Thicker border width for emphasis */
+    --border-width-low: 1px; /* Thinner border width for subtle lines */
+    /**/
+    --font-size-base: 14px; /* Standard text for most UI elements (labels, interactive text) */
+    --font-size-sm: 12px; /* Smaller text for less important info, sub-labels, tooltips */
+    --font-size-lg: 16px; /* Larger text, e.g., for section titles or important labels */
+    --font-size-xl: 18px; /* Medium headings, major section titles */
+    --font-size-xxl: 24px; /* Large headings, main window titles */
+}

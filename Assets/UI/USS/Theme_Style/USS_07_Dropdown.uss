@@ -1,0 +1,55 @@
+/*DropdownField : Popup*/
+.unity-popup-field .unity-popup-field__input {
+    /* Background & Borders */
+    background-color: var(--interactive-bg-normal);
+    border-color: var(--border-interactive-normal);
+    border-width: var(--border-width-low);
+    border-radius: var(--border-radius-low);
+
+    /* Text */
+    color: var(--text-interactive-normal);
+    font-size: var(--font-size-base);
+    -unity-text-align: middle-center;
+
+    /* Size and Spacing */
+    min-height:20px;
+    min-width: 5px;
+    max-width: 200px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    margin: var(--spacing-xs);
+    flex-direction:row;
+}
+
+.unity-popup-field:hover:enabled .unity-popup-field__input {
+    background-color: var(--interactive-bg-hover);
+    color: var(--text-interactive-hover);
+    border-color: var(--border-interactive-hover);
+}
+
+.unity-popup-field:disabled .unity-popup-field__input  {    
+    background-color: var(--interactive-bg-disabled);
+    color: var(--text-interactive-disabled);
+    border-color: var(--border-interactive-disabled);
+}
+
+
+
+/* Input Text */
+.unity-popup-field .unity-base-popup-field__text{
+    flex-grow:1;
+    -unity-text-align: middle-left;
+}
+
+
+/*DropdownField : Arrow*/
+.unity-popup-field .unity-base-popup-field__arrow {
+    width:10px;
+    height:10px;
+    align-self:center;
+    background-image: var(--dropdown-arrow);
+    -unity-background-image-tint-color: var(--white-normal);
+}
+
+DropdownField:hover:enabled .unity-base-popup-field__arrow {
+    -unity-background-image-tint-color: var(--theme-color-brighter);
+}

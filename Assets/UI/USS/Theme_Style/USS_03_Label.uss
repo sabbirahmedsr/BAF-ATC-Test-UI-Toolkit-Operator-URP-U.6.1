@@ -1,0 +1,24 @@
+.unity-label-super-heading {
+    color: var(--text-label-heading);
+    font-size: var(--font-size-xxl);
+}
+
+.unity-label-heading {
+    color: var(--text-label-heading);
+    font-size: var(--font-size-xl);
+}
+
+.unity-label-sub-heading {
+    color: var(--text-label-sub-heading);
+    font-size: var(--font-size-lg);
+}
+
+.unity-label-primary {
+    color: var(--text-label-normal:);
+    font-size: var(--font-size-base);
+}
+
+.unity-label-subtle {
+    color: var(--text-label-subtle);
+    font-size: var(--font-size-sm);
+}
