@@ -1,3 +1,13 @@
+/*Key notes
+    1. Them main theme style is = dark mode high contrast scifi style
+    2. --theme-color-main would be the primary color and every color will be consistent with it
+    3. The interactive color should be a semi white version consistent with main theme color
+    4. The normal and hover state should have significant high contrast difference for esily noticable
+    5. --border-static-main should be --theme-color-main
+    6. Don't remove this keynote. Suggest me if something even better is possible.
+*/
+
+
 :root {
     /* Theme Colors (General color palette for the UI) */
     --theme-color-main: #282828;            /* Primary main color for the entire theme*/
@@ -73,8 +83,9 @@
     --icon-color-disabled: #858585; /* Less white for disabled */
 
     /* Scrollbar Colors */
-    --scrollbar-thumb-normal: #ff0000;
-    --scrollbar-thumb-hover: #ff0000;   /* Brighter for hover */
-    --scrollbar-thumb-active: #ff0000;  /* Even Brighter for active */
+    --scrollbar-thumb-normal: #cfcfcf;
+    --scrollbar-thumb-hover: #ffffff;   /* Brighter for hover */
+    --scrollbar-thumb-active: #e9e9e9;  /* Even Brighter for active */
     --scrollbar-track: #181818;         /* Matches --bg-color-deep for a cohesive look */
+    --slider-fill: #e2e2e2;
 }

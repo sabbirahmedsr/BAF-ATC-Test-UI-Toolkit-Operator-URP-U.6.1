@@ -5,8 +5,7 @@ using UnityEngine.UIElements;
 namespace ATC.Data {
     [CreateAssetMenu(fileName = "ATC_UI_Theme_Data", menuName = "Azmi_Studio/ATC_UI_Theme")]
     public class UI_Theme_Data : ScriptableObject {
-        [SerializeField] internal StyleSheet mainStyleSheet;
-        [SerializeField] internal StyleSheet chosenThemeStyle;
+        [SerializeField] internal StyleSheet selectedThemeColor;
         [SerializeField] internal UI_Theme[] allUITheme = new UI_Theme[1];
 
         internal List<string> GetAllThemeName() {

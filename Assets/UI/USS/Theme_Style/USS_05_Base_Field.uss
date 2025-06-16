@@ -1,55 +1,44 @@
-.unity-base-field{
-    flex-direction:row;    
-    margin: var(--spacing-xs); 
+.unity-base-field{   
+    margin: var(--spacing-popup-panel-vertical-distance) 0px; 
+    padding: 0px var(--spacing-header-horizontal-distance) ;
+    justify-content:space-between;
+}
+.unity-base-field--no-label{
+    margin: var(--spacing-header-horizontal-distance); 
+    padding: 0px;
 }
 
-
-
-
 .unity-base-field__label{
+    /* Text */
     color: var(--text-interactive-normal);
+    /* Size and Spacing */
+    width:150px;
     -unity-text-align: middle-left;
-    min-width:150px;
-    flex-shrink:0;
-    flex-grow:0;
-    padding-left: var(--spacing-xs);
 }
 
 .unity-base-field:hover:enabled     .unity-base-field__label {
     color: var(--text-interactive-hover);
 }
 
-.unity-base-field:focus             .unity-base-field__label  {
-    color: var(--text-interactive-focus);
+.unity-base-field:focus:enabled             .unity-base-field__label  {
+    color: var(--text-interactive-active);
 }
-.unity-base-field:focus:hover       .unity-base-field__label { /* Add this combined rule */
-    color: var(--text-interactive-focus);
+.unity-base-field:focus:hover   .unity-base-field__label { /* Add this combined rule */
+    color: var(--text-interactive-hover);
+}
+.unity-base-field:active  .unity-base-field__label { /* Add this combined rule */
+    color: var(--text-interactive-hover);
 }
 
-.unity-base-field:disabled          .unity-base-field__label{    
+.unity-base-field:disabled  .unity-base-field__label{    
     color: var(--text-interactive-disabled);
 }
 
 
 
 
-
-
-
-
-.unity-base-field__input{
-    /* Background & Borders */
-    border-width: var(--border-width-low);
-    border-radius: var(--border-radius-low);
-
-    /* Text */
-    color: var(--text-interactive-normal);
-    font-size: var(--font-size-base);
-    -unity-text-align: middle-center;
-
-    /* Size and Spacing */
-    justify-content:center;
-    flex-shrink:1;
-    flex-grow:1;
-    flex-direction:row;
+.unity-base-field .unity-base-field__input{   
+    right: 0px;
+    margin: 0px; 
+    padding: 0px;
 }

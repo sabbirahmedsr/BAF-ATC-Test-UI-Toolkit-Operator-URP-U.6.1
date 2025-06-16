@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 19101, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Default_Panel_Setting
+  m_Name: 'Panel_Default_[Constant_Pixel]'
   m_EditorClassIdentifier: 
-  themeUss: {fileID: -4733365628477956816, guid: 70da5c3174f4b7a438f702ced53263ea, type: 3}
+  themeUss: {fileID: -4733365628477956816, guid: 8e77755ef4472104db54b611b1f2a47a, type: 3}
   m_DisableNoThemeWarning: 0
   m_TargetTexture: {fileID: 0}
   m_RenderMode: 0
@@ -23,9 +23,9 @@ MonoBehaviour:
   m_Scale: 1
   m_ReferenceDpi: 96
   m_FallbackDpi: 96
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 1280, y: 1080}
   m_ScreenMatchMode: 0
-  m_Match: 1
+  m_Match: 0.968
   m_SortingOrder: 0
   m_TargetDisplay: 0
   m_BindingLogLevel: 0

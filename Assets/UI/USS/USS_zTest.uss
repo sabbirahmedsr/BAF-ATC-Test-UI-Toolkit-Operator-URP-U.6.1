@@ -27,3 +27,17 @@
     -unity-text-align: upper-left;
     white-space: nowrap;
 }
+
+.dawdawd {
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.dawdd {
+    translate: 11px 0;
+    overflow: hidden;
+    height: 60px;
+    width: 118px;
+    transform-origin: left;
+    align-self: auto;
+}

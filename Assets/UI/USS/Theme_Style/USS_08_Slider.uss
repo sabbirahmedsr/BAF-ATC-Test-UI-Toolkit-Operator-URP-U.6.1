@@ -1,44 +1,37 @@
-/*Container*/
-.unity-base-slider .unity-base-slider__drag-container{
-    flex-grow:1;
-}
-
 /*Slider : Background / Tracker*/
 .unity-base-slider .unity-base-slider__tracker {
+    /*Background*/
     background-color: var(--scrollbar-track);
     border-color: var(--border-deep-separator);
-    border-width: 1px;
-    border-radius: 2px;
-    height:6px;
-    margin:-3px 0px 0px 0px;
-
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
+    /*Size and Space*/
+    height: 6px;
+    margin: -3px 0px 0px 0px;
 }
+
 
 
 /*Slider : Fill Color*/
 .unity-base-slider .unity-base-slider__fill {
-    background-color: var(--white-normal);
+    position:absolute;
+    background-color: var(--slider-fill);
 }
 
-.unity-base-slider:hover:enabled .unity-base-slider__fill {
-    background-color: var(--white-hover);
+.unity-base-slider:disabled .unity-base-slider__fill {
+    background-color: var(--border-interactive-disabled);
 }
+
 
 
 /*Slider: Dragger*/
 .unity-base-slider .unity-base-slider__dragger {
+    /*BG & Border*/
     background-color: var(--scrollbar-thumb-normal);
     border-color: var(--border-interactive-normal);
     border-width: var(--border-width-low);
     border-radius: var(--border-radius-low);
-    width: 8px;
+    /*Size and Space*/
+    width: 12px;
     height: 24px;
-    position:absolute;
-    top:50%;
     margin:-12px 0px 0px 0px;
 }
 
@@ -47,40 +40,26 @@
     border-color: var(--border-interactive-hover);
 }
 
-.unity-base-slider:active .unity-base-slider__dragger {
-    background-color: var(--scrollbar-thumb-active);
-    border-color: var(--border-interactive-active);
+.unity-base-slider:disabled .unity-base-slider__dragger {
+    background-color: var(--text-interactive-disabled);
+    border-color: var(--border-interactive-disabled);
 }
+
 
 
 
 /* Slider: Input Field*/
 .unity-base-slider .unity-text-field{
-    -unity-text-align: middle-left;
-    white-space: nowrap;    margin: 0px 0px 0px 4px;
-    width: 60px;
-   flex-shrink:0;
-
-}
-.unity-base-slider .unity-text-field .unity-base-text-field__input--single-line{
-        -unity-text-align: middle-left;
-    white-space: nowrap;
-    margin:0px;
-    padding:10px;
-    overflow:hidden;
-    justify-content:flex-start;
-    flex-basis:0%;
+    width: 50px;
 }
 
-.unity-base-slider .unity-text-field .unity-text-element--inner-input-field-component{
-    
-    padding: 0px 2px 0px 2px;
-    -unity-text-align: middle-left;
-    white-space: nowrap;
-    flex-shrink:0;
-    flex-grow:1;
+.unity-base-slider .unity-text-field .unity-text-field__input{
+    padding:5px;  
 }
 
+.unity-base-slider .unity-text-field .unity-text-element--inner-input-field-component{    
+    padding: 0px 2px 0px 2px;    
+}
 
 
 

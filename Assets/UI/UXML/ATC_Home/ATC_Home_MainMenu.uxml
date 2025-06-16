@@ -1,15 +1,15 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="root" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; align-self: center; justify-content: center; align-content: center;">
+    <ui:VisualElement name="root" style="height: 100%; flex-wrap: nowrap; position: absolute; flex-direction: column; top: 0; left: 0; right: 0; bottom: 0; width: 100%; justify-content: center;">
         <ui:VisualElement name="panel" class="bg-popup" style="flex-grow: 1; position: absolute; align-self: center; justify-content: center; align-content: center; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px;">
             <ui:VisualElement name="title" style="align-self: center; margin-bottom: 20px;">
-                <ui:Label text="ATC SIMULATOR BD" name="txtSimulatorName" class="main-menu-heading-large unity-label-super-heading" style="font-size: 22px; -unity-text-align: middle-center;" />
-                <ui:Label text="ARRIVAL OPERATOR" name="txtOperator" class="main-menu-heading-small unity-label-heading" style="-unity-font-style: normal; scale: 1.03 1.03; -unity-text-align: middle-center;" />
+                <ui:Label text="ATC SIMULATOR BD" name="txtSimulatorName" class="unity-label-super-heading" style="font-size: 22px; -unity-text-align: middle-center;" />
+                <ui:Label text="ARRIVAL OPERATOR" name="txtOperator" class="unity-label-heading" style="-unity-font-style: normal; scale: 1.03 1.03; -unity-text-align: middle-center;" />
             </ui:VisualElement>
             <ui:VisualElement name="actionButton" style="flex-grow: 0; align-self: center; width: 200px;">
-                <ui:Button text="START" name="btnStart" class="unity-button" />
-                <ui:Button text="SETTING" name="btnSetting" />
-                <ui:Button text="ABOUT" name="btnAbout" />
-                <ui:Button text="EXIT" name="btnExit" />
+                <ui:Button text="START" name="btnStart" class="unity-button menu-button" />
+                <ui:Button text="SETTING" name="btnSetting" class="menu-button" />
+                <ui:Button text="ABOUT" name="btnAbout" class="menu-button" />
+                <ui:Button text="EXIT" name="btnExit" class="menu-button" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

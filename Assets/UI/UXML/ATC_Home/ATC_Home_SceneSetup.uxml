@@ -1,13 +1,13 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="root" style="flex-grow: 1; position: absolute; top: 0; left: 0; right: 0; bottom: 0; align-self: center; justify-content: center;">
-        <ui:VisualElement name="heading" class="bg-center-popup__heading" style="align-self: center;">
+    <ui:VisualElement name="root" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; justify-content: center;">
+        <ui:VisualElement name="heading" class="bg-panel__center-popup-heading" style="align-self: center;">
             <ui:Label text="Scene Setup" class="unity-label-heading" style="-unity-font-style: normal; scale: 1.03 1.03;" />
         </ui:VisualElement>
-        <ui:VisualElement name="body" class="bg-center-popup__body" style="flex-grow: 0; align-self: center; align-items: stretch; width: 400px;">
+        <ui:VisualElement name="body" class="bg-panel__center-popup-body" style="align-self: center; align-items: stretch; width: 400px;">
             <ui:DropdownField label="AIRPORT" name="drdAirport" choices="VGHS,VGJR" index="0" />
             <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: space-evenly; align-items: stretch; margin-top: 20px; align-self: auto;">
-                <ui:Button text="BACK" name="btnBack" style="flex-grow: 1;" />
-                <ui:Button text="START" name="btnStart" style="align-self: stretch; align-content: flex-end; justify-content: space-evenly; flex-grow: 1;" />
+                <ui:Button text="BACK" name="btnBack" class="menu-button" style="flex-grow: 1;" />
+                <ui:Button text="START" name="btnStart" class="menu-button" style="align-self: stretch; align-content: flex-end; justify-content: space-evenly; flex-grow: 1;" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

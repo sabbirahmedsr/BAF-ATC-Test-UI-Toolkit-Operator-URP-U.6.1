@@ -1,3 +1,4 @@
+@import url("/Assets/UI/USS Old V1/UI_Theme_Default.tss");
 
 @import url("Theme_Style/USS_01_Background.uss");
 @import url("Theme_Style/USS_02_Border.uss");
@@ -8,26 +9,18 @@
 @import url("Theme_Style/USS_06_TextField.uss");
 @import url("Theme_Style/USS_07_Dropdown.uss");
 @import url("Theme_Style/USS_08_Slider.uss");
-
-
-
-
-
-
-
-
-
+@import url("Theme_Style/USS_Size_Variation.uss");
 
 
 /*Key notes
-    1. The theme style would be a scifi style, high contrast and eye catching
-    2. --theme-color-main would be the primary color and every color will be consisten with it
-    3. The main color would be the main thin line color of the theme
-    3. The --text-interactive color should be a semi white version consistent with theme color
-    4. The border-interactive color should be same as --text-interactive color
+    1. Them main theme style is = dark mode high contrast scifi style
+    2. --theme-color-main would be the primary color and every color will be consistent with it
+    3. The interactive color should be a semi white version consistent with main theme color
+    4. The normal and hover state should have significant high contrast difference for esily noticable
     5. --border-static-main should be --theme-color-main
-    6. the normal and hover state should have high contrast to ensure visible difference
+    6. Don't remove this keynote. Suggest me if something even better is possible.
 */
+
 
 :root {
     /* Theme Colors (General color palette for the UI) */
@@ -104,18 +97,30 @@
     --icon-color-disabled: #858585; /* Less white for disabled */
 
     /* Scrollbar Colors */
-    --scrollbar-thumb-normal: #faf77b;
-    --scrollbar-thumb-hover: #ff0000;   /* Brighter for hover */
-    --scrollbar-thumb-active: #c600ff;  /* Even Brighter for active */
+    --scrollbar-thumb-normal: #cfcfcf;
+    --scrollbar-thumb-hover: #ffffff;   /* Brighter for hover */
+    --scrollbar-thumb-active: #e9e9e9;  /* Even Brighter for active */
     --scrollbar-track: #181818;         /* Matches --bg-color-deep for a cohesive look */
+    --slider-fill: #e2e2e2;
 
 
     /* Utilities & Measurements (Spacing, Radius, Widths, Font Sizes) */
-    --spacing-xs: 2px;      /* Extra small spacing, minimal separation */
-    --spacing-sm: 4px;      /* Small spacing, common for padding and gaps */
-    --spacing-md: 8px;      /* Medium spacing, for standard component separation */
-    --spacing-lg: 12px;     /* Large spacing, for section breaks or major padding */
+    --spacing-xs: 1px;      /* Extra small spacing, minimal separation */
+    --spacing-sm: 2px;      /* Small spacing, common for padding and gaps */
+    --spacing-md: 4px;      /* Medium spacing, for standard component separation */
+    --spacing-lg: 8px;      /* Large spacing, for section breaks or major padding */
     --spacing-xl: 16px;     /* Extra large spacing, for significant layout separation */
+    --spacing-xxl: 24px;    /* Extra large spacing, for significant layout separation */
+
+    /*Spacing*/
+    --spacing-popup-panel-vertical-distance: 8px;
+    --spacing-header-horizontal-distance: 2px;
+
+    /*Padding Distance*/
+    --pading-text-box-left-right: 8px;
+    --pading-text-box-top-down: 8px;
+
+    /**/
 
     /* Border Radius */
     --border-radius-high: 5px;  /* Larger border radius for softer corners */
@@ -124,14 +129,13 @@
     /* Border Widths */
     --border-width-high: 2px;   /* Thicker border width for emphasis */
     --border-width-low: 1px;    /* Thinner border width for subtle lines */
+    --border-width-separator: 1px;
 
     /* Font Sizes */
-    --font-size-base: 14px;         /* Standard text for most UI elements (labels, interactive text) */
-    --font-size-sm: 12px;           /* Smaller text for less important info, sub-labels, tooltips */
+    --font-size-main: 12px;         /* Standard text for most UI elements (labels, interactive text) */
+    --font-size-md: 14px;           /* Medium text size for a little larger item like sub-heading*/
     --font-size-lg: 16px;           /* Larger text, e.g., for section titles or important labels */
     --font-size-xl: 18px;           /* Medium headings, major section titles */
     --font-size-xxl: 24px;          /* Large headings, main window titles */
 
-    /* Icon Reference */
-    --dropdown-arrow: url("project://database/Assets/UI/Icon/UI_Icon.psd?fileID=-395398485&guid=29e9d7c1a6896f7429165ae478fad548&type=3#UI_ICN_Dropdown_Arrow");
 }

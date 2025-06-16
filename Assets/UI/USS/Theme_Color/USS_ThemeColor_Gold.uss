@@ -1,0 +1,68 @@
+/*Key notes
+    1. Them main theme style is = dark mode high contrast scifi style
+    2. --theme-color-main would be the primary color and every color will be consistent with it
+    3. The interactive color should be a semi white version consistent with main theme color
+    4. The normal and hover state should have significant high contrast difference for esily noticable
+    5. --border-static-main should be --theme-color-main
+    6. Don't remove this keynote. Suggest me if something even better is possible.
+*/
+
+
+:root {
+    /* Theme Colors (General color palette for the UI) */
+    --theme-color-main: #FFD700;            /* Primary main color for the entire theme - Pure Gold */
+
+    /*Background Section*/
+
+    /* Background Colors (Hierarchy of darkness for panels and containers) */
+    --bg-color-deep: #1A1700;                           /* Primary background for main windows and content areas - Very dark, almost black with a hint of gold */
+    --bg-color-panel: #2B2600;                          /* Background for sub-panels, groups, and distinct sections - Darker, with a noticeable gold tint */
+    --bg-color-panel-brighter: #3C3500;                 /* Brighter panel variant, often used for panel headers or active tabs - Even more gold-tinted */
+    --bg-color-field: #1F1B00;                          /* Background for input fields and text entry areas - Slightly lighter than deep background */
+    --modal-backdrop-color: rgba(26, 23, 0, 0.95);      /* Overlay to dim content behind popups/modals - Dark gold, very opaque */
+
+    /* Interactive Element Colors (Backgrounds for buttons, toggles, dropdowns, etc.) */
+    --interactive-bg-normal: #5C5200;   /* a dark background consistent with --theme-color-main, but still distinctly gold */
+    --interactive-bg-hover: #9E8F00;    /* Significantly brighter gold for hover */
+    --interactive-bg-active: #FFD700;   /* very BRIGHTER, pure gold for active state */
+    --interactive-bg-focus: #7C7000;    /* Closer to normal than hover, slightly brighter to visualize difference - a mid-range gold */
+    --interactive-bg-disabled: #383100; /* For disabled interactive elements background - Muted gold */
+
+    /* Selection Colors (Backgrounds for selected items in lists, trees, etc.) */
+    --selection-bg-normal: #FFD700;
+    --selection-bg-hover: #FFEE58;  /* Brighter for hover */
+    --selection-bg-active: #FFF176; /* NOW EVEN BRIGHTER for active */
+    --selection-bg-focus: #FFDF00;  /* Closer to normal than hover */
+    --selection-bg-disabled: #8A7A00;
+
+    /*Text Section*/
+
+    /* Text Label Colors (For static text like labels, paragraphs, headings) */
+    --text-label-heading: #FFFFE0;           /* A bright, desaturated gold-white for headings, contrasting with dark background*/
+    --text-label-sub-heading: #FFFACD;       /* A semi-white tone with a gold tint, consistent with --theme-color-main, For internal heading inside panel */
+    --text-label-normal: #FFF8DC;             /* Default text for general labels and descriptions - a clear, readable off-white */
+    --text-label-subtle: #807200;             /* For less prominent labels, placeholders, and secondary info - Muted, darker gold */
+    
+    /* Text Interactive Colors (For text within interactive elements like buttons, input fields) */
+    --text-interactive-normal: #FFFDD0;    /* A semi white tone color, consistent with --theme-color-main */
+    --text-interactive-hover: #FFFFFF;      /* Brighter than normal, Make Visible Contrast */
+    --text-interactive-active: #FFFFF0;      /* Slightly brighter than hover */
+    --text-interactive-focus: #FFED82;      /* Closer to --text-interactive-normal, Slightly Brighter, Visible Contrast - a light yellowish gold */
+    --text-interactive-disabled: #A69500;   /* Less white/gold than normal for disabled */
+
+    /*Border Section*/
+
+    /* Border Static Colors (For fixed, non-interactive panel outlines and separators) */
+    --border-static-main: #FFD700;            /* same as --theme-color-main */
+    --border-static-separator: #4C4400;       /* For thin lines separating sections within panels, or subtle dividers - a dark gold */
+    --border-deep-separator: #292400;          /* Very deep, subtle separator for strong visual breaks or deepest outlines - almost black with a hint of gold */
+
+    /* Border Interactive Colors (For borders of interactive elements like buttons, fields) */
+    --border-interactive-normal: #665C00;    /* A dark, distinct gold */
+    --border-interactive-field:  #3D3600;    /* slight brighter than --border-deep-separator, consistent with --bg-color-field */
+    --border-interactive-hover: #FFEE58;     /* Same as --selection-bg-hover for consistency and strong contrast */
+    --border-interactive-active: #FFDF00;    /* Similar to --selection-bg-focus for active, provides good contrast */
+    --border-interactive-focus: #FFF176;     /* A lighter, brighter gold for focus, providing good contrast */
+    --border-interactive-disabled: #4F4700;  /* Muted gold for disabled borders */
+
+    /* State Section */

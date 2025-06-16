@@ -1,0 +1,91 @@
+/*Key notes
+    1. Them main theme style is = dark mode high contrast scifi style
+    2. --theme-color-main would be the primary color and every color will be consistent with it
+    3. The interactive color should be a semi white version consistent with main theme color
+    4. The normal and hover state should have significant high contrast difference for esily noticable
+    5. --border-static-main should be --theme-color-main
+    6. Don't remove this keynote. Suggest me if something even better is possible.
+*/
+
+
+:root {
+    /* Theme Colors (General color palette for the UI) */
+    --theme-color-main: #8CACC6;            /* Primary main color for the entire theme - Inspired by your theme-color-main */
+
+    /*Background Section*/
+
+    /* Background Colors (Hierarchy of darkness for panels and containers) */
+    --bg-color-deep: #131415;                           /* Primary background for main windows and content areas - Inspired by your bg-color-black */
+    --bg-color-panel: #3D3E40;                          /* Background for sub-panels, groups, and distinct sections - Inspired by your bg-color-panel */
+    --bg-color-panel-brighter: #47494B;                 /* Brighter panel variant, often used for panel headers or active tabs - Inspired by your bg-color-button */
+    --bg-color-field: #28292B;                          /* Background for input fields and text entry areas - Inspired by your bg-color-inputField */
+    --modal-backdrop-color: rgba(24, 25, 27, 0.95);      /* Overlay to dim content behind popups/modals - Derived from bg-color-main with high opacity */
+
+    /* Interactive Element Colors (Backgrounds for buttons, toggles, dropdowns, etc.) */
+    --interactive-bg-normal: #47494B;   /* a dark background consistent with --theme-color-main - Inspired by your bg-color-button */
+    --interactive-bg-hover: #5B5E60;    /* Significantly brighter for hover - Inspired by your bg-color-hover */
+    --interactive-bg-active: #66686A;   /* very BRIGHTER for active state - Inspired by your bg-color-focus */
+    --interactive-bg-focus: #515456;    /* Closer to normal than hover, slightly brighter to visualize difference - Inspired by your bg-color-dropdown */
+    --interactive-bg-disabled: #323436; /* For disabled interactive elements background - Inspired by your bg-color-card */
+
+    /* Selection Colors (Backgrounds for selected items in lists, trees, etc.) */
+    --selection-bg-normal: #8CACC6;     /* Inspired by your theme-color-main */
+    --selection-bg-hover: #B7D2E6;      /* Brighter for hover - Inspired by your theme-color-brighter */
+    --selection-bg-active: #DEEDF5;     /* NOW EVEN BRIGHTER for active - Inspired by your theme-color-brightest */
+    --selection-bg-focus: #A6ABB0;      /* Closer to normal than hover - Inspired by your white-defocus */
+    --selection-bg-disabled: #6B747D;   /* Inspired by your theme-color-disabled */
+
+    /*Text Section*/
+
+    /* Text Label Colors (For static text like labels, paragraphs, headings) */
+    --text-label-heading: #F9FBFC;            /* same as --theme-color-main - Inspired by your white-focus, almost pure white */
+    --text-label-sub-heading: #E2E7EC;        /* A semi white tone color, consistent with --theme-color-main, For internal heading inside panel - Inspired by your white-hover */
+    --text-label-normal: #D3D8DD;             /* Default text for general labels and descriptions - Inspired by your white-normal */
+    --text-label-subtle: #8D9399;             /* For less prominent labels, placeholders, and secondary info - Inspired by your text-color-placeholder */
+    
+    /* Text Interactive Colors (For text within interactive elements like buttons, input fields) */
+    --text-interactive-normal: #D3D8DD;     /* A semi white tone color, consistent with --theme-color-main - Inspired by your white-normal */
+    --text-interactive-hover: #F9FBFC;       /* Brighter than normal, Make Visible Contrast - Inspired by your white-focus */
+    --text-interactive-active: #DEEDF5;      /* slightly brighter than hover - Inspired by your theme-color-brightest */
+    --text-interactive-focus: #B7D2E6;       /* Closer to --text-interactive-normal, Slightly Brighter, Visible Contrast - Inspired by your theme-color-brighter */
+    --text-interactive-disabled: #7F8285;    /* Less white than normal for disabled - Inspired by your white-disabled */
+
+    /*Border Section*/
+
+    /* Border Static Colors (For fixed, non-interactive panel outlines and separators) */
+    --border-static-main: #8CACC6;            /* same as --theme-color-main - Inspired by your theme-color-main */
+    --border-static-separator: #131415;       /* For thin lines separating sections within panels, or subtle dividers - Inspired by your bg-color-black */
+    --border-deep-separator: #0F1011;         /* Very deep, subtle separator for strong visual breaks or deepest outlines - A slightly darker black based on your bg-color-black */
+
+    /* Border Interactive Colors (For borders of interactive elements like buttons, fields) */
+    --border-interactive-normal: #A6ABB0;     /* same as --text-interactive-normal - Inspired by your white-defocus */
+    --border-interactive-field:  #28292B;     /* slight brighter than --border-deep-separator, consistent with --bg-color-field - Inspired by your bg-color-inputField */
+    --border-interactive-hover: #E2E7EC;      /* same as --text-interactive-hover - Inspired by your white-hover */
+    --border-interactive-active: #B7D2E6;     /* same as --text-interactive-active - Inspired by your theme-color-brighter */
+    --border-interactive-focus: #DEEDF5;      /* same as --text-interactive-focus - Inspired by your theme-color-brightest */
+    --border-interactive-disabled: #7F8285;   /* same as --text-interactive-disabled - Inspired by your white-disabled */
+
+    /* State Section */
+
+    /* State Colors (Feedback colors for user actions, errors, warnings, etc.) */
+    --state-color-error: #E53935;         /* Red for errors and critical warnings - Standard vibrant red */
+    --state-color-warning: #FFB300;       /* Amber/Yellow for warnings and cautions - Standard vibrant yellow */
+    --state-color-success: #4CAF50;       /* Green for success and positive feedback - Standard vibrant green */
+    --state-color-info: #2196F3;          /* Blue for general information and non-critical messages - Standard vibrant blue */
+
+    /* Icon & Thumb */
+
+    /* Icon Colors (For monochromatic icons used throughout the UI) */
+    --icon-color-normal: #D3D8DD;      /* Matching "less white" theme - Inspired by your white-normal */
+    --icon-color-hover: #F9FBFC;       /* Brighter for hover - Inspired by your white-focus */
+    --icon-color-active: #DEEDF5;      /* Even brighter for active - Inspired by your theme-color-brightest */
+    --icon-color-focus: #B7D2E6;       /* Closer to normal for focus - Inspired by your theme-color-brighter */
+    --icon-color-disabled: #7F8285;    /* Less white for disabled - Inspired by your white-disabled */
+
+    /* Scrollbar Colors */
+    --scrollbar-thumb-normal: #A6ABB0;
+    --scrollbar-thumb-hover: #D3D8DD;       /* Brighter for hover */
+    --scrollbar-thumb-active: #E2E7EC;    /* Even Brighter for active */
+    --scrollbar-track: #1E1F21;             /* Matches --bg-color-deep for a cohesive look - Inspired by your bg-color-main */
+    --slider-fill: #8CACC6;                 /* Inspired by your theme-color-main */
+}

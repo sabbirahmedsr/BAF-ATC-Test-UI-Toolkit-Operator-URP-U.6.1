@@ -1,91 +1,91 @@
-@import url("USS_03_Button.uss");
+/*Key notes
+    1. Them main theme style is = dark mode high contrast scifi style
+    2. --theme-color-main would be the primary color and every color will be consistent with it
+    3. The interactive color should be a semi white version consistent with main theme color
+    4. The normal and hover state should have significant high contrast difference for esily noticable
+    5. --border-static-main should be --theme-color-main
+    6. Don't remove this keynote. Suggest me if something even better is possible.
+*/
+
 
 :root {
     /* Theme Colors (General color palette for the UI) */
-    --theme-color-main: #dddddd; /* Primary light color for major elements and default text */
-    --theme-color-highlight: #64B5FF; /* Prominent color for highlights, accents, and focused states */
-    --theme-color-disabled: #808080; /* Universal color for disabled elements and text */
-    /**/
+    --theme-color-main: #FF0033;            /* Primary main color for the entire theme - Sci-fi Red */
+
+    /*Background Section*/
+
     /* Background Colors (Hierarchy of darkness for panels and containers) */
-    --bg-color-deep: #282828;               /* Primary background for main windows and content areas */
-    --bg-color-panel: #383838;              /* Background for sub-panels, groups, and distinct sections */
-    --bg-color-panel-brighter: #3E3E3E;     /* Brighter panel variant, often used for panel headers or active tabs */
-    --bg-color-field: #202020;              /* Background for input fields and text entry areas */
-    --modal-backdrop-color: rgba(40, 40, 40, 0.80); /* Overlay to dim content behind popups/modals */
-    /**/
+    --bg-color-deep: #1A0008;                           /* Primary background for main windows and content areas - Very dark, almost black with a hint of red */
+    --bg-color-panel: #2B0011;                          /* Background for sub-panels, groups, and distinct sections - Darker, with a noticeable red tint */
+    --bg-color-panel-brighter: #3C0018;                 /* Brighter panel variant, often used for panel headers or active tabs - Even more red-tinted */
+    --bg-color-field: #1F000A;                          /* Background for input fields and text entry areas - Slightly lighter than deep background */
+    --modal-backdrop-color: rgba(10, 0, 0, 0.95);       /* Overlay to dim content behind popups/modals - Dark red, very opaque */
+
     /* Interactive Element Colors (Backgrounds for buttons, toggles, dropdowns, etc.) */
-    --interactive-bg-normal: #585858;
-    --interactive-bg-hover: #646464;
-    --interactive-bg-active: #646464;   /* Often same as hover, or slightly darker */
-    --interactive-bg-focus: #6E6E6E;
-    --interactive-bg-disabled: #404040; /* For disabled interactive elements background */
-    /**/
+    --interactive-bg-normal: #5C002E;   /* A dark background consistent with --theme-color-main, but still distinctly red */
+    --interactive-bg-hover: #9E004F;    /* Significantly brighter red for hover */
+    --interactive-bg-active: #FF0066;   /* Very BRIGHTER, almost pure red for active state */
+    --interactive-bg-focus: #7C003E;    /* Closer to normal than hover, slightly brighter to visualize difference - a mid-range red */
+    --interactive-bg-disabled: #38001C; /* For disabled interactive elements background - Muted red */
+
     /* Selection Colors (Backgrounds for selected items in lists, trees, etc.) */
-    --selection-bg-normal: #525252;
-    --selection-bg-hover: #606060;
-    --selection-bg-active: #606060;
-    --selection-bg-focus: #6A6A6A;
-    --selection-bg-disabled: #484848;
-    /**/
+    --selection-bg-normal: #FF0033;
+    --selection-bg-hover: #FF3366;  /* Brighter for hover */
+    --selection-bg-active: #FF6699; /* NOW EVEN BRIGHTER for active */
+    --selection-bg-focus: #FF004C;  /* Closer to normal than hover */
+    --selection-bg-disabled: #8A002C;
+
+    /*Text Section*/
+
     /* Text Label Colors (For static text like labels, paragraphs, headings) */
-    --text-label-normal: #CCCCCC;       /* Default text for general labels and descriptions */
-    --text-label-subtle: #A0A0A0;       /* For less prominent labels, placeholders, and secondary info */
-    --text-label-heading: #E0E0E0;      /* For titles and section headings */
-    --text-label-disabled: #808080;     /* Text for disabled labels and non-interactive states */
-    /**/
+    --text-label-heading: #FFCCCC;           /* A bright, desaturated red-white for headings, contrasting with dark background*/
+    --text-label-sub-heading: #FF99AA;       /* A semi-white tone with a red tint, consistent with --theme-color-main, For internal heading inside panel */
+    --text-label-normal: #FF6677;             /* Default text for general labels and descriptions - a clear, readable red */
+    --text-label-subtle: #80333D;             /* For less prominent labels, placeholders, and secondary info - Muted, darker red */
+    
     /* Text Interactive Colors (For text within interactive elements like buttons, input fields) */
-    --text-interactive-normal: #CCCCCC; /* Text on interactive elements in their normal state */
-    --text-interactive-hover: #E0E0E0;
-    --text-interactive-active: #E0E0E0;
-    --text-interactive-focus: #FFFFFF;
-    --text-interactive-disabled: #A0A0A0;
-    /**/
+    --text-interactive-normal: #FFD9D9;    /* A semi-white tone with a red tint, consistent with --theme-color-main */
+    --text-interactive-hover: #FFFFFF;      /* Brighter than normal, Make Visible Contrast */
+    --text-interactive-active: #FFEEEE;      /* Slightly brighter than hover */
+    --text-interactive-focus: #FFC0CB;      /* Closer to --text-interactive-normal, Slightly Brighter, Visible Contrast - a light pinkish red */
+    --text-interactive-disabled: #A65353;   /* Less white/red than normal for disabled */
+
+    /*Border Section*/
+
     /* Border Static Colors (For fixed, non-interactive panel outlines and separators) */
-    --border-static-normal: #484848;    /* Border for fixed panels and general non-interactive outlines */
-    --border-static-separator: #383838; /* For thin lines separating sections within panels, or subtle dividers */
-    --border-deep-separator: #141414;   /* Very deep, subtle separator for strong visual breaks or deepest outlines */
-    /**/
+    --border-static-main: #FF0033;            /* same as --theme-color-main */
+    --border-static-separator: #4C001F;       /* For thin lines separating sections within panels, or subtle dividers - a dark red */
+    --border-deep-separator: #29000D;          /* Very deep, subtle separator for strong visual breaks or deepest outlines - almost black with a hint of red */
+
     /* Border Interactive Colors (For borders of interactive elements like buttons, fields) */
-    --border-interactive-normal: #585858;   /* Normal state border for buttons, dropdowns, etc. */
-    --border-interactive-hover: #525252;    /* Slightly lighter border on hover */
-    --border-interactive-active: #525252;   /* Active state border */
-    --border-interactive-focus: #64B5F6;    /* Accent color for focused interactive elements */
-    --border-interactive-disabled: #303030; /* Border for disabled interactive elements */
-    /**/
+    --border-interactive-normal: #660033;    /* A dark, distinct red */
+    --border-interactive-field:  #3D001A;    /* Slightly brighter than --border-deep-separator, consistent with --bg-color-field */
+    --border-interactive-hover: #FF3366;     /* Same as --selection-bg-hover for consistency and strong contrast */
+    --border-interactive-active: #FF004C;    /* Similar to --selection-bg-focus for active, provides good contrast */
+    --border-interactive-focus: #FF99CC;     /* A lighter, brighter red for focus, providing good contrast */
+    --border-interactive-disabled: #4F0028;  /* Muted red for disabled borders */
+
+    /* State Section */
+
     /* State Colors (Feedback colors for user actions, errors, warnings, etc.) */
-    --state-color-error: #F44336;   /* Red for errors and critical warnings */
-    --state-color-warning: #FFC107; /* Amber/Yellow for warnings and cautions */
-    --state-color-success: #4CAF50; /* Green for success and positive feedback */
-    --state-color-info: #2196F3;    /* Blue for general information and non-critical messages */
-    /**/
+    --state-color-error: #FF0000;    /* Red for errors and critical warnings - Intense Red */
+    --state-color-warning: #FFDD00;  /* Amber/Yellow for warnings and cautions - Bright Yellow */
+    --state-color-success: #00FF00;  /* Green for success and positive feedback - Bright Green */
+    --state-color-info: #00CCFF;     /* Blue for general information and non-critical messages - Bright Blue */
+
+    /* Icon & Thumb */
+
     /* Icon Colors (For monochromatic icons used throughout the UI) */
-    --icon-color-normal: #CCCCCC;
-    --icon-color-hover: #E0E0E0;
-    --icon-color-active: #FFFFFF;
-    --icon-color-focus: #FFFFFF;
-    --icon-color-disabled: #808080;
-    /**/
+    --icon-color-normal: #FFD9D9;    /* Matching "less white" theme */
+    --icon-color-hover: #FFFFFF;      /* Brighter for hover */
+    --icon-color-active: #FFEBEB;      /* Even brighter for active */
+    --icon-color-focus: #FFCCCC;      /* Closer to normal for focus */
+    --icon-color-disabled: #A65353;  /* Less white for disabled */
+
     /* Scrollbar Colors */
-    --scrollbar-thumb-normal: #606060;
-    --scrollbar-thumb-hover: #707070;
-    --scrollbar-thumb-active: #808080;
-    --scrollbar-track: #282828; /* Matches --bg-color-deep for a cohesive look */
-    /**/
-    /* Utilities & Measurements (Spacing, Radius, Widths, Font Sizes) */
-    --spacing-xs: 4px; /* Extra small spacing, minimal separation */
-    --spacing-sm: 8px; /* Small spacing, common for padding and gaps */
-    --spacing-md: 12px; /* Medium spacing, for standard component separation */
-    --spacing-lg: 16px; /* Large spacing, for section breaks or major padding */
-    --spacing-xl: 24px; /* Extra large spacing, for significant layout separation */
-    /**/
-    --border-radius-high: 5px; /* Larger border radius for softer corners */
-    --border-radius-low: 3px; /* Smaller border radius for sharper corners */
-    --border-width-high: 2px; /* Thicker border width for emphasis */
-    --border-width-low: 1px; /* Thinner border width for subtle lines */
-    /**/
-    --font-size-base: 14px; /* Standard text for most UI elements (labels, interactive text) */
-    --font-size-sm: 12px; /* Smaller text for less important info, sub-labels, tooltips */
-    --font-size-lg: 16px; /* Larger text, e.g., for section titles or important labels */
-    --font-size-xl: 18px; /* Medium headings, major section titles */
-    --font-size-xxl: 24px; /* Large headings, main window titles */
+    --scrollbar-thumb-normal: #FF3366;
+    --scrollbar-thumb-hover: #FF6699;     /* Brighter for hover */
+    --scrollbar-thumb-active: #FF99CC;   /* Even Brighter for active */
+    --scrollbar-track: #1A0008;           /* Matches --bg-color-deep for a cohesive look */
+    --slider-fill: #FF0033;
 }

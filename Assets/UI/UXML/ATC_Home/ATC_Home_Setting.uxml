@@ -1,15 +1,15 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement name="root" style="flex-grow: 1; position: absolute; top: 0; left: 0; right: 0; bottom: 0; align-self: center; justify-content: center; align-content: center;">
-        <ui:VisualElement name="heding" class="bg-center-popup__heading" style="align-self: center; margin-bottom: 0; flex-direction: row;">
+        <ui:VisualElement name="heding" class="bg-panel__center-popup-heading" style="align-self: center; margin-bottom: 0; flex-direction: row;">
             <ui:Label text="SETTING" class="main-menu-heading-small unity-label unity-label-heading" style="-unity-font-style: normal; scale: 1.03 1.03; -unity-text-align: upper-center;" />
         </ui:VisualElement>
-        <ui:VisualElement name="body" class="bg-center-popup__body" style="flex-grow: 0; align-self: center; align-items: stretch; width: 400px;">
-            <ui:TextField label="SERVER IP" placeholder-text="127.0.0.1" name="txtFieldServerIP" keyboard-type="NumberPad" hide-placeholder-on-focus="true" />
-            <ui:TextField label="SERVER PORT" placeholder-text="7777" name="txtFieldServerPort" keyboard-type="NumberPad" hide-placeholder-on-focus="true" style="height: 40px;" />
+        <ui:VisualElement name="body" class="bg-panel__center-popup-body" style="flex-grow: 0; align-self: center; align-items: stretch; width: 400px;">
+            <ui:TextField label="SERVER IP" placeholder-text="127.0.0.1" name="txtFieldServerIP" keyboard-type="NumberPad" hide-placeholder-on-focus="true" max-length="15" />
+            <ui:TextField label="SERVER PORT" placeholder-text="7777" name="txtFieldServerPort" keyboard-type="NumberPad" hide-placeholder-on-focus="true" max-length="8" />
             <ui:DropdownField label="UI THEME" name="drdUITheme" choices="DEFAULT" index="0" />
             <ui:Slider label="UI SCALE" value="1" high-value="1.8" fill="true" show-input-field="true" inverted="false" name="sldrUIScale" low-value="0.8" />
             <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: space-evenly; align-items: auto; margin-top: 20px;">
-                <ui:Button text="BACK" name="btnBack" style="flex-direction: row; align-self: stretch; align-content: flex-end; justify-content: space-evenly; flex-grow: 1; flex-shrink: 1;" />
+                <ui:Button text="BACK" name="btnBack" class="menu-button" style="flex-direction: row; align-self: stretch; align-content: flex-end; justify-content: space-evenly; flex-grow: 1; flex-shrink: 1;" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

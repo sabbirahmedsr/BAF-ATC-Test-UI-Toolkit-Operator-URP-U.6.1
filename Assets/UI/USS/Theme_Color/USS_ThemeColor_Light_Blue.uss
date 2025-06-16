@@ -1,0 +1,91 @@
+/*Key notes
+    1. Them main theme style is = dark mode high contrast scifi style
+    2. --theme-color-main would be the primary color and every color will be consistent with it
+    3. The interactive color should be a semi white version consistent with main theme color
+    4. The normal and hover state should have significant high contrast difference for esily noticable
+    5. --border-static-main should be --theme-color-main
+    6. Don't remove this keynote. Suggest me if something even better is possible.
+*/
+
+
+:root {
+    /* Theme Colors (General color palette for the UI) */
+    --theme-color-main: #87CEEB;            /* Primary main color for the entire theme - Sky Blue */
+
+    /*Background Section*/
+
+    /* Background Colors (Hierarchy of darkness for panels and containers) */
+    --bg-color-deep: #0D161A;                           /* Primary background for main windows and content areas - Very dark, almost black with a hint of blue */
+    --bg-color-panel: #1A2933;                          /* Background for sub-panels, groups, and distinct sections - Darker, with a noticeable blue tint */
+    --bg-color-panel-brighter: #2A3B47;                 /* Brighter panel variant, often used for panel headers or active tabs - Even more blue-tinted */
+    --bg-color-field: #132026;                          /* Background for input fields and text entry areas - Slightly lighter than deep background */
+    --modal-backdrop-color: rgba(13, 22, 26, 0.95);      /* Overlay to dim content behind popups/modals - Dark blue, very opaque */
+
+    /* Interactive Element Colors (Backgrounds for buttons, toggles, dropdowns, etc.) */
+    --interactive-bg-normal: #37576B;   /* a dark background consistent with --theme-color-main, but still distinctly blue */
+    --interactive-bg-hover: #5A8CA3;    /* Significantly brighter blue for hover */
+    --interactive-bg-active: #87CEEB;   /* very BRIGHTER, pure sky blue for active state */
+    --interactive-bg-focus: #486E82;    /* Closer to normal than hover, slightly brighter to visualize difference - a mid-range blue */
+    --interactive-bg-disabled: #213B49; /* For disabled interactive elements background - Muted blue */
+
+    /* Selection Colors (Backgrounds for selected items in lists, trees, etc.) */
+    --selection-bg-normal: #87CEEB;
+    --selection-bg-hover: #ADD8E6;  /* Brighter for hover */
+    --selection-bg-active: #B0E0E6; /* NOW EVEN BRIGHTER for active */
+    --selection-bg-focus: #9ACEDF;  /* Closer to normal than hover */
+    --selection-bg-disabled: #6D90A3;
+
+    /*Text Section*/
+
+    /* Text Label Colors (For static text like labels, paragraphs, headings) */
+    --text-label-heading: #E0FFFF;           /* A bright, desaturated light-blue-white for headings, contrasting with dark background*/
+    --text-label-sub-heading: #D4F3F7;       /* A semi white tone color, consistent with --theme-color-main, For internal heading inside panel */
+    --text-label-normal: #C0E8EE;             /* Default text for general labels and descriptions - a clear, readable off-white */
+    --text-label-subtle: #587F8C;             /* For less prominent labels, placeholders, and secondary info - Muted, darker blue */
+    
+    /* Text Interactive Colors (For text within interactive elements like buttons, input fields) */
+    --text-interactive-normal: #CEF5FF;    /* A semi white tone color, consistent with --theme-color-main */
+    --text-interactive-hover: #FFFFFF;      /* Brighter than normal, Make Visible Contrast */
+    --text-interactive-active: #E0FFFF;      /* Slightly brighter than hover */
+    --text-interactive-focus: #B6F0FF;      /* Closer to --text-interactive-normal, Slightly Brighter, Visible Contrast - a light cyan-blue */
+    --text-interactive-disabled: #7F9FAD;   /* Less white/blue than normal for disabled */
+
+    /*Border Section*/
+
+    /* Border Static Colors (For fixed, non-interactive panel outlines and separators) */
+    --border-static-main: #87CEEB;            /* same as --theme-color-main */
+    --border-static-separator: #2A3B47;       /* For thin lines separating sections within panels, or subtle dividers - a dark blue */
+    --border-deep-separator: #132026;          /* Very deep, subtle separator for strong visual breaks or deepest outlines - almost black with a hint of blue */
+
+    /* Border Interactive Colors (For borders of interactive elements like buttons, fields) */
+    --border-interactive-normal: #37576B;    /* A dark, distinct blue */
+    --border-interactive-field:  #213B49;    /* slight brighter than --border-deep-separator, consistent with --bg-color-field */
+    --border-interactive-hover: #5A8CA3;     /* Same as --selection-bg-hover for consistency and strong contrast */
+    --border-interactive-active: #9ACEDF;    /* Similar to --selection-bg-focus for active, provides good contrast */
+    --border-interactive-focus: #B0E0E6;     /* A lighter, brighter blue for focus, providing good contrast */
+    --border-interactive-disabled: #486E82;  /* Muted blue for disabled borders */
+
+    /* State Section */
+
+    /* State Colors (Feedback colors for user actions, errors, warnings, etc.) */
+    --state-color-error: #E53935;         /* Red for errors and critical warnings - Standard vibrant red */
+    --state-color-warning: #FFB300;       /* Amber/Yellow for warnings and cautions - Standard vibrant yellow */
+    --state-color-success: #4CAF50;       /* Green for success and positive feedback - Standard vibrant green */
+    --state-color-info: #2196F3;          /* Blue for general information and non-critical messages - Standard vibrant blue */
+
+    /* Icon & Thumb */
+
+    /* Icon Colors (For monochromatic icons used throughout the UI) */
+    --icon-color-normal: #CEF5FF;    /* Matching "less white" theme */
+    --icon-color-hover: #FFFFFF;      /* Brighter for hover */
+    --icon-color-active: #E0FFFF;      /* Even brighter for active */
+    --icon-color-focus: #D4F3F7;      /* Closer to normal for focus */
+    --icon-color-disabled: #7F9FAD;  /* Less white for disabled */
+
+    /* Scrollbar Colors */
+    --scrollbar-thumb-normal: #87CEEB;
+    --scrollbar-thumb-hover: #ADD8E6;     /* Brighter for hover */
+    --scrollbar-thumb-active: #B0E0E6;   /* Even Brighter for active */
+    --scrollbar-track: #0D161A;           /* Matches --bg-color-deep for a cohesive look */
+    --slider-fill: #87CEEB;
+}

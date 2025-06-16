@@ -12,30 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a429848e5c325eb4bbf815db002a5a0c, type: 3}
   m_Name: UI_Theme_Data
   m_EditorClassIdentifier: 
-  mainStyleSheet: {fileID: 7433441132597879392, guid: 906cb49b247c32e4aac692bc29395447, type: 3}
-  chosenThemeStyle: {fileID: 7433441132597879392, guid: 9608c2f157c49264bb1d80f6fa5fbc06, type: 3}
+  selectedThemeColor: {fileID: 7433441132597879392, guid: 8a103724da8532d4a81982984272907a, type: 3}
   allUITheme:
   - caption: GREY
     mainColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
-    styleSheet: {fileID: 7433441132597879392, guid: cbbecb5bc58983f4cac63ecd57852a6c, type: 3}
+    styleSheet: {fileID: 7433441132597879392, guid: d3c2cd3de6c3a834287e6e029ef25a1b, type: 3}
   - caption: MONO
     mainColor: {r: 0.30949628, g: 0.39958346, b: 0.6132076, a: 1}
-    styleSheet: {fileID: 7433441132597879392, guid: be3dd956c40cf174c93dc1f06ed5944c, type: 3}
+    styleSheet: {fileID: 7433441132597879392, guid: 9dfb443ccac4d7846bf4ed45a73e24d6, type: 3}
   - caption: AQUA
     mainColor: {r: 0, g: 1, b: 1, a: 1}
-    styleSheet: {fileID: 7433441132597879392, guid: dafbde26bf6b29d4da2ae178953bee19, type: 3}
+    styleSheet: {fileID: 7433441132597879392, guid: 8a103724da8532d4a81982984272907a, type: 3}
   - caption: RED
     mainColor: {r: 0.8018868, g: 0, b: 0, a: 1}
-    styleSheet: {fileID: 7433441132597879392, guid: aad72396f409453459658674bf1d3504, type: 3}
+    styleSheet: {fileID: 7433441132597879392, guid: f5b072cd847f33a4f8308a42cddaa285, type: 3}
   - caption: GOLD
     mainColor: {r: 0.8, g: 0.6081557, b: 0, a: 1}
-    styleSheet: {fileID: 7433441132597879392, guid: cd3c60114a18a5f409b98bbb54929a94, type: 3}
+    styleSheet: {fileID: 7433441132597879392, guid: 7d8405f4ae5cc40418a21c5cb8a26592, type: 3}
   - caption: LIME
     mainColor: {r: 0.2062567, g: 0.9716981, b: 0.21796086, a: 1}
-    styleSheet: {fileID: 7433441132597879392, guid: 88272a6fe40b8b34689b571df234c3b7, type: 3}
-  - caption: L.BLUE
+    styleSheet: {fileID: 7433441132597879392, guid: f1a3764fc01a39a4b93e51eb7cdec3e5, type: 3}
+  - caption: BLUE
     mainColor: {r: 0.21960661, g: 0.7259891, b: 0.990566, a: 1}
-    styleSheet: {fileID: 7433441132597879392, guid: 1695d0415f4f7a846bcf8a9eca7e95d3, type: 3}
-  - caption: L.B.DAY
-    mainColor: {r: 0.12775902, g: 0.6556789, b: 0.9339623, a: 1}
-    styleSheet: {fileID: 7433441132597879392, guid: 9608c2f157c49264bb1d80f6fa5fbc06, type: 3}
+    styleSheet: {fileID: 7433441132597879392, guid: 27e872ea05256524b9620339c8d6936c, type: 3}

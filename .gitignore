@@ -122,9 +122,11 @@ crashlytics-build.properties
 *.mp3
 
 # Cusom folder choice [to ingore uploading]
-/Assets/Models/   # Exclude entire Models folder
-/Assets/Textures/ # Exclude entire Textures folder
-/Assets/Audio/    # Exclude entire Audio folder
-/Assets/zTest/	  # Excdule entire zTest folder		
-/Assets/zTest/	  # Excdule entire zTest folder		
-/Assets/URP Setting/ # Excdule entire URP Setting folder	
+/[Aa]ssets/Model/   		# Exclude entire Models folder
+/[Aa]ssets/Models/   		# Exclude entire Models folder
+/[Aa]ssets/Texture/ 		# Exclude entire Textures folder
+/[Aa]ssets/Textures/ 		# Exclude entire Textures folder
+/[Aa]ssets/Audio/    		# Exclude entire Audio folder
+/[Aa]ssets/zTest/	 	# Excdule entire zTest folder		
+/[Aa]ssets/zTest/	  	# Excdule entire zTest folder		
+/[Aa]ssets/URP Setting/ 	# Excdule entire URP Setting folder	
