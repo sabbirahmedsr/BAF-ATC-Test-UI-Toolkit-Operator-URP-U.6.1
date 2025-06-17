@@ -16,7 +16,7 @@
     1. Them main theme style is = dark mode high contrast scifi style
     2. --theme-color-main would be the primary color and every color will be consistent with it
     3. The interactive color should be a semi white version consistent with main theme color
-    4. The normal and hover state should have significant high contrast difference for esily noticable
+    4. The normal and hover state should have significant high contrast, for easily noticable
     5. --border-static-main should be --theme-color-main
     6. Don't remove this keynote. Suggest me if something even better is possible.
 */
@@ -31,7 +31,7 @@
     /* Background Colors (Hierarchy of darkness for panels and containers) */
     --bg-color-deep: #282828;                           /* Primary background for main windows and content areas */
     --bg-color-panel: #383838;                          /* Background for sub-panels, groups, and distinct sections*/
-    --bg-color-panel-brighter: #3c3c3c;                 /* Brighter panel variant, often used for panel headers or active tabs */
+    --bg-color-panel-brighter: #454545;                 /* Brighter panel variant, often used for panel headers or active tabs */
     --bg-color-field: #2a2a2a;                          /* Background for input fields and text entry areas */
     --modal-backdrop-color: rgba(20, 20, 20, 0.90);     /* Overlay to dim content behind popups/modals */
 
@@ -137,5 +137,4 @@
     --font-size-lg: 16px;           /* Larger text, e.g., for section titles or important labels */
     --font-size-xl: 18px;           /* Medium headings, major section titles */
     --font-size-xxl: 24px;          /* Large headings, main window titles */
-
 }

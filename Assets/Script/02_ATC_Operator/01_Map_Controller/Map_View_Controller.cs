@@ -7,7 +7,7 @@ using static ATC.Operator.MapView.Map_View_Controller;
 namespace ATC.Operator.MapView {
     [System.Serializable]   
     internal class Map_View_Controller {
-        internal enum MapThemeEnum { NO_THEME, DAY_THEME, NIGHT_THEME, SATELITE}
+        internal enum MapThemeEnum { NONE, DAY, NIGHT, SATELITE}
 
         [Tooltip("This will be the heading name, on the top left corner of the map ui panel")]
         [SerializeField] internal string headingCaption;
@@ -47,7 +47,8 @@ namespace ATC.Operator.MapView {
             drdMapType.index = curMapType;
             int curMapTheme = PlayerPrefs.GetInt(headingCaption + nameof(drdMapTheme), 0);
             drdMapTheme.index = curMapTheme;
-            
+            SetMapTypeAndTheme(curMapType, curMapTheme);
+
 
             // Register Callback
             drdMapType.RegisterValueChangedCallback<string>(OnDrdChange_MapType);

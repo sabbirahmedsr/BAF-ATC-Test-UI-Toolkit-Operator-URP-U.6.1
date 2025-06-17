@@ -1,11 +1,7 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement name="header" class="bg-panel__header">
         <ui:VisualElement name="heading" class="bg-panel__header-name">
-            <ui:Label text="MAP HEADING" name="txtHeading" class="unity-label-sub-heading" />
-        </ui:VisualElement>
-        <ui:VisualElement style="flex-direction: row-reverse; right: 0; position: absolute; height: 100%;">
-            <ui:DropdownField name="drdMapType" index="0" choices="TYPE" style="flex-shrink: 1;" />
-            <ui:DropdownField name="drdMapTheme" choices="THEME" index="0" style="flex-shrink: 1;" />
+            <ui:Label text="INFO" name="txtHeading" class="unity-label-sub-heading" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

@@ -113,8 +113,6 @@ crashlytics-build.properties
 
 
 
-
-
 # Large Files & Assets (Add specific folders/extensions here)
 *.mp4
 *.mov
@@ -122,14 +120,20 @@ crashlytics-build.properties
 *.wav.meta
 *.mp3
 *.mp3.meta
+
+# Cusom folder choice [to ingore uploading]
+/[Aa]ssets/[Aa]udio/*    	# Exclude everything inside Audio folder, but keep the audio folder
+/[Aa]ssets/[zz]Test/	 	# Excdule entire zTest folder		
+/[Aa]ssets/[Uu]RP [Ss]etting/	# Excdule entire URP Setting folder	
+
+#Ignore PSD
 *.psd
 *.psd.meta
 
-# Cusom folder choice [to ingore uploading]
-/[Aa]ssets/[Mm]odel/  		# Exclude entire Models folder
-/[Aa]ssets/[Mm]odels/  		# Exclude entire Models folder
-/[Aa]ssets/[Tt]exture/ 		# Exclude entire Textures folder
-/[Aa]ssets/[Tt]extures/		# Exclude entire Textures folder
-/[Aa]ssets/[Aa]udio/    	# Exclude entire Audio folder
-/[Aa]ssets/[zz]Test/	 	# Excdule entire zTest folder		
-/[Aa]ssets/[Uu]RP [Ss]etting/	# Excdule entire URP Setting folder	
+#Don't Ignore these psd
+!/Assets/Model/Airport_VGHS/Map_Color_Palette.psd
+!/Assets/Model/Airport_VGHS/Map_Color_Palette.psd.meta
+
+
+
+

@@ -1,5 +1,11 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:Template name="ATC_Radar_Map" src="project://database/Assets/UI/UXML/ATC_Operator/ATC_Map_View.uxml?fileID=9197481963319205126&amp;guid=9ad29fac894959a4f82c1851afb94bc9&amp;type=3#ATC_Map_View" />
+    <ui:Template name="ATC_Strip_View" src="project://database/Assets/UI/UXML/ATC_Operator/ATC_Strip_View.uxml?fileID=9197481963319205126&amp;guid=43e1a04bb3f9ddd45a00b77340086447&amp;type=3#ATC_Strip_View" />
+    <ui:Template name="ATC_Info_View" src="project://database/Assets/UI/UXML/ATC_Operator/ATC_Info_View.uxml?fileID=9197481963319205126&amp;guid=f7164417dff1787488a3b15acfebde41&amp;type=3#ATC_Info_View" />
+    <ui:Template name="ATC_Command_View" src="project://database/Assets/UI/UXML/ATC_Operator/ATC_Command_View.uxml?fileID=9197481963319205126&amp;guid=491620115a7af9a4dbb8c9925b33c5ff&amp;type=3#ATC_Command_View" />
     <ui:Instance template="ATC_Radar_Map" name="radarMapRoot" class="radar-map-bg" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 50%;" />
     <ui:Instance template="ATC_Radar_Map" name="surfaceMapRoot" class="surface-map-bg" style="position: absolute; top: 50%; left: 50%; right: 0; bottom: 0; width: 50%; height: 50%;" />
+    <ui:Instance template="ATC_Strip_View" name="stripViewRoot" class="strip-view-bg" style="width: 25%; height: 50%; position: absolute; left: 50%;" />
+    <ui:Instance template="ATC_Info_View" name="infoViewRoot" class="info-view-bg" style="width: 25%; left: 75%; height: 25%; position: absolute; top: 0;" />
+    <ui:Instance template="ATC_Command_View" name="cmdViewRoot" class="command-view-bg" style="height: 25%; position: absolute; left: 75%; width: 25%; top: 25%;" />
 </ui:UXML>
