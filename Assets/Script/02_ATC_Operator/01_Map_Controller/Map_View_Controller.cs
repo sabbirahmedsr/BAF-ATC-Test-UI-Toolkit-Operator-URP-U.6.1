@@ -1,14 +1,19 @@
+using System;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static ATC.Operator.MapView.Map_View_Controller;
 
 namespace ATC.Operator.MapView {
     [System.Serializable]   
     internal class Map_View_Controller {
+        internal enum MapThemeEnum { NO_THEME, DAY_THEME, NIGHT_THEME, SATELITE}
+
         [Tooltip("This will be the heading name, on the top left corner of the map ui panel")]
         [SerializeField] internal string headingCaption;
         [Tooltip("This is the root name of this map controller ui, under uiDocument")]
         [SerializeField] internal string myRootName;
-        [SerializeField] internal MapTypeContainer[] allMapTypeContainer;
+        [SerializeField] internal Map_Container[] allMapContainer;
 
         [Header("UI Reference")]
         private TextElement txtHeading = null;
@@ -23,40 +28,48 @@ namespace ATC.Operator.MapView {
             drdMapType = myRoot.Q<DropdownField>("drdMapType");
             drdMapTheme = myRoot.Q<DropdownField>("drdMapTheme");
 
+
             // Setup initial variable
+            /// heading
             txtHeading.text = headingCaption;
+            /// Map type dropdown
             drdMapType.choices.Clear();
-            for (int i = 0; i < allMapTypeContainer.Length; i++) {
-                drdMapType.choices.Add(allMapTypeContainer[i].caption);
+            for (int i = 0; i < allMapContainer.Length; i++) {
+                drdMapType.choices.Add(allMapContainer[i].caption);
             }
-            drdMapType.RegisterValueChangedCallback<string>(OnDrdChange_MapType);
+            /// Map Theme dropdown
+            drdMapTheme.choices.Clear();
+            drdMapTheme.choices = Enum.GetNames(typeof(MapThemeEnum)).ToList();
+
+
+            // Get set variable from PlayerPrefs
             int curMapType = PlayerPrefs.GetInt(headingCaption + nameof(drdMapType), 0);
-            drdMapType.SetValueWithoutNotify(allMapTypeContainer[curMapType].caption);
-            SetMapType(curMapType);
+            drdMapType.index = curMapType;
+            int curMapTheme = PlayerPrefs.GetInt(headingCaption + nameof(drdMapTheme), 0);
+            drdMapTheme.index = curMapTheme;
+            
+
+            // Register Callback
+            drdMapType.RegisterValueChangedCallback<string>(OnDrdChange_MapType);
+            drdMapTheme.RegisterValueChangedCallback<string>(OnDrdChange_MapTheme);
+
         }
 
         private void OnDrdChange_MapType(ChangeEvent<string> evt) {
-            SetMapType(drdMapType.index);
+            SetMapTypeAndTheme(drdMapType.index, drdMapTheme.index);
+        }
+        private void OnDrdChange_MapTheme(ChangeEvent<string> evt) {
+            SetMapTypeAndTheme(drdMapType.index, drdMapTheme.index);
         }
 
-        internal virtual void SetMapType(int index) {
-            for (int i = 0; i < allMapTypeContainer.Length; i++) {
-                allMapTypeContainer[i].mapModelRoot.gameObject.SetActive(i == index);
-                allMapTypeContainer[i].camera.gameObject.SetActive(i == index);
+        internal virtual void SetMapTypeAndTheme(int _mapTypeIndex, int _mapThemeIndex) {
+            for (int i = 0; i < allMapContainer.Length; i++) {
+                allMapContainer[i].Activate(i == _mapTypeIndex, _mapThemeIndex);
             }
-            PlayerPrefs.SetInt(headingCaption + nameof(drdMapType), index);
+            PlayerPrefs.SetInt(headingCaption + nameof(drdMapType), _mapTypeIndex);
+            PlayerPrefs.GetInt(headingCaption + nameof(drdMapTheme), _mapThemeIndex);
         }
 
 
-    }
-
-    [System.Serializable]
-    internal struct MapTypeContainer {
-        [Tooltip("UI Dropdown option name")]
-        [SerializeField] internal string caption;
-        [Tooltip("3D model root of the map mesh. it will be activate/deactivate based on given index")]
-        [SerializeField] internal Transform mapModelRoot;
-        [Tooltip("Top view camera of the map. it will be activate/deactivate based on given index. also bg color will be changed according to ui theme color")]
-        [SerializeField] internal Camera camera;
     }
 }
