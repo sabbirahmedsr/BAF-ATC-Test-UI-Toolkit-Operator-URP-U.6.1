@@ -119,8 +119,11 @@ crashlytics-build.properties
 *.mp4
 *.mov
 *.wav
+*.wav.meta
 *.mp3
+*.mp3.meta
 *.psd
+*.psd.meta
 
 # Cusom folder choice [to ingore uploading]
 /[Aa]ssets/[Mm]odel/  		# Exclude entire Models folder
