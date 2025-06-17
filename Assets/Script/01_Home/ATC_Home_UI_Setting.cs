@@ -64,9 +64,9 @@ namespace ATC.Home.UI {
 
 
         internal void ChangeUITheme(int rIndex) {
-            uiThemeData.selectedThemeColor = uiThemeData.GetStyleSheet(rIndex);
+            uiThemeData.selectedUITheme = uiThemeData.GetUITheme(rIndex);
             uiManager.rootVisualElement.styleSheets.Clear();
-            uiManager.rootVisualElement.styleSheets.Add(uiThemeData.selectedThemeColor);
+            uiManager.rootVisualElement.styleSheets.Add(uiThemeData.selectedUITheme.styleSheet);
             PlayerPrefs.SetInt(nameof(drdUITheme), rIndex);
         }
         internal void ChangeUIScale(float rValue) {

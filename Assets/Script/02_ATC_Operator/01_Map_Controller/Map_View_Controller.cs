@@ -2,12 +2,12 @@ using System;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
-using static ATC.Operator.MapView.Map_View_Controller;
 
 namespace ATC.Operator.MapView {
-    [System.Serializable]   
+    [System.Serializable]
     internal class Map_View_Controller {
-        internal enum MapThemeEnum { NONE, DAY, NIGHT, SATELITE}
+        internal enum MapThemeEnum { none, day, night, satelite }
+        internal string[] MapThemeName = new string[] { "NONE", "LITE", "DARK", "S.MAP" };
 
         [Tooltip("This will be the heading name, on the top left corner of the map ui panel")]
         [SerializeField] internal string headingCaption;
@@ -39,7 +39,7 @@ namespace ATC.Operator.MapView {
             }
             /// Map Theme dropdown
             drdMapTheme.choices.Clear();
-            drdMapTheme.choices = Enum.GetNames(typeof(MapThemeEnum)).ToList();
+            drdMapTheme.choices = MapThemeName.ToList();
 
 
             // Get set variable from PlayerPrefs
@@ -70,7 +70,5 @@ namespace ATC.Operator.MapView {
             PlayerPrefs.SetInt(headingCaption + nameof(drdMapType), _mapTypeIndex);
             PlayerPrefs.GetInt(headingCaption + nameof(drdMapTheme), _mapThemeIndex);
         }
-
-
     }
 }

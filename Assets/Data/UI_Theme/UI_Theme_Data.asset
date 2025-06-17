@@ -12,26 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a429848e5c325eb4bbf815db002a5a0c, type: 3}
   m_Name: UI_Theme_Data
   m_EditorClassIdentifier: 
-  selectedThemeColor: {fileID: 7433441132597879392, guid: 8a103724da8532d4a81982984272907a, type: 3}
+  selectedUITheme:
+    caption: BLUE
+    mainColor: {r: 0.21960661, g: 0.7259891, b: 0.990566, a: 1}
+    backgroundColor: {r: 0.050980393, g: 0.08627451, b: 0.101960786, a: 1}
+    styleSheet: {fileID: 7433441132597879392, guid: 27e872ea05256524b9620339c8d6936c, type: 3}
   allUITheme:
-  - caption: GREY
+  - caption: DARK
     mainColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
+    backgroundColor: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
     styleSheet: {fileID: 7433441132597879392, guid: d3c2cd3de6c3a834287e6e029ef25a1b, type: 3}
   - caption: MONO
     mainColor: {r: 0.30949628, g: 0.39958346, b: 0.6132076, a: 1}
+    backgroundColor: {r: 0.07450981, g: 0.078431375, b: 0.08235294, a: 1}
     styleSheet: {fileID: 7433441132597879392, guid: 9dfb443ccac4d7846bf4ed45a73e24d6, type: 3}
   - caption: AQUA
     mainColor: {r: 0, g: 1, b: 1, a: 1}
+    backgroundColor: {r: 0, g: 0.05882353, b: 0.07058824, a: 1}
     styleSheet: {fileID: 7433441132597879392, guid: 8a103724da8532d4a81982984272907a, type: 3}
   - caption: RED
     mainColor: {r: 0.8018868, g: 0, b: 0, a: 1}
+    backgroundColor: {r: 0.101960786, g: 0, b: 0.03137255, a: 1}
     styleSheet: {fileID: 7433441132597879392, guid: f5b072cd847f33a4f8308a42cddaa285, type: 3}
   - caption: GOLD
     mainColor: {r: 0.8, g: 0.6081557, b: 0, a: 1}
+    backgroundColor: {r: 0.101960786, g: 0.09019608, b: 0, a: 1}
     styleSheet: {fileID: 7433441132597879392, guid: 7d8405f4ae5cc40418a21c5cb8a26592, type: 3}
   - caption: LIME
     mainColor: {r: 0.2062567, g: 0.9716981, b: 0.21796086, a: 1}
+    backgroundColor: {r: 0, g: 0.101960786, b: 0, a: 1}
     styleSheet: {fileID: 7433441132597879392, guid: f1a3764fc01a39a4b93e51eb7cdec3e5, type: 3}
   - caption: BLUE
     mainColor: {r: 0.21960661, g: 0.7259891, b: 0.990566, a: 1}
+    backgroundColor: {r: 0.050980393, g: 0.08627451, b: 0.101960786, a: 1}
     styleSheet: {fileID: 7433441132597879392, guid: 27e872ea05256524b9620339c8d6936c, type: 3}

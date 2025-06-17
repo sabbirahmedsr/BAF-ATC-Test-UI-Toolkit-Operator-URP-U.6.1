@@ -23,10 +23,10 @@ namespace ATC.Operator.MapView {
         internal void Activate(bool rBool, int themeIndex) {
             gameObject.SetActive(rBool);
             if (rBool) {
-                tNoThemeObject.gameObject.SetActive(themeIndex == (int)MapThemeEnum.NONE);
-                tDayThemeObject.gameObject.SetActive(themeIndex == (int)MapThemeEnum.DAY);
-                tNightThemeObject.gameObject.SetActive(themeIndex == (int)MapThemeEnum.NIGHT);
-                tSateliteThemeObject.gameObject.SetActive(themeIndex == (int)MapThemeEnum.SATELITE);
+                tNoThemeObject.gameObject.SetActive(themeIndex == (int)MapThemeEnum.none);
+                tDayThemeObject.gameObject.SetActive(themeIndex == (int)MapThemeEnum.day);
+                tNightThemeObject.gameObject.SetActive(themeIndex == (int)MapThemeEnum.night);
+                tSateliteThemeObject.gameObject.SetActive(themeIndex == (int)MapThemeEnum.satelite);
             }
         }
     }

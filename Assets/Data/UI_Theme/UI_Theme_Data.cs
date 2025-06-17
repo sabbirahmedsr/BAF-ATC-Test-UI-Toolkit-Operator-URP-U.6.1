@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 namespace ATC.Data {
     [CreateAssetMenu(fileName = "ATC_UI_Theme_Data", menuName = "Azmi_Studio/ATC_UI_Theme")]
     public class UI_Theme_Data : ScriptableObject {
-        [SerializeField] internal StyleSheet selectedThemeColor;
+        [SerializeField] internal UI_Theme selectedUITheme;
         [SerializeField] internal UI_Theme[] allUITheme = new UI_Theme[1];
 
         internal List<string> GetAllThemeName() {
@@ -16,12 +16,12 @@ namespace ATC.Data {
             return result;
         }
 
-        internal StyleSheet GetStyleSheet(int index) {
+        internal UI_Theme GetUITheme(int index) {
             if (index < 0 || index >= allUITheme.Length) {
                 Debug.LogError("No ui theme available with given index " + index);
                 return null;
             }
-            return allUITheme[index].styleSheet;
+            return allUITheme[index];
         }
     }
 
@@ -29,6 +29,7 @@ namespace ATC.Data {
     internal class UI_Theme {
         [SerializeField] internal string caption;
         [SerializeField] internal Color mainColor;
+        [SerializeField] internal Color backgroundColor;
         [SerializeField] internal StyleSheet styleSheet;
     }
 }

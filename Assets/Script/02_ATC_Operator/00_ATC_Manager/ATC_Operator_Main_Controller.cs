@@ -8,9 +8,12 @@ namespace ATC.Operator {
         [SerializeField] internal RadarMapController radarMapController;
         [SerializeField] internal SurfaceMapController surfaceMapController;
 
+        [Header("Internat Helping Script")]
+        [SerializeField] private ATC_Operator_Theme_Loader uiThemeLoader;
         void Start() {
             radarMapController.Initialize(this);
             surfaceMapController.Initialize(this);
+            uiThemeLoader.Initialize(this);
         }
     }
 }
