@@ -2,7 +2,7 @@ using UnityEngine;
 using static ATC.Operator.MapView.Map_View_Controller;
 
 namespace ATC.Operator.MapView {
-    public class Map_Container : MonoBehaviour {
+    public class Map_Model_Holder : MonoBehaviour {
         [Tooltip("UI Dropdown option name")]
         [SerializeField] internal string caption;
 

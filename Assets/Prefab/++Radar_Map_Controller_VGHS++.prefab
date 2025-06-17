@@ -50,7 +50,7 @@ MonoBehaviour:
   mapViewController:
     headingCaption: RADAR MAP
     myRootName: radarMapRoot
-    allMapContainer:
+    allMapModelHolder:
     - {fileID: 363697512318889214}
     - {fileID: 5640583609051060648}
     - {fileID: 1093793979594021116}
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5560281095232378709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bb84549802c8084aa10fec8779cb206, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c02de0d56a52a8488f2a316030a5fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   caption: 50 NM
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6413935165687983867}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bb84549802c8084aa10fec8779cb206, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c02de0d56a52a8488f2a316030a5fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   caption: 12 NM
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7946004289276999495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bb84549802c8084aa10fec8779cb206, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c02de0d56a52a8488f2a316030a5fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   caption: 25 NM

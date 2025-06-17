@@ -1,7 +1,5 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement name="header" class="bg-panel__header">
-        <ui:VisualElement name="heading" class="bg-panel__header-name">
-            <ui:Label text="INFO" name="txtHeading" class="unity-label-sub-heading" />
-        </ui:VisualElement>
+        <ui:Label text="INFO" name="txtHeading" class="bg-panel__header-name" />
     </ui:VisualElement>
 </ui:UXML>

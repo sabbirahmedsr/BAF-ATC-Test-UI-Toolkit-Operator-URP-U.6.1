@@ -8,14 +8,14 @@
 
     /* Text */
     color: var(--text-interactive-normal);
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-main);
     -unity-text-align: middle-center;
 
     /* Size and Spacing */
-    min-height:20px;
-    min-width: 5px;
-    max-width: 200px;
-    padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-lg) var(--spacing-xl);
+    min-height: 20px;
+    min-width: 140px;
+    max-width: 220px;
+    padding: var(--pading-text-box-top-down) var(--pading-text-box-left-right);
     margin: 0px;
 }
 
@@ -42,4 +42,11 @@
 
 DropdownField:hover:enabled .unity-base-popup-field__arrow {
     -unity-background-image-tint-color: var(--text-interactive-hover);
+}
+
+
+/*Dropdown: text*/
+.unity-popup-field .unity-base-popup-field__text{
+    -unity-text-align: middle-center;
+    margin:0px 4px 0px 0px ;
 }

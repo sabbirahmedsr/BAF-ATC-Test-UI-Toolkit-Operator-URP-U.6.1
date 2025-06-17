@@ -12,6 +12,7 @@
 @import url("Theme_Style/USS_Size_Variation.uss");
 
 
+
 /*Key notes
     1. Them main theme style is = dark mode high contrast scifi style
     2. --theme-color-main would be the primary color and every color will be consistent with it
@@ -22,7 +23,9 @@
 */
 
 
+
 :root {
+
     /* Theme Colors (General color palette for the UI) */
     --theme-color-main: #282828;            /* Primary main color for the entire theme*/
 
@@ -117,7 +120,7 @@
     --spacing-header-horizontal-distance: 2px;
 
     /*Padding Distance*/
-    --pading-text-box-left-right: 8px;
+    --pading-text-box-left-right: 12px;
     --pading-text-box-top-down: 8px;
 
     /**/
@@ -132,9 +135,12 @@
     --border-width-separator: 1px;
 
     /* Font Sizes */
+    -unity-font-definition: url("project://database/Assets/UI/Fonts/toxigenesis/toxigenesis%20bd.otf?fileID=12800000&guid=77c0a388c36057c4981402cac962298e&type=3#toxigenesis bd");
     --font-size-main: 12px;         /* Standard text for most UI elements (labels, interactive text) */
     --font-size-md: 14px;           /* Medium text size for a little larger item like sub-heading*/
     --font-size-lg: 16px;           /* Larger text, e.g., for section titles or important labels */
     --font-size-xl: 18px;           /* Medium headings, major section titles */
     --font-size-xxl: 24px;          /* Large headings, main window titles */
+
 }
+

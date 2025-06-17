@@ -1,5 +1,5 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="VisualElement" class="bg-main" style="flex-grow: 1; -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/toxigenesis/toxigenesis%20bd.otf?fileID=12800000&amp;guid=77c0a388c36057c4981402cac962298e&amp;type=3#toxigenesis bd&quot;); align-self: center; justify-content: center; align-items: center; width: 100%; height: 100%;">
+    <ui:VisualElement name="VisualElement" class="bg-main" style="flex-grow: 1; align-self: center; justify-content: center; align-items: center; width: 100%; height: 100%;">
         <ui:Label text="Label" class="asdadw asdawd" />
         <ui:VisualElement name="header" class="bg-panel__header" style="position: absolute; top: 0;">
             <ui:VisualElement name="name" class="bg-panel__header-name">

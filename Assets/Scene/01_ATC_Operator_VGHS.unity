@@ -319,10 +319,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ++Surface_Map_Controller++
       objectReference: {fileID: 0}
-    - target: {fileID: 5551953790944230604, guid: b3f45510f12e05243982e87ff6eee95d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6727573516896305100, guid: b3f45510f12e05243982e87ff6eee95d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -13,7 +13,7 @@ namespace ATC.Operator.MapView {
         [SerializeField] internal string headingCaption;
         [Tooltip("This is the root name of this map controller ui, under uiDocument")]
         [SerializeField] internal string myRootName;
-        [SerializeField] internal Map_Container[] allMapContainer;
+        [SerializeField] internal Map_Model_Holder[] allMapModelHolder;
 
         [Header("UI Reference")]
         private TextElement txtHeading = null;
@@ -34,8 +34,8 @@ namespace ATC.Operator.MapView {
             txtHeading.text = headingCaption;
             /// Map type dropdown
             drdMapType.choices.Clear();
-            for (int i = 0; i < allMapContainer.Length; i++) {
-                drdMapType.choices.Add(allMapContainer[i].caption);
+            for (int i = 0; i < allMapModelHolder.Length; i++) {
+                drdMapType.choices.Add(allMapModelHolder[i].caption);
             }
             /// Map Theme dropdown
             drdMapTheme.choices.Clear();
@@ -44,9 +44,9 @@ namespace ATC.Operator.MapView {
 
             // Get set variable from PlayerPrefs
             int curMapType = PlayerPrefs.GetInt(headingCaption + nameof(drdMapType), 0);
-            drdMapType.index = curMapType;
+            drdMapType.SetValueWithoutNotify(allMapModelHolder[curMapType].caption);
             int curMapTheme = PlayerPrefs.GetInt(headingCaption + nameof(drdMapTheme), 0);
-            drdMapTheme.index = curMapTheme;
+            drdMapTheme.SetValueWithoutNotify(MapThemeName[curMapTheme]);
             SetMapTypeAndTheme(curMapType, curMapTheme);
 
 
@@ -63,12 +63,12 @@ namespace ATC.Operator.MapView {
             SetMapTypeAndTheme(drdMapType.index, drdMapTheme.index);
         }
 
-        internal virtual void SetMapTypeAndTheme(int _mapTypeIndex, int _mapThemeIndex) {
-            for (int i = 0; i < allMapContainer.Length; i++) {
-                allMapContainer[i].Activate(i == _mapTypeIndex, _mapThemeIndex);
+        internal void SetMapTypeAndTheme(int _mapTypeIndex, int _mapThemeIndex) {
+            for (int i = 0; i < allMapModelHolder.Length; i++) {
+                allMapModelHolder[i].Activate(i == _mapTypeIndex, _mapThemeIndex);
             }
             PlayerPrefs.SetInt(headingCaption + nameof(drdMapType), _mapTypeIndex);
-            PlayerPrefs.GetInt(headingCaption + nameof(drdMapTheme), _mapThemeIndex);
+            PlayerPrefs.SetInt(headingCaption + nameof(drdMapTheme), _mapThemeIndex);
         }
     }
 }
