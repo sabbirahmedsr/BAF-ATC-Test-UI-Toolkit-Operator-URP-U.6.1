@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6544478603609997883}
-  - component: {fileID: 334617294378143597}
+  - component: {fileID: 2111997661196306049}
   m_Layer: 8
   m_Name: ++Radar_Map_Controller_VGHS++
   m_TagString: Untagged
@@ -35,7 +35,7 @@ Transform:
   - {fileID: 1045557858858526068}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &334617294378143597
+--- !u!114 &2111997661196306049
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,16 +44,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 4795729541605535913}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39c298028963836488cb3f7a5815b76c, type: 3}
+  m_Script: {fileID: 11500000, guid: 06dd216b5507db846a39242fb3986eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapViewController:
-    headingCaption: RADAR MAP
-    myRootName: radarMapRoot
+  headingCaption: RADAR MAP
+  myRootName: radarMapRoot
+  mapModelController:
     allMapModelHolder:
     - {fileID: 363697512318889214}
     - {fileID: 5640583609051060648}
     - {fileID: 1093793979594021116}
+  mapNodeController:
+    mapNodeTemplate: {fileID: 9197481963319205126, guid: 5cea5a2f189ecaa43b1127f60f78449b, type: 3}
 --- !u!1 &5560281095232378709
 GameObject:
   m_ObjectHideFlags: 0

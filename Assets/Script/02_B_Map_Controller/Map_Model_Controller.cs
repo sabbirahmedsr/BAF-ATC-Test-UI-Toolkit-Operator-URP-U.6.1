@@ -1,37 +1,30 @@
-using System;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace ATC.Operator.MapView {
+    internal enum MapThemeEnum { none, day, night, satelite }
+
     [System.Serializable]
-    internal class Map_View_Controller {
-        internal enum MapThemeEnum { none, day, night, satelite }
+    public class Map_Model_Controller {
         internal string[] MapThemeName = new string[] { "NONE", "LITE", "DARK", "S.MAP" };
 
-        [Tooltip("This will be the heading name, on the top left corner of the map ui panel")]
-        [SerializeField] internal string headingCaption;
-        [Tooltip("This is the root name of this map controller ui, under uiDocument")]
-        [SerializeField] internal string myRootName;
         [SerializeField] internal Map_Model_Holder[] allMapModelHolder;
 
         [Header("UI Reference")]
-        private TextElement txtHeading = null;
         private DropdownField drdMapType = null;
         private DropdownField drdMapTheme = null;
 
-        internal void Initialize(UIDocument _uiDocument) {
-            VisualElement myRoot = _uiDocument.rootVisualElement.Q<VisualElement>(myRootName); 
+        private Map_Controller mapController;
+
+        internal void Initialize(Map_Controller _mapController) {
+            mapController = _mapController;
 
             // Find Reference;
-            txtHeading = myRoot.Q<TextElement>("txtHeading");
-            drdMapType = myRoot.Q<DropdownField>("drdMapType");
-            drdMapTheme = myRoot.Q<DropdownField>("drdMapTheme");
-
+            drdMapType = mapController.mapRoot.Q<DropdownField>("drdMapType");
+            drdMapTheme = mapController.mapRoot.Q<DropdownField>("drdMapTheme");
 
             // Setup initial variable
-            /// heading
-            txtHeading.text = headingCaption;
             /// Map type dropdown
             drdMapType.choices.Clear();
             for (int i = 0; i < allMapModelHolder.Length; i++) {
@@ -43,9 +36,9 @@ namespace ATC.Operator.MapView {
 
 
             // Get set variable from PlayerPrefs
-            int curMapType = PlayerPrefs.GetInt(headingCaption + nameof(drdMapType), 0);
+            int curMapType = PlayerPrefs.GetInt(mapController.headingCaption + nameof(drdMapType), 0);
             drdMapType.SetValueWithoutNotify(allMapModelHolder[curMapType].caption);
-            int curMapTheme = PlayerPrefs.GetInt(headingCaption + nameof(drdMapTheme), 0);
+            int curMapTheme = PlayerPrefs.GetInt(mapController.headingCaption + nameof(drdMapTheme), 0);
             drdMapTheme.SetValueWithoutNotify(MapThemeName[curMapTheme]);
             SetMapTypeAndTheme(curMapType, curMapTheme);
 
@@ -53,7 +46,6 @@ namespace ATC.Operator.MapView {
             // Register Callback
             drdMapType.RegisterValueChangedCallback<string>(OnDrdChange_MapType);
             drdMapTheme.RegisterValueChangedCallback<string>(OnDrdChange_MapTheme);
-
         }
 
         private void OnDrdChange_MapType(ChangeEvent<string> evt) {
@@ -67,8 +59,8 @@ namespace ATC.Operator.MapView {
             for (int i = 0; i < allMapModelHolder.Length; i++) {
                 allMapModelHolder[i].Activate(i == _mapTypeIndex, _mapThemeIndex);
             }
-            PlayerPrefs.SetInt(headingCaption + nameof(drdMapType), _mapTypeIndex);
-            PlayerPrefs.SetInt(headingCaption + nameof(drdMapTheme), _mapThemeIndex);
+            PlayerPrefs.SetInt(mapController.headingCaption + nameof(drdMapType), _mapTypeIndex);
+            PlayerPrefs.SetInt(mapController.headingCaption + nameof(drdMapTheme), _mapThemeIndex);
         }
     }
 }

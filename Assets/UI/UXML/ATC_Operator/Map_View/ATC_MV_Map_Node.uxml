@@ -1,0 +1,14 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/USS/Theme_Style/USS_03_Label.uss?fileID=7433441132597879392&amp;guid=d4166e5f0763e2b4bac85bac8e444cac&amp;type=3#USS_03_Label" />
+    <Style src="project://database/Assets/UI/USS/Theme_Style/USS_01_Background.uss?fileID=7433441132597879392&amp;guid=4ba703985e7d99a418b0a9df33590588&amp;type=3#USS_01_Background" />
+    <ui:VisualElement focusable="true" style="background-color: rgba(36, 36, 36, 0.76); position: absolute; flex-direction: column; border-left-color: rgb(0, 250, 255); border-right-color: rgb(0, 250, 255); border-top-color: rgb(0, 250, 255); border-bottom-color: rgb(0, 250, 255); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
+        <ui:VisualElement name="top" style="flex-direction: row;">
+            <ui:Label text="BG 367" enabled="true" name="txtCallSign" style="color: rgb(0, 255, 230); font-size: 18px; -unity-text-align: middle-center; margin-top: 2px; margin-right: 2px; margin-bottom: 2px; margin-left: 2px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+            <ui:Label text="360°" name="txtHeading" class="unity-label-primary" style="-unity-text-align: lower-center; justify-content: flex-end; margin-top: 2px; margin-right: 2px; margin-bottom: 2px; margin-left: 4px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="down" style="flex-direction: row;">
+            <ui:Label text="0 KTS" name="txtSpeed" class="unity-label-primary" style="-unity-text-align: middle-center; margin-top: 2px; margin-right: 2px; margin-bottom: 2px; margin-left: 4px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+            <ui:Label text="1000 feet" name="txtHeight" class="unity-label-primary" style="-unity-text-align: middle-center; margin-top: 2px; margin-right: 2px; margin-bottom: 2px; margin-left: 10px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

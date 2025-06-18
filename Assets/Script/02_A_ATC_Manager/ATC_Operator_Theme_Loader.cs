@@ -12,13 +12,13 @@ namespace ATC.Operator {
             rootElement.styleSheets.Clear();
             rootElement.styleSheets.Add(uiThemeData.selectedUITheme.styleSheet);
 
-            for (int i = 0; i < _mainController.radarMapController.mapViewController.allMapModelHolder.Length; i++) {
-                Camera mapCam = _mainController.radarMapController.mapViewController.allMapModelHolder[i].mapCamera;
+            for (int i = 0; i < _mainController.radarMapController.mapModelController.allMapModelHolder.Length; i++) {
+                Camera mapCam = _mainController.radarMapController.mapModelController.allMapModelHolder[i].mapCamera;
                 mapCam.backgroundColor = uiThemeData.selectedUITheme.backgroundColor;
             }
 
-            for (int i = 0; i < _mainController.surfaceMapController.mapViewController.allMapModelHolder.Length; i++) {
-                Camera mapCam = _mainController.surfaceMapController.mapViewController.allMapModelHolder[i].mapCamera;
+            for (int i = 0; i < _mainController.surfaceMapController.mapModelController.allMapModelHolder.Length; i++) {
+                Camera mapCam = _mainController.surfaceMapController.mapModelController.allMapModelHolder[i].mapCamera;
                 mapCam.backgroundColor = uiThemeData.selectedUITheme.backgroundColor;
             }
         }

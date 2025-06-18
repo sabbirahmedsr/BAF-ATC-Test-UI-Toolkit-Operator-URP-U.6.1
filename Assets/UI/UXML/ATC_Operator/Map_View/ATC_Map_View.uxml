@@ -6,4 +6,5 @@
             <ui:DropdownField name="drdMapTheme" choices="THEME" index="0" style="flex-shrink: 1;" />
         </ui:VisualElement>
     </ui:VisualElement>
+    <ui:VisualElement name="mapNodeContainer" style="flex-grow: 1; overflow: hidden;" />
 </ui:UXML>
