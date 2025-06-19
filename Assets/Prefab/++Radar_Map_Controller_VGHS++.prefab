@@ -56,6 +56,11 @@ MonoBehaviour:
     - {fileID: 1093793979594021116}
   mapNodeController:
     mapNodeTemplate: {fileID: 9197481963319205126, guid: 5cea5a2f189ecaa43b1127f60f78449b, type: 3}
+    tempTarget: {fileID: 0}
+    screenPos: {x: 0, y: 0}
+    screenPosModified: {x: 0, y: 0}
+    initialOffsetRatio: {x: 0, y: 0, z: 0}
+    initialOffset: {x: 0, y: 0}
 --- !u!1 &5560281095232378709
 GameObject:
   m_ObjectHideFlags: 0

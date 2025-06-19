@@ -61,6 +61,7 @@ namespace ATC.Operator.MapView {
             }
             PlayerPrefs.SetInt(mapController.headingCaption + nameof(drdMapType), _mapTypeIndex);
             PlayerPrefs.SetInt(mapController.headingCaption + nameof(drdMapTheme), _mapThemeIndex);
+            mapController.activeMapCamera = allMapModelHolder[_mapTypeIndex].mapCamera;
         }
     }
 }

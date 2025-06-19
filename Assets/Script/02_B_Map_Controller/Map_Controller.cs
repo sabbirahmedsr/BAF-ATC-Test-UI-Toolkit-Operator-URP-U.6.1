@@ -10,23 +10,31 @@ namespace ATC.Operator.MapView {
         [SerializeField] internal string myRootName;
 
         [Header("UI Reference")]
+        internal VisualElement rootElement;
         internal VisualElement mapRoot;
 
         [Header("Child Script")]
         [SerializeField] internal Map_Model_Controller mapModelController;
         [SerializeField] internal Map_Node_Controller mapNodeController;
+        internal Camera activeMapCamera;
 
         internal override void Initialize(ATC_Operator_Main_Controller _mainController) {
             base.Initialize(_mainController);
 
             // Find root, and set heading ui
-            mapRoot = mainController.uiDocument.rootVisualElement.Q<VisualElement>(myRootName);            
+            rootElement = mainController.uiDocument.rootVisualElement;
+            mapRoot = rootElement.Q<VisualElement>(myRootName);            
             TextElement txtHeading = mapRoot.Q<TextElement>("txtHeading");
             txtHeading.text  = headingCaption;
 
             // Initialize Child Script
             mapModelController.Initialize(this);
             mapNodeController.Initialize(this);
+        }
+
+
+        private void Update() {
+            mapNodeController.ManualUpdate();
         }
     }
 }

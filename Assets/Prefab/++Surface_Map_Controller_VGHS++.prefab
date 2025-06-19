@@ -106,6 +106,10 @@ MonoBehaviour:
     - {fileID: 7535916623673963685}
   mapNodeController:
     mapNodeTemplate: {fileID: 9197481963319205126, guid: 5cea5a2f189ecaa43b1127f60f78449b, type: 3}
+    tempTarget: {fileID: 0}
+    screenPos: {x: 0, y: 0}
+    screenPosModified: {x: 0, y: 0}
+    initialOffset: {x: 0, y: 0}
 --- !u!1 &8086977311748662608
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,10 +446,6 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 34
       objectReference: {fileID: 0}
-    - target: {fileID: 3308062464945988798, guid: 9dff020b7c3de454c87841c73b2220b0, type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7453858340861229227, guid: 9dff020b7c3de454c87841c73b2220b0, type: 3}
       propertyPath: m_Name
       value: Parking_Camera
@@ -512,10 +512,6 @@ PrefabInstance:
     - target: {fileID: 1914290779175563749, guid: 9dff020b7c3de454c87841c73b2220b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3308062464945988798, guid: 9dff020b7c3de454c87841c73b2220b0, type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7453858340861229227, guid: 9dff020b7c3de454c87841c73b2220b0, type: 3}
       propertyPath: m_Name
