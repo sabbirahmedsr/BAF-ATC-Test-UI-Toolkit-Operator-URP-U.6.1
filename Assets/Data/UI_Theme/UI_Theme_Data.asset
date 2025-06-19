@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: UI_Theme_Data
   m_EditorClassIdentifier: 
   selectedUITheme:
-    caption: BLUE
-    mainColor: {r: 0.21960661, g: 0.7259891, b: 0.990566, a: 1}
-    backgroundColor: {r: 0.050980393, g: 0.08627451, b: 0.101960786, a: 1}
-    styleSheet: {fileID: 7433441132597879392, guid: 27e872ea05256524b9620339c8d6936c, type: 3}
+    caption: DARK
+    mainColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
+    backgroundColor: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+    styleSheet: {fileID: 7433441132597879392, guid: d3c2cd3de6c3a834287e6e029ef25a1b, type: 3}
   allUITheme:
   - caption: DARK
     mainColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}

@@ -122,9 +122,11 @@ crashlytics-build.properties
 *.mp3.meta
 
 # Cusom folder choice [to ingore uploading]
+/[Aa]ssets/++Imported++/*	# Exclude everything inside ++Imported++ folder, but keep the ++Imported++ folder
 /[Aa]ssets/[Aa]udio/*    	# Exclude everything inside Audio folder, but keep the audio folder
 /[Aa]ssets/[zz]Test/	 	# Excdule entire zTest folder		
 /[Aa]ssets/[Uu]RP [Ss]etting/	# Excdule entire URP Setting folder	
+
 
 #Ignore PSD
 *.psd
