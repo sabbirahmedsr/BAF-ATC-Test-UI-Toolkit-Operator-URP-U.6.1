@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd25176d26d5e574a997da60b10f7356, type: 3}
+  m_Name: MIL_AP_Data_AJX1483
+  m_EditorClassIdentifier: 
+  airplanePrefab: {fileID: 2696278577592986930, guid: 9df53aa170f8f284e847f34754e71bc3, type: 3}
+  callSign: 17
+  aircraftType: 3
+  allPreArrivalPoints:
+  - TRG.EAST
+  allArrivalApproach: 030504
+  parkingPathData: {fileID: 11400000, guid: bfa35a1746341ea4cb807c0a960f1f38, type: 2}
+  allArrTaxiwayID: 0304
+  allParkingStandID: 

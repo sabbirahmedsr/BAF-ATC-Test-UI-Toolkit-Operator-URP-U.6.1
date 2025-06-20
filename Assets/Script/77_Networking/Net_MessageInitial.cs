@@ -1,8 +1,6 @@
 
 namespace ATC.Operator.Networking {
     public enum MSG_Initial : ushort {
-        /// heartbeat for connection continuety
-        heartbeat,
 
         /// <summary> format :: initial </summary>
         request_startupInfo,
@@ -56,6 +54,10 @@ namespace ATC.Operator.Networking {
         /// <summary> format :: initial, arrivalScoreCount, departureScoreCount </summary>
         update_ArrAndDepScoreCount,
         /// <summary> format :: initial, speed </summary>
-        update_globalSpeed
+        update_globalSpeed,
+
+
+        /// <summary> format :: initial </summary>
+        heartbeat,
     }
 }

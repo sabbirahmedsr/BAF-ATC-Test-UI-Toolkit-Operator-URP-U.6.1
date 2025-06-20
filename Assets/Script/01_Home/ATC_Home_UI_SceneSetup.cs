@@ -1,3 +1,5 @@
+using ATC.Global;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 namespace ATC.Home.UI {
@@ -22,7 +24,7 @@ namespace ATC.Home.UI {
 
 
         private void OnClick_StartOperator(ClickEvent e) {
-            //uiManager.ToggleMainPanel(ATC_Home_PanelType.mainMenu);
+            SceneManager.LoadScene(GlobalSceneName.atcOperator_vghs);
         }
 
         private void OnClick_BackToMenu(ClickEvent e) {

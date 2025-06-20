@@ -1,9 +1,36 @@
+using ATC.Operator.Airplane;
+using Riptide;
+using System.Collections.Generic;
+public enum OperatorType { arrival, departure}
 
-namespace ATC.Global {
+public static class GlobalData {
+    internal static OperatorType operatorType = OperatorType.departure;
 
-    public enum OperatorType { arrival, departure }
+    internal static Dictionary<ushort, AirplaneController> allActiveAirplane = new Dictionary<ushort, AirplaneController>();
 
-    public static class GlobalData {
-        internal static OperatorType operatorType = OperatorType.departure;
+    // scoring
+    internal static ScoreCount arrScoreCount = new ScoreCount();
+    internal static ScoreCount depScoreCount = new ScoreCount();
+}
+
+[System.Serializable]
+public struct ScoreCount {
+    internal ushort activeAircraftCount;
+    internal ushort completedAircraftCount;
+    internal ushort failedAircraftCount;
+    internal ushort totalAircraftCount;
+
+    internal void AddToMessage(Message msg) {
+        msg.AddUShort(activeAircraftCount);
+        msg.AddUShort(completedAircraftCount);
+        msg.AddUShort(failedAircraftCount);
+        msg.AddUShort(totalAircraftCount);
+    }
+
+    internal void GetFromMessage(Message msg) {
+        activeAircraftCount = msg.GetUShort();
+        completedAircraftCount = msg.GetUShort();
+        failedAircraftCount = msg.GetUShort();
+        totalAircraftCount = msg.GetUShort();
     }
 }

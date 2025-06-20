@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06dd216b5507db846a39242fb3986eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mapType: 1
   headingCaption: SURFACE MAP
   myRootName: surfaceMapRoot
   mapModelController:
@@ -106,10 +107,7 @@ MonoBehaviour:
     - {fileID: 7535916623673963685}
   mapNodeController:
     mapNodeTemplate: {fileID: 9197481963319205126, guid: 5cea5a2f189ecaa43b1127f60f78449b, type: 3}
-    tempTarget: {fileID: 0}
-    screenPos: {x: 0, y: 0}
-    screenPosModified: {x: 0, y: 0}
-    initialOffset: {x: 0, y: 0}
+    panelOffsetRatio: {x: 0.5, y: 0.5}
 --- !u!1 &8086977311748662608
 GameObject:
   m_ObjectHideFlags: 0

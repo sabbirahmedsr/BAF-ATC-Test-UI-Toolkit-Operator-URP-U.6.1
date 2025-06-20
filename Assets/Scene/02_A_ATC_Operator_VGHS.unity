@@ -267,10 +267,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2111997661196306049, guid: a3c7a0d7a05504041aa00d8bfdddb569, type: 3}
-      propertyPath: mapNodeController.tempTarget
-      value: 
-      objectReference: {fileID: 1493926986}
     - target: {fileID: 4795729541605535913, guid: a3c7a0d7a05504041aa00d8bfdddb569, type: 3}
       propertyPath: m_Name
       value: ++Radar_Map_Controller++
@@ -339,10 +335,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 860235509717869693, guid: 349f87944f9401f468606d6be5648eb9, type: 3}
-      propertyPath: networkUI.uiDocument
-      value: 
-      objectReference: {fileID: 1117398177}
     - target: {fileID: 5914719740867107949, guid: 349f87944f9401f468606d6be5648eb9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -400,18 +392,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1562244044602026138, guid: b3f45510f12e05243982e87ff6eee95d, type: 3}
-      propertyPath: mapNodeController.tempTarget
-      value: 
-      objectReference: {fileID: 1493926986}
-    - target: {fileID: 1562244044602026138, guid: b3f45510f12e05243982e87ff6eee95d, type: 3}
-      propertyPath: mapNodeController.initialOffset.x
-      value: -640
-      objectReference: {fileID: 0}
-    - target: {fileID: 1562244044602026138, guid: b3f45510f12e05243982e87ff6eee95d, type: 3}
-      propertyPath: mapNodeController.initialOffset.y
-      value: -360
-      objectReference: {fileID: 0}
     - target: {fileID: 5551953790944230604, guid: b3f45510f12e05243982e87ff6eee95d, type: 3}
       propertyPath: m_Name
       value: ++Surface_Map_Controller++
