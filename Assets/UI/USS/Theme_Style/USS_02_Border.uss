@@ -27,3 +27,7 @@
     border-color: var(--border-deep-separator);
     border-width: var(--border-width-low);
 }
+
+.separator-color{
+    border-color: var(--border-deep-separator);
+}

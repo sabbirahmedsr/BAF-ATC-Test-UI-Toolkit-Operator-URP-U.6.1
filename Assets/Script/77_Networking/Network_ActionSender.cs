@@ -3,10 +3,8 @@ using Riptide;
 using ATC.Operator.Airplane;
 
 namespace ATC.Operator.Networking { 
-    public class Network_ActionSender : MonoBehaviour {
-        [SerializeField] private AirplaneData[] allAirplaneData;
+    public class Network_ActionSender : MonoBehaviour, INetwork_ActionSender_Operator {
         private AirplaneController tmpApController;
-
         NetworkManager_ForClient networkManager;
 
         internal void Initialize(NetworkManager_ForClient rNetworkManager) {
@@ -15,9 +13,14 @@ namespace ATC.Operator.Networking {
 
 
 
-        internal void SendHeartbeat() {
+        public void SendHeartbeat() {
             Message heartBeatMsg = CreateNewMessage(MessageSendMode.Unreliable, MSG_Initial.heartbeat);
             networkManager.SendMessageToNetwork(heartBeatMsg);
+        }
+
+        public void Request_StartupInfo() {
+            Message msg = CreateNewMessage(MessageSendMode.Reliable, MSG_Initial.request_startupInfo);
+            networkManager.SendMessageToNetwork(msg);
         }
 
 
@@ -95,5 +98,7 @@ namespace ATC.Operator.Networking {
             newMsg.AddUShort((ushort)rMsgInitial);
             return newMsg;
         }
+
+
     }
 }

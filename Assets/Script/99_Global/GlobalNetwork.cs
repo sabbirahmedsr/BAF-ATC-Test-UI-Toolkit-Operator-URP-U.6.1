@@ -4,6 +4,8 @@ using System;
 
 namespace ATC.Global {
 
+    public enum ConnectionStatus { hasNoResult, attemptConnection, connected, connectionFailed, disconnected }
+
     public class GlobalNetwork {
         public static string ip = "127.0.0.1";
         public static ushort port = 7777;

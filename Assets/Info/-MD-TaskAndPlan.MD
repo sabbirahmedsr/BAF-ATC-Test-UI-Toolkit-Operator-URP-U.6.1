@@ -46,4 +46,5 @@ public void AddToMessage(Message msg) {
 }
 ```
 
+* There could be a "Auto Complete" button to complete the current phase of airplane immediately or "Next Phase" button to jump to next phase immediately
 

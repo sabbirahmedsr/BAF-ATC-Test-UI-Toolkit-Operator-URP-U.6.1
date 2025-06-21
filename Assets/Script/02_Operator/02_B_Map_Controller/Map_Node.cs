@@ -1,6 +1,4 @@
 using ATC.Operator.Airplane;
-using System;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 namespace ATC.Operator.MapView {
@@ -20,27 +18,13 @@ namespace ATC.Operator.MapView {
         private Map_Node_AirplaneIcon airplaneIcon = new Map_Node_AirplaneIcon();
         private Map_Node_Draggable draggable = new Map_Node_Draggable();
         private Map_Node_Connecting_Line connectingLine = new Map_Node_Connecting_Line(Vector2.zero, Vector2.zero);
+        private Map_Node_Info_UI infoUI = new Map_Node_Info_UI();
 
-        private Vector2 lastAirplaneScreenPosition = Vector2.positiveInfinity;
-
-        [Header("Child Variable")]
-        private VisualElement txtCallSign;
-        private VisualElement txtHeading;
-        private VisualElement txtSpeed;
-        private VisualElement txtHeight;
-
-        private bool isInitialized = false;
-
-        private IPanel containerPanel;
-        private Vector2 panelOffset;
-        private Camera activeMapCamera;
+        internal Map_Node_Controller mapNodeController;
 
         public Map_Node(Map_Node_Controller rMapNodeController, AirplaneController rApController) {
+            mapNodeController = rMapNodeController;
             apController = rApController;
-            containerPanel = rMapNodeController.mapNodeContainer.panel;
-            activeMapCamera = rMapNodeController.mapController.activeMapCamera;
-            panelOffset = rMapNodeController.panelOffset;
-            rApController.apEvent.onUpdate_MapNodePosRot.AddListener(OnUpdate_MapNodePosRot);
             CloneAndProcessMapNodeAsync(rMapNodeController.mapNodeTemplate, rMapNodeController.mapNodeContainer);
         }
         private async void CloneAndProcessMapNodeAsync(VisualTreeAsset rMapNodeTemplate, VisualElement rParentContainer) {
@@ -48,6 +32,7 @@ namespace ATC.Operator.MapView {
             mapNode_CloneElement = rMapNodeTemplate.CloneTree();
             airplaneIcon.Initialize(this, mapNode_CloneElement);
             draggable.Initialize(this, mapNode_CloneElement, rParentContainer);
+            infoUI.Initialize(this, mapNode_CloneElement);
             mapNode_CloneElement.Add(connectingLine);
 
             // Add created instance for cloning in scene view
@@ -56,42 +41,31 @@ namespace ATC.Operator.MapView {
             // Wait for the end of the frame, after layout has been calculated
             await Awaitable.EndOfFrameAsync();
 
-            isInitialized = true;
+            // register callback
+            apController.apEvent.onUpdate_MapNodePosRot.AddListener(OnUpdate_MapNodePosRot);
+            apController.apEvent.onUpdate_VizHeadingSpeedFL.AddListener(OnUpdate_VizHeadingSpeedFL);
         }
 
 
 
-
-
+        /* External call back */
         private void OnUpdate_MapNodePosRot(Vector3 rWorldPos, Vector3 rFwd) {
-            if (!isInitialized)
-                return;
-
-            Vector2 airplaneScreenPosition = RuntimePanelUtils.CameraTransformWorldToPanel(containerPanel, rWorldPos, activeMapCamera);
-            airplaneScreenPosition -= panelOffset;
-
-            // if the airplane screen position is same as the last frame, dont do anything, just skip it
-            if (Vector2.Distance(lastAirplaneScreenPosition, airplaneScreenPosition) < 3f) {
-                return;
-            }
-
-            // if we have new airplane position
-            airplaneIcon.OnAirplanePositionUpdate(airplaneScreenPosition);
-
-            // record this screen position to comapre in next frame
-            lastAirplaneScreenPosition = airplaneScreenPosition;
+            /// We will only update the aiplance icon position
+            /// aiplance icon --> OnGeometryChangeEvent --> will update the draggable position 
+            /// draggable --> OnGeometryChangeEvent --> will update the map connecting line
+            airplaneIcon.OnUpdate_MapNodePosRot(rWorldPos, rFwd);
         }
-
-
-
-        internal void  OnChange_ActiveMapCamera(Camera rActiveMapCamera) {
-            activeMapCamera = rActiveMapCamera;
-            OnUpdate_MapNodePosRot(apController.position, apController.fwd);
+        internal void OnUpdate_VizHeadingSpeedFL(VizHeadSpeedFL rVizHeadSpeedFL) {
+            infoUI.SetVizHeadSpeedHeight(rVizHeadSpeedFL);
+        }
+        internal void OnChange_ActiveMapCamera(Camera rActiveMapCamera) {
+            airplaneIcon.OnChange_ActiveMapCamera(rActiveMapCamera);
         }
 
 
 
 
+        /*Internal Cll back */
         internal void OnGeometryChange_AirplaneIcons() {
             draggable.OnAirplanePositionUpdate(airplaneIcon.localBound.center);
         }

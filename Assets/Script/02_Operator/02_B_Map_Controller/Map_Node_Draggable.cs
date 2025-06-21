@@ -14,11 +14,14 @@ namespace ATC.Operator.MapView {
         private VisualElement draggableRoot;
         private Vector3 _tmp_mousePos;
         private Vector3 _tmp_dragPos;
+
+        [Header("Offset from Airplane Icon")]
         private Vector2 draggableOffset = new Vector2(-200f, -200f);
         private Vector2 lastAirplanePos;
 
         private bool _isDragging;
 
+        [Header("Clamping Position")]
         private float minX;
         private float maxX;
         private float minY;
@@ -39,6 +42,10 @@ namespace ATC.Operator.MapView {
             draggableRoot.RegisterCallback<PointerMoveEvent>(OnPointerMove);
             draggableRoot.RegisterCallback<PointerUpEvent>(OnPointerUp);
             draggableRoot.RegisterCallback<GeometryChangedEvent>(OnGemetryChange);
+
+            // Generate Random Direction Offset 
+            Vector2 rndDirection = new Vector2(Random.value, Random.value);
+            draggableOffset = rndDirection.normalized * 200;
 
             // Calculate bound
             CalculateMinMaxBound();
@@ -63,6 +70,9 @@ namespace ATC.Operator.MapView {
 
                 // Store the element's position relative to its parent at the start of the drag
                 _tmp_dragPos = new Vector2(draggableRoot.layout.x, draggableRoot.layout.y);
+
+                // Calculate bound
+                CalculateMinMaxBound();
             }
             // Stop event propagation to prevent it from bubbling up to parent elements
             evt.StopPropagation();
@@ -102,8 +112,7 @@ namespace ATC.Operator.MapView {
 
 
 
-        private void OnGemetryChange(GeometryChangedEvent evt) {
-            CalculateMinMaxBound();     
+        private void OnGemetryChange(GeometryChangedEvent evt) {   
             mapNode.OnGeometryChange_Draggable();
         }
 

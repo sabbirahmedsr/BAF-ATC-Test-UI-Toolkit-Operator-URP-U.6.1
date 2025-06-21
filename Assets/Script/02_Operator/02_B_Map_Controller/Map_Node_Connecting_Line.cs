@@ -6,7 +6,7 @@ namespace ATC.Operator.MapView {
     public class Map_Node_Connecting_Line : VisualElement {
         private Vector2 _startPoint;
         private Vector2 _endPoint;
-        private Color _color = Color.cyan;
+        private Color _color = Color.yellow;
         private Color _capColor = Color.yellow;
         private const float _thickness = 3f;
         private const float _capRadius = 6f;    

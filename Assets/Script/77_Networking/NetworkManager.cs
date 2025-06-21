@@ -5,7 +5,6 @@ using System;
 using UnityEngine;
 
 namespace ATC.Operator.Networking {
-    public enum ConnectionStatus { hasNoResult, attemptConnection, connected, connectionFailed, disconnected }
 
     public enum MessageID : ushort {
         serverId = 0,
@@ -28,13 +27,11 @@ namespace ATC.Operator.Networking {
         private float frameWaitingTime = 10f;
         private float counter = 0;
 
-        [Header("Heartbeat")]
+        [Header("Child Script")]
         [SerializeField] private Network_Heartbeat heartbeat;
         [SerializeField] private Network_ConnectionUI connectionUI;
         [SerializeField] private Network_ActionReceiver actionReceiver;
         [SerializeField] private Network_ActionSender actionSender;
-
-
 
         internal void Start() {
             // Initialize Riptide Logger
@@ -66,7 +63,10 @@ namespace ATC.Operator.Networking {
             client.TimeoutTime = timeOutTimeInMili;
         }
 
-
+        public void SyncSceneWithServer() {
+            // request for startup info to the server
+            actionSender.Request_StartupInfo();
+        }
 
 
 
@@ -100,6 +100,7 @@ namespace ATC.Operator.Networking {
         private void OnSelfConnected(object sender, EventArgs e) {
             GlobalNetwork.clientId = client.Id;
             GlobalNetwork.OnConnectionChange(ConnectionStatus.connected, "Connected", e.ToString());
+            SyncSceneWithServer();
         }
         private void OnSelfDisconnected(object sender, DisconnectedEventArgs e) {
             GlobalNetwork.OnConnectionChange(ConnectionStatus.disconnected, "Server Lost: ", e.Reason.ToString());

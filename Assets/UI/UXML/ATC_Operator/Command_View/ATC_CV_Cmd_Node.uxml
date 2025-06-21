@@ -1,0 +1,26 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="root" style="background-color: rgb(58, 58, 58); margin-top: 4px; margin-bottom: 4px; margin-right: 4px; margin-left: 4px;">
+        <ui:VisualElement name="primaryCommandRoot" style="flex-grow: 1; flex-direction: row;">
+            <ui:VisualElement name="signAndAction" style="flex-grow: 1; border-right-width: 2px; border-left-color: rgba(0, 0, 0, 0.98); border-right-color: rgba(0, 0, 0, 0.98); border-top-color: rgba(0, 0, 0, 0.98); border-bottom-color: rgba(0, 0, 0, 0.98);">
+                <ui:Label text="CALL SIGN" name="txtCallSign" class="unity-label-sub-heading" style="color: rgb(255, 255, 255); flex-grow: 1; min-width: auto; max-width: 120px; -unity-text-align: lower-left; padding-left: 4px;" />
+                <ui:Button text="MAIN BUTTON" name="btnMainAction" style="min-width: auto; max-width: none;" />
+                <ui:Button text="REPEAT LAST CALL" name="btnRepeatLastcall" style="min-width: auto; max-width: none; display: none;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="freezeAndMore">
+                <ui:VisualElement name="freezeAndhighlight" style="flex-grow: 1; flex-direction: row-reverse;">
+                    <ui:Button text="H" name="btnHighlight" />
+                    <ui:Button text="||" name="btnFreeze" style="display: flex;" />
+                    <ui:Button text="R" name="btnResume" style="display: none;" />
+                </ui:VisualElement>
+                <ui:Button text="MORE" name="btnMore" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="extraCommandRoot" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); display: none;">
+            <ui:Button text="EXTRA 01" name="btnExtra01" style="min-width: auto; max-width: none;" />
+            <ui:Button text="EXTRA 02" name="btnExtra02" style="min-width: auto; max-width: none;" />
+            <ui:Button text="EXTRA 03" name="btnExtra03" style="min-width: auto; max-width: none;" />
+            <ui:Button text="EXTRA 04 " name="btnExtra04" style="min-width: auto; max-width: none;" />
+            <ui:Button text="EXTRA 05 " name="btnExtra05" style="min-width: auto; max-width: none;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

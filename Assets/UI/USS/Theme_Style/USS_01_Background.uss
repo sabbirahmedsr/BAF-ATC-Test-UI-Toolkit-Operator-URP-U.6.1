@@ -78,22 +78,27 @@
 .strip-view-bg{
     background-color: var(--bg-color-deep);
     border-color: var(--border-deep-separator);
-    border-width: 0px var(--border-width-low) var(--border-width-low) var(--border-width-low);
+    border-width: var(--border-width-high) var(--border-width-low) var(--border-width-low) var(--border-width-low);
 }
 .info-view-bg{
     background-color: var(--bg-color-deep);
     border-color: var(--border-deep-separator);
-    border-width: 0px 0px var(--border-width-low) var(--border-width-low);
+    border-width: var(--border-width-high) var(--border-width-high) var(--border-width-low)  var(--border-width-low);
 }
 .command-view-bg{
     background-color: var(--bg-color-deep);
     border-color: var(--border-deep-separator);
-    border-width: 0px 0px var(--border-width-low) var(--border-width-low);
+    border-width: var(--border-width-high) var(--border-width-low) var(--border-width-low) var(--border-width-low);
 }
 
 
 
 
-.map-node-bg{
-
+.map-node-draggable{
+    background-color: var(--modal-backdrop-color);
+    border-color: var(--text-interactive-hover);
+    border-width: var(--border-width-high);
+}
+.map-node-draggable:hover:enabled{
+    background-color: var(--bg-color-deep);
 }

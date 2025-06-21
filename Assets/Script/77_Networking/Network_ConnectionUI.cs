@@ -4,6 +4,11 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 namespace ATC.Operator.Networking {
+    /// <summary>
+    /// Show UI at each state of
+    /// OnConnectionChange event
+    /// </summary>
+
     [System.Serializable]
     public class Network_ConnectionUI : MonoBehaviour {
         private VisualElement myRoot;
@@ -55,28 +60,30 @@ namespace ATC.Operator.Networking {
 
 
         internal void OnConnectionChange(ConnectionStatus rConnectionStatus, string rHeadingString, string rReason) {
-            ShowPopupMessage(rHeadingString, rReason, rConnectionStatus);
+            string message = "";
+            if (rConnectionStatus == ConnectionStatus.attemptConnection) {
+                message = "Attempting connection to server...";
+            } else if (rConnectionStatus == ConnectionStatus.connected) {
+                message = "Successfully Connected to server !!!";
+            } else if(rConnectionStatus == ConnectionStatus.disconnected) {
+                message = rHeadingString + " :: " + rReason;
+            } else if(rConnectionStatus == ConnectionStatus.connectionFailed){
+                message = rHeadingString + " :: " + rReason;
+            }
+
+            ShowPopupMessage(rHeadingString, message, rConnectionStatus);
         }
-        /*
-        internal void OnStartConnection() {
-            ShowPopupMessage("CONNECTING...", "Trying to connecting the server...", false, false, false);
-        }
-        internal void OnConnectionSuccess() {
-            ShowPopupMessage("SUCCESS", "SUCCESSFULLY CONNECTED TO SERVER !!!", true, false, false);
-        }
-        internal void OnConnectionFailure(string rReason) {
-            ShowPopupMessage("FAILURE", rReason, false, true, true);
-        }
-        internal void OnConnectionLost(string rReason) {
-            ShowPopupMessage("SERVER LOST", rReason, false, true, true);
-        }
-        */
 
 
         private void ShowPopupMessage(string heading, string message, ConnectionStatus rConnectionStatus) {
+            // make root visible
             myRoot.style.display = DisplayStyle.Flex;
+
+            // set info text
             txtHeading.text = heading;
             txtMessage.text = message;
+
+            // enable or disable trio button
             btnOk.style.display = rConnectionStatus == ConnectionStatus.connected ? DisplayStyle.Flex : DisplayStyle.None;
             bool showRetryAndExit = rConnectionStatus == ConnectionStatus.disconnected || rConnectionStatus == ConnectionStatus.connectionFailed;
             btnRetry.style.display = showRetryAndExit ? DisplayStyle.Flex : DisplayStyle.None;

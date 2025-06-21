@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UIElements;
 using ATC.Operator.Airplane;
-using System;
 
 namespace ATC.Operator.MapView {
     [System.Serializable]
@@ -10,12 +9,10 @@ namespace ATC.Operator.MapView {
         [SerializeField] internal VisualTreeAsset mapNodeTemplate;
         internal VisualElement mapNodeContainer;
 
-
         [SerializeField] private Vector2 panelOffsetRatio = new Vector2(0.5f, 0.5f);
         internal Vector2 panelOffset;
 
-        private List<Map_Node> activeMapNode = new List<Map_Node>();
-        private List<Map_Node> mapNodePool = new List<Map_Node>();
+        private MapNodeReference mapNodeReference = new MapNodeReference();
 
         internal Map_Controller mapController;
 
@@ -28,14 +25,19 @@ namespace ATC.Operator.MapView {
         }
 
         internal void OnChange_ActiveMapCamera(Camera rActiveMapCamera) {
-            foreach (Map_Node mapNode in activeMapNode) {
-                mapNode.OnChange_ActiveMapCamera(rActiveMapCamera);
+            foreach (Map_Node mapNode in mapNodeReference.activeMapNode) {
+                 mapNode.OnChange_ActiveMapCamera(rActiveMapCamera);
             }
         }
 
         internal void CreateMapNode(AirplaneController rApController) {
             Map_Node newMapNode = new Map_Node(this, rApController);
-            activeMapNode.Add(newMapNode);
+            mapNodeReference.activeMapNode.Add(newMapNode);
         }
+    }
+
+    internal class MapNodeReference {
+        internal List<Map_Node> activeMapNode = new List<Map_Node>();
+        internal List<Map_Node> mapNodePool = new List<Map_Node>();
     }
 }
