@@ -1,14 +1,15 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:Template name="ATC_Radar_Map" src="project://database/Assets/UI/UXML/ATC_Operator/Map_View/ATC_Map_View.uxml?fileID=9197481963319205126&amp;guid=9ad29fac894959a4f82c1851afb94bc9&amp;type=3#ATC_Map_View" />
     <ui:Template name="ATC_Strip_View" src="project://database/Assets/UI/UXML/ATC_Operator/ATC_Strip_View.uxml?fileID=9197481963319205126&amp;guid=43e1a04bb3f9ddd45a00b77340086447&amp;type=3#ATC_Strip_View" />
-    <ui:Template name="ATC_Info_View" src="project://database/Assets/UI/UXML/ATC_Operator/ATC_Info_View.uxml?fileID=9197481963319205126&amp;guid=f7164417dff1787488a3b15acfebde41&amp;type=3#ATC_Info_View" />
     <ui:Template name="ATC_Command_View" src="project://database/Assets/UI/UXML/ATC_Operator/Command_View/ATC_Command_View.uxml?fileID=9197481963319205126&amp;guid=491620115a7af9a4dbb8c9925b33c5ff&amp;type=3#ATC_Command_View" />
+    <ui:Template name="ATC_Info_View" src="project://database/Assets/UI/UXML/ATC_Operator/ATC_Info_View.uxml?fileID=9197481963319205126&amp;guid=f7164417dff1787488a3b15acfebde41&amp;type=3#ATC_Info_View" />
     <ui:Template name="ATC_Networking" src="project://database/Assets/UI/UXML/ATC_Operator/ATC_Networking.uxml?fileID=9197481963319205126&amp;guid=f3d1e82536b8e8b40bf478cb15df93d6&amp;type=3#ATC_Networking" />
-    <Style src="project://database/Assets/UI/USS/USS_zTest.uss?fileID=7433441132597879392&amp;guid=2f582ea4182900e4893233eda4004e04&amp;type=3#USS_zTest" />
+    <ui:Template name="ATC_Command_Parameter_Window" src="project://database/Assets/UI/UXML/ATC_Operator/Command_View/ATC_Command_Parameter_Window.uxml?fileID=9197481963319205126&amp;guid=424fd05607cbd934aa9f616b7fcc47ff&amp;type=3#ATC_Command_Parameter_Window" />
     <ui:Instance template="ATC_Radar_Map" name="radarMapRoot" class="radar-map-bg" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 50%; overflow: visible; display: flex;" />
     <ui:Instance template="ATC_Radar_Map" name="surfaceMapRoot" class="surface-map-bg" style="width: 50%; height: 50%; position: absolute; left: 50%; top: 50%;" />
     <ui:Instance template="ATC_Strip_View" name="stripViewRoot" class="strip-view-bg" style="width: 20%; height: 50%; position: absolute; left: 50%; display: flex;" />
-    <ui:Instance template="ATC_Command_View" name="cmdViewRoot" class="command-view-bg" style="height: 50%; position: absolute; left: 70%; width: 18%; top: 0; display: flex;" />
+    <ui:Instance template="ATC_Command_View" name="cmdViewRoot" class="command-view-bg" style="width: 18%; position: absolute; left: 70%; height: 50%;" />
     <ui:Instance template="ATC_Info_View" name="infoViewRoot" class="info-view-bg" style="width: 12%; left: auto; height: 50%; position: absolute; top: 0; display: flex; right: 0;" />
     <ui:Instance template="ATC_Networking" name="networkUI" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: none; visibility: visible;" />
+    <ui:Instance template="ATC_Command_Parameter_Window" name="cmdParameterWindow" focusable="true" class="bg-modal-backdrop" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: none;" />
 </ui:UXML>

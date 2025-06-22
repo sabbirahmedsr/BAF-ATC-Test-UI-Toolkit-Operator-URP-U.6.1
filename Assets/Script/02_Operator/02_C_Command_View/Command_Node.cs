@@ -8,30 +8,30 @@ namespace ATC.Operator.CommandView {
         internal VisualElement cmdNode_cloneElement;
 
         [Header("Child Sciprt")]
-        private Command_Node_MainCommand mainCommand;   /// for call sign, main action command, and repeat last call button
-        private Command_Node_FixedCommand fixedCommand; /// for highlight, freeze, resume, and auto complete button
-        private Command_Node_ExtraCommand extraCommand; /// for extra command button
+        private Command_Node_MainCommand mainCommand = new Command_Node_MainCommand();   /// for call sign, main action command, and repeat last call button
+        private Command_Node_FixedCommand fixedCommand = new Command_Node_FixedCommand(); /// for highlight, freeze, resume, and auto complete button
+        private Command_Node_ExtraCommand extraCommand = new Command_Node_ExtraCommand(); /// for extra command button
 
         internal Command_Node_Controller cmdNodeController;
         internal AirplaneController apController;
-        internal FlightCommandPopup flightCommandPopup;
+        internal Command_Parameter_Window cmdParameterWindow;
 
         // Called when the object becomes enabled and active.
         internal void Initialize(Command_Node_Controller rCmdNodeController, AirplaneController rAP__Controller) {
             cmdNodeController = rCmdNodeController;
             apController = rAP__Controller;
-            flightCommandPopup = cmdNodeController.cmdController.flightCommandPopup;
+            cmdParameterWindow = cmdNodeController.cmdController.commandParameterWindow;
 
-            CloneAndProcess_CommandNodeAsync(cmdNodeController.commandNodeTemplate, cmdNodeController.commandNodeContainer);
+            CloneAndProcess_CommandNodeAsync(cmdNodeController.commandNodeTemplate, cmdNodeController.scrlCommandNodeContainer);
         }
 
 
-        private async void CloneAndProcess_CommandNodeAsync(VisualTreeAsset rCmdNodeTemplate, VisualElement rParentContainer) {
+        private async void CloneAndProcess_CommandNodeAsync(VisualTreeAsset rCmdNodeTemplate, ScrollView rParentScrollContainer) {
             // Create a instance from map node template and find root element
             cmdNode_cloneElement = rCmdNodeTemplate.CloneTree();
-            
+
             // Add created instance for cloning in scene view
-            rParentContainer.Add(cmdNode_cloneElement);
+            rParentScrollContainer.Add(cmdNode_cloneElement);
 
             // initialize child script
             mainCommand.Initialize(this);

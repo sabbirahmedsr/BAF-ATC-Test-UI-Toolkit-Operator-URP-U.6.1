@@ -20,6 +20,7 @@ namespace ATC.Operator.CommandView {
 
         // Called when the object becomes enabled and active.
         internal void Initialize(Command_Node rCommandNode) {
+            cmdNode = rCommandNode;
             var nodeRoot = rCommandNode.cmdNode_cloneElement;
 
             // get ui reference
@@ -31,7 +32,7 @@ namespace ATC.Operator.CommandView {
             btnExtra05 = nodeRoot.Q<Button>("btnExtra05");
             allExtraButton = new Button[] { btnExtra01, btnExtra02, btnExtra03, btnExtra04, btnExtra05 };
 
-            extraCommandRoot = nodeRoot.Q<Button>("extraCommandRoot");
+            extraCommandRoot = nodeRoot.Q<VisualElement>("extraCommandRoot");
 
             // Register callback
             btnMore?.RegisterCallback<ClickEvent>(OnClick_More);

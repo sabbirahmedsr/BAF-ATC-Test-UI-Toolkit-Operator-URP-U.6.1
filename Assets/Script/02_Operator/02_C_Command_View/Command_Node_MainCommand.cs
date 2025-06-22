@@ -17,6 +17,8 @@ namespace ATC.Operator.CommandView {
 
 
         internal void Initialize(Command_Node rCmdNode) {
+            cmdNode = rCmdNode;
+
             var nodeRoot = rCmdNode.cmdNode_cloneElement;
 
             // get ui reference
@@ -52,7 +54,7 @@ namespace ATC.Operator.CommandView {
             if (mainArrCmdID != ArrivalCommandID.none) {
                 if (cmdNode.cmdNodeController.cmdController.arrCommandData.TryGetCommand(mainArrCmdID, out ArrivalCommand arrCommand)) {
                     if (arrCommand.allParameterID.Length > 0) {
-                        cmdNode.cmdNodeController.cmdController.flightCommandPopup.Activate(cmdNode.apController, mainArrCmdID);
+                        cmdNode.cmdParameterWindow.Activate(cmdNode.apController, mainArrCmdID);
                     } else {
                         GlobalNetwork.actionSender.Send_AP_FlightCommand(cmdNode.apController.globalID, (ushort)mainArrCmdID, new ushort[] { });
                     }
@@ -81,6 +83,7 @@ namespace ATC.Operator.CommandView {
 
             // if we have main action, update the required button name
             if (mainArrCmdID != ArrivalCommandID.none) {
+                
                 if (cmdNode.cmdNodeController.cmdController.arrCommandData.TryGetCommand(mainArrCmdID, out ArrivalCommand arrCmd)) {
                     btnMainAction.text = arrCmd.commandName;
                 }

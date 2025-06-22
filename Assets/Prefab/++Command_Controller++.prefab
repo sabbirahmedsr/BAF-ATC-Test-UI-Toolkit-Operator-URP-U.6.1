@@ -47,4 +47,5 @@ MonoBehaviour:
   arrCommandData: {fileID: 11400000, guid: c7fac09680cc95c41b9c2e28b90b05e1, type: 2}
   departureCommandData: {fileID: 11400000, guid: 1c6d0cd110bbb8e4e9ef8bd40a5dd24e, type: 2}
   parkingPathData: {fileID: 11400000, guid: bfa35a1746341ea4cb807c0a960f1f38, type: 2}
-  flightCommandPopup: {fileID: 0}
+  commandNodeController:
+    commandNodeTemplate: {fileID: 9197481963319205126, guid: 130346c63f485e04182d2c8841eabc25, type: 3}

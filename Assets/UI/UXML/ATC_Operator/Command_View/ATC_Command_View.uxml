@@ -1,11 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Template name="ATC_CV_Cmd_Node" src="project://database/Assets/UI/UXML/ATC_Operator/Command_View/ATC_CV_Cmd_Node.uxml?fileID=9197481963319205126&amp;guid=130346c63f485e04182d2c8841eabc25&amp;type=3#ATC_CV_Cmd_Node" />
     <ui:VisualElement name="header" class="bg-panel__header">
         <ui:Label text="COMMAND" name="txtHeading" class="bg-panel__header-name" />
     </ui:VisualElement>
-    <ui:ScrollView style="flex-grow: 1;">
-        <ui:Instance template="ATC_CV_Cmd_Node" />
-        <ui:Instance template="ATC_CV_Cmd_Node" />
-        <ui:Instance template="ATC_CV_Cmd_Node" />
-    </ui:ScrollView>
+    <ui:ScrollView name="scrlCommandNodeContainer" style="flex-grow: 1;" />
 </ui:UXML>

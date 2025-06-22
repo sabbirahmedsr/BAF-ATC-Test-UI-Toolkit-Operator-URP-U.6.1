@@ -49,8 +49,6 @@ namespace ATC.Operator.MapView {
         internal void OnUpdate_MapNodePosRot(Vector3 rWorldPos, Vector3 rFwd) {
             // if we have same location and rotation of the previous frame, skip the further operation
             if(rWorldPos == lastWorldPos && rFwd == lastFwd) {
-                Debug.Log("Last :: " + lastWorldPos + "\n" + "Cur: " + rWorldPos);
-                Debug.Log("Last FWD :: " + lastFwd + "\n" + "Cur FWD: " + rFwd);
                 return;
             }
             // store the position and fwd for comparing in next frame
@@ -61,7 +59,6 @@ namespace ATC.Operator.MapView {
             Vector2 screenPosition = RuntimePanelUtils.CameraTransformWorldToPanel(containerPanel, rWorldPos, activeMapCamera);
             // if the screen position has not changed a pixel, we will skip further calculation
             if (Vector2.Distance(screenPosition, lastScreenPos) < 2) {
-                Debug.Log("--------same pixel");
                 return;
             }
             // store the screen position for next frame comparison

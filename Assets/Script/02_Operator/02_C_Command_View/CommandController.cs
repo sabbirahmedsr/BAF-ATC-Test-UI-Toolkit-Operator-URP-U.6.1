@@ -10,15 +10,13 @@ namespace ATC.Operator.CommandView {
 
         [Header("Child Script")]
         [SerializeField] internal Command_Node_Controller commandNodeController;
-        [SerializeField] internal FlightCommandPopup flightCommandPopup;
-
-
+        [SerializeField] internal Command_Parameter_Window commandParameterWindow;
 
         internal override void Initialize(ATC_Operator_Main_Controller _mainController) {
             base.Initialize(_mainController);
 
             commandNodeController.Initialize(this);
-            flightCommandPopup.Initialize(this);
+            commandParameterWindow.Initialize(this);
         }
     }
 }
