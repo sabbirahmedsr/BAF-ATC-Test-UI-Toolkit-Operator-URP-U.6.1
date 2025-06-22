@@ -51,7 +51,7 @@ namespace ATC.Operator.CommandView {
 
 
         private void OnClick_More(ClickEvent evt) {
-            if (allExtraCommand.Count > 0) return;
+            if (allExtraCommand.Count <= 0) return;
             isExpanded = !isExpanded;
             ToggleExtraCommand(isExpanded);
         }
@@ -97,6 +97,7 @@ namespace ATC.Operator.CommandView {
             for (int i = 0; i < allExtraButton.Length; i++) {
                 allExtraButton[i].style.display = i < allExtraCommand.Count ? DisplayStyle.Flex : DisplayStyle.None;
             }
+            btnMore.SetEnabled(allExtraCommand.Count > 0);
 
             // hide me
             ToggleExtraCommand(false);

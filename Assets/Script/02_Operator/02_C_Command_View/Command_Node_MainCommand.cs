@@ -54,7 +54,7 @@ namespace ATC.Operator.CommandView {
             if (mainArrCmdID != ArrivalCommandID.none) {
                 if (cmdNode.cmdNodeController.cmdController.arrCommandData.TryGetCommand(mainArrCmdID, out ArrivalCommand arrCommand)) {
                     if (arrCommand.allParameterID.Length > 0) {
-                        cmdNode.cmdParameterWindow.Activate(cmdNode.apController, mainArrCmdID);
+                        cmdNode.cmdParamCtrl.Activate(cmdNode.apController, mainArrCmdID);
                     } else {
                         GlobalNetwork.actionSender.Send_AP_FlightCommand(cmdNode.apController.globalID, (ushort)mainArrCmdID, new ushort[] { });
                     }

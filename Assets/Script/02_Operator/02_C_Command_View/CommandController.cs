@@ -9,14 +9,14 @@ namespace ATC.Operator.CommandView {
         [SerializeField] internal ParkingPathData parkingPathData;
 
         [Header("Child Script")]
-        [SerializeField] internal Command_Node_Controller commandNodeController;
-        [SerializeField] internal Command_Parameter_Window commandParameterWindow;
+        [SerializeField] internal Command_Node_Controller cmdNodeController;
+        [SerializeField] internal Command_Parameter_Controller cmdParamController;
 
         internal override void Initialize(ATC_Operator_Main_Controller _mainController) {
             base.Initialize(_mainController);
 
-            commandNodeController.Initialize(this);
-            commandParameterWindow.Initialize(this);
+            cmdNodeController.Initialize(this);
+            cmdParamController.Initialize(this);
         }
     }
 }

@@ -14,13 +14,13 @@ namespace ATC.Operator.CommandView {
 
         internal Command_Node_Controller cmdNodeController;
         internal AirplaneController apController;
-        internal Command_Parameter_Window cmdParameterWindow;
+        internal Command_Parameter_Controller cmdParamCtrl;
 
         // Called when the object becomes enabled and active.
         internal void Initialize(Command_Node_Controller rCmdNodeController, AirplaneController rAP__Controller) {
             cmdNodeController = rCmdNodeController;
             apController = rAP__Controller;
-            cmdParameterWindow = cmdNodeController.cmdController.commandParameterWindow;
+            cmdParamCtrl = cmdNodeController.cmdController.cmdParamController;
 
             CloneAndProcess_CommandNodeAsync(cmdNodeController.commandNodeTemplate, cmdNodeController.scrlCommandNodeContainer);
         }
