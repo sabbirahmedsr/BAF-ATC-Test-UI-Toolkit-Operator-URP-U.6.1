@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace ATC.Operator.CommandView {
+
     public class Command_Node {
         
         internal VisualElement cmdNode_cloneElement;
@@ -12,17 +13,17 @@ namespace ATC.Operator.CommandView {
         private Command_Node_FixedCommand fixedCommand = new Command_Node_FixedCommand(); /// for highlight, freeze, resume, and auto complete button
         private Command_Node_ExtraCommand extraCommand = new Command_Node_ExtraCommand(); /// for extra command button
 
-        internal Command_Node_Controller cmdNodeController;
+        internal Command_Node_Controller cmdNodeCtrl;
         internal AirplaneController apController;
         internal Command_Parameter_Controller cmdParamCtrl;
 
         // Called when the object becomes enabled and active.
         internal void Initialize(Command_Node_Controller rCmdNodeController, AirplaneController rAP__Controller) {
-            cmdNodeController = rCmdNodeController;
+            cmdNodeCtrl = rCmdNodeController;
             apController = rAP__Controller;
-            cmdParamCtrl = cmdNodeController.cmdController.cmdParamController;
+            cmdParamCtrl = cmdNodeCtrl.cmdController.cmdParamController;
 
-            CloneAndProcess_CommandNodeAsync(cmdNodeController.commandNodeTemplate, cmdNodeController.scrlCommandNodeContainer);
+            CloneAndProcess_CommandNodeAsync(cmdNodeCtrl.cmdController.commandNodeTemplate, cmdNodeCtrl.scrlCommandNodeContainer);
         }
 
 
@@ -42,11 +43,11 @@ namespace ATC.Operator.CommandView {
             await Awaitable.EndOfFrameAsync();
 
             // add listener
-            apController.apEvent.onUpdate_ArrivalCommandList.AddListener(OnUpdateArrivalCommandList);
+            apController.apEvent.onUpdate_ArrivalCommandList.AddListener(OnUpdate_ArrivalCommandList);
             apController.apEvent.onAirplaneDestroyEvent.AddListener(DestroyMe);
 
             // refresh variable for first time
-            OnUpdateArrivalCommandList(apController.allArrivalCommandID);
+            OnUpdate_ArrivalCommandList(apController.allArrivalCommandID);
         }
 
 
@@ -61,11 +62,14 @@ namespace ATC.Operator.CommandView {
 
 
 
-        void OnUpdateArrivalCommandList(ArrivalCommandID[] rAllArrCmdID) {
-            mainCommand.OnUpdateArrivalCommandList(rAllArrCmdID);   
-            extraCommand.OnUpdateArrivalCommandList(rAllArrCmdID);
+        private void OnUpdate_ArrivalCommandList(ArrivalCommandID[] rAllArrCmdID) {
+            mainCommand.OnUpdate_ArrivalCommandList(rAllArrCmdID);   
+            extraCommand.OnUpdate_ArrivalCommandList(rAllArrCmdID);
         }
-
+        private void OnUpdate_DepartureCommandList(DepartureCommandID[] rAllDepCmdID) {
+            mainCommand.OnUpdate_DepartureCommandList(rAllDepCmdID);
+            extraCommand.OnUpdate_DepartureCommandList(rAllDepCmdID);
+        }
 
         internal void DestroyMe() {
             //Destroy(gameObject);

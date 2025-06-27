@@ -32,11 +32,11 @@
     /*Background Section*/
 
     /* Background Colors (Hierarchy of darkness for panels and containers) */
-    --bg-color-deep: #282828;                           /* Primary background for main windows and content areas */
-    --bg-color-panel: #383838;                          /* Background for sub-panels, groups, and distinct sections*/
-    --bg-color-panel-brighter: #454545;                 /* Brighter panel variant, often used for panel headers or active tabs */
-    --bg-color-field: #2a2a2a;                          /* Background for input fields and text entry areas */
-    --modal-backdrop-color: rgba(20, 20, 20, 0.90);     /* Overlay to dim content behind popups/modals */
+    --bg-color-deep: #1f1f1f;                           /* Primary background for main windows and content areas */
+    --bg-color-panel: #282828;                          /* Background for sub-panels, groups, and distinct sections*/
+    --bg-color-panel-brighter: #3c3c3c;                 /* Brighter panel variant, often used for panel headers or active tabs */
+    --bg-color-field: #212121;                          /* Background for input fields and text entry areas */
+    --modal-backdrop-color: rgba(31, 31, 31, 0.90);     /* Overlay to dim content behind popups/modals */
 
     /* Interactive Element Colors (Backgrounds for buttons, toggles, dropdowns, etc.) */
     --interactive-bg-normal: #515151;   /* a dark background consistent with --theme-color-main*/

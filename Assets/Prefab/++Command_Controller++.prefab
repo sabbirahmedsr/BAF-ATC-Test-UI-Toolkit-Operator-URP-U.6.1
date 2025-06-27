@@ -45,7 +45,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrCommandData: {fileID: 11400000, guid: c7fac09680cc95c41b9c2e28b90b05e1, type: 2}
-  departureCommandData: {fileID: 11400000, guid: 1c6d0cd110bbb8e4e9ef8bd40a5dd24e, type: 2}
+  depCommandData: {fileID: 11400000, guid: 1c6d0cd110bbb8e4e9ef8bd40a5dd24e, type: 2}
   parkingPathData: {fileID: 11400000, guid: bfa35a1746341ea4cb807c0a960f1f38, type: 2}
-  cmdNodeController:
-    commandNodeTemplate: {fileID: 9197481963319205126, guid: 130346c63f485e04182d2c8841eabc25, type: 3}
+  allAirplaneData:
+  - {fileID: 11400000, guid: cd3e47b3b26985943919a3a8b797aa41, type: 2}
+  - {fileID: 11400000, guid: 5c80d4348664c0c40be4acc1fbfc6d8b, type: 2}
+  - {fileID: 11400000, guid: 7fbe56082032bed4eafee96d99ce396a, type: 2}
+  - {fileID: 11400000, guid: e4ec48bbb4b65d74c92cf0d957e3bb36, type: 2}
+  - {fileID: 11400000, guid: 28be9b801e7d381418f0d020cf98c22a, type: 2}
+  - {fileID: 11400000, guid: 81bff8f8eb0f77b47a8a7e72199b27ec, type: 2}
+  - {fileID: 11400000, guid: f24804f8687897149b0add78708921c7, type: 2}
+  - {fileID: 11400000, guid: a2ad91c54f5d6294b94cfc6bc2548c29, type: 2}
+  - {fileID: 11400000, guid: 207a3a5a99302d542a6070e4b6b83198, type: 2}
+  - {fileID: 11400000, guid: 104d49602b7200a40ad9c052f98207b3, type: 2}
+  - {fileID: 11400000, guid: b0fac87d0c2224e4082f792e97225a39, type: 2}
+  - {fileID: 11400000, guid: ff3687baff066aa449fa359870de2791, type: 2}
+  - {fileID: 11400000, guid: 43ba729571dee984d960b32148628196, type: 2}
+  - {fileID: 11400000, guid: 9f82293f895bb9149a4b9ea219347ccc, type: 2}
+  - {fileID: 11400000, guid: d2a22d6d2cf6506499283e81d7cbb02d, type: 2}
+  - {fileID: 11400000, guid: ba29a0b459b2c2742acac562222fe2d2, type: 2}
+  - {fileID: 11400000, guid: 039be89750cbaf54eb68956b32c88183, type: 2}
+  - {fileID: 11400000, guid: 174ac974fe6b83d4989724a42961e9d9, type: 2}
+  commandNodeTemplate: {fileID: 9197481963319205126, guid: 130346c63f485e04182d2c8841eabc25, type: 3}

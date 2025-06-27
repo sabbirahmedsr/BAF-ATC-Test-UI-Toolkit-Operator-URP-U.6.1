@@ -1,10 +1,10 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/USS/Theme_Style/USS_01_Background.uss?fileID=7433441132597879392&amp;guid=4ba703985e7d99a418b0a9df33590588&amp;type=3#USS_01_Background" />
-    <ui:VisualElement style="flex-grow: 1; justify-content: center;">
-        <ui:VisualElement class="bg-panel__center-popup-heading">
+    <ui:VisualElement name="root" style="flex-grow: 1; justify-content: center;">
+        <ui:VisualElement name="headingRoot" class="bg-panel__center-popup-heading">
             <ui:Label text="COMMAND" class="unity-label-heading" />
         </ui:VisualElement>
-        <ui:VisualElement class="bg-panel__center-popup-body" style="align-items: center; justify-content: center; align-self: center;">
+        <ui:VisualElement name="bodyRoot" class="bg-panel__center-popup-body" style="align-items: center; justify-content: center; align-self: center;">
             <ui:Label text="CALL SIGN" name="txtCallSign" class="unity-label-sub-heading" />
             <ui:Label text="COMMAND NAME" name="txtCommandName" class="unity-label-sub-heading" />
             <ui:DropdownField label="DRD 01" name="drd01" />

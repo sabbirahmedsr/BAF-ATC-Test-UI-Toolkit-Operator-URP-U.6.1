@@ -3,23 +3,22 @@ using ATC.Operator.Airplane;
 using UnityEngine;
 
 namespace ATC.Operator.CommandView {
-    [System.Serializable]
     public class Command_Parameter_Controller {
         [Header("Variable Reference")]
         private ArrivalCommandID arrCommandID;
         internal CommandParameter[] allCmdParameter;
         internal ParkingStandID[] resultParkingStandID = new ParkingStandID[] { };
 
+        [Header("Airplane & Data")]
+        internal AirplaneController apController;
+
         [Header("UI and Child Reference")]
         internal Command_Parameter_UI ui = new Command_Parameter_UI();
-
-        [Header("Parent and Airplane Reference")]
-        internal CommandController cmdController;
-        internal AirplaneController apController;
         
+        internal CommandController cmdCtrl;
 
         internal void Initialize(CommandController rCmdController) {
-            cmdController = rCmdController;
+            cmdCtrl = rCmdController;
             ui.Initialize(this);
         }
 
@@ -27,7 +26,7 @@ namespace ATC.Operator.CommandView {
             arrCommandID = rArrCmdID;
             apController = rAPController;
             // try to get command from data
-            if (cmdController.arrCommandData.TryGetCommand(rArrCmdID, out ArrivalCommand arrCommand)) {
+            if (cmdCtrl.arrCommandData.TryGetCommand(rArrCmdID, out ArrivalCommand arrCommand)) {
                 ui.Refresh_CallSignAndCmdName(arrCommand);
                 
                 // get parameter list

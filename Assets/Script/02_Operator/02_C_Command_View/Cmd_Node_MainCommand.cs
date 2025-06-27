@@ -52,7 +52,7 @@ namespace ATC.Operator.CommandView {
 
         private void ActivateMainArrCommand() {
             if (mainArrCmdID != ArrivalCommandID.none) {
-                if (cmdNode.cmdNodeController.cmdController.arrCommandData.TryGetCommand(mainArrCmdID, out ArrivalCommand arrCommand)) {
+                if (cmdNode.cmdNodeCtrl.cmdController.arrCommandData.TryGetCommand(mainArrCmdID, out ArrivalCommand arrCommand)) {
                     if (arrCommand.allParameterID.Length > 0) {
                         cmdNode.cmdParamCtrl.Activate(cmdNode.apController, mainArrCmdID);
                     } else {
@@ -66,7 +66,7 @@ namespace ATC.Operator.CommandView {
 
 
 
-        internal void OnUpdateArrivalCommandList(ArrivalCommandID[] rAllArrCmdID) {
+        internal void OnUpdate_ArrivalCommandList(ArrivalCommandID[] rAllArrCmdID) {
             // At first check if there is any main action
             bool hasMainAction = false;
             for (int i = 0; i < rAllArrCmdID.Length; i++) {
@@ -84,8 +84,32 @@ namespace ATC.Operator.CommandView {
             // if we have main action, update the required button name
             if (mainArrCmdID != ArrivalCommandID.none) {
                 
-                if (cmdNode.cmdNodeController.cmdController.arrCommandData.TryGetCommand(mainArrCmdID, out ArrivalCommand arrCmd)) {
+                if (cmdNode.cmdNodeCtrl.cmdController.arrCommandData.TryGetCommand(mainArrCmdID, out ArrivalCommand arrCmd)) {
                     btnMainAction.text = arrCmd.commandName;
+                }
+            }
+        }
+
+
+        internal void OnUpdate_DepartureCommandList(DepartureCommandID[] rAllDepCmdID) {
+            // At first check if there is any main action
+            bool hasMainAction = false;
+            for (int i = 0; i < rAllDepCmdID.Length; i++) {
+                if ((ushort)rAllDepCmdID[i] <= 99) {
+                    mainDepCmdID = rAllDepCmdID[i];
+                    hasMainAction = true;
+                    break;
+                }
+            }
+
+            // set visibility based on that
+            btnMainAction.style.display = hasMainAction ? DisplayStyle.Flex : DisplayStyle.None;
+            btnRepeatLastcall.style.display = hasMainAction ? DisplayStyle.None : DisplayStyle.Flex;
+
+            // if we have main action, update the required button name
+            if (mainDepCmdID != DepartureCommandID.none) {
+                if (cmdNode.cmdNodeCtrl.cmdController.depCommandData.TryGetCommand(mainDepCmdID, out DepartureCommand depCmd)) {
+                    btnMainAction.text = depCmd.commandName;
                 }
             }
         }

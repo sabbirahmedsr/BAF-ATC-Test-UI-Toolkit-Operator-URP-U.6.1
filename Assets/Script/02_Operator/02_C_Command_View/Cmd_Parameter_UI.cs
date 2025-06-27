@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace ATC.Operator.CommandView {
-    [System.Serializable]
     public class Command_Parameter_UI{
         [Header("Root Variable")]
         private VisualElement myRoot;
@@ -24,37 +23,66 @@ namespace ATC.Operator.CommandView {
 
         internal void Initialize(Command_Parameter_Controller rCmdParamCtrl) {
             cmdParamCtrl = rCmdParamCtrl;
+            FindUIReference(rCmdParamCtrl.cmdCtrl.mainController.uiDocument.rootVisualElement);
+            RegisterCallback();
+            // register callback
 
-            // Find root 
-            VisualElement rootElement = rCmdParamCtrl.cmdController.mainController.uiDocument.rootVisualElement;
+        }
+
+
+
+        private void FindUIReference(VisualElement rootElement) {
             myRoot = rootElement.Q<VisualElement>("cmdParameterWindow");
-
             // get label reference ui reference
             txtCallSign = myRoot.Q<Label>("txtCallSign");
             txtCommandName = myRoot.Q<Label>("txtCommandName");
-
             // get dropdown reference
             drd01 = myRoot.Q<DropdownField>("drd01");
             drd02 = myRoot.Q<DropdownField>("drd02");
             drd03 = myRoot.Q<DropdownField>("drd03");
             drd04 = myRoot.Q<DropdownField>("drd04");
             allDropDown = new DropdownField[] { drd01, drd02, drd03, drd04 };
-
+            // action button
             btnConfirm = myRoot.Q<Button>("btnConfirm");
             btnCancel = myRoot.Q<Button>("btnCancel");
+        }
 
-            // register callback
+        private void RegisterCallback() {
             for (int i = 0; i < allDropDown.Length; i++) {
                 int index = i;
-                allDropDown[i].RegisterValueChangedCallback<string>(evt => { 
-                    rCmdParamCtrl.OnDrdValueChange(index, allDropDown[index].index); 
+                allDropDown[i].RegisterValueChangedCallback<string>(evt => {
+                    cmdParamCtrl.OnDrdValueChange(index, allDropDown[index].index);
                 });
             }
             btnConfirm.RegisterCallback<ClickEvent>(ConfirmCommand);
             btnCancel.RegisterCallback<ClickEvent>(CancelCommand);
         }
 
+        private void UnregisterCallback() {
+            for (int i = 0; i < allDropDown.Length; i++) {
+                int index = i;
+                allDropDown[i].UnregisterValueChangedCallback<string>(evt => {
+                    cmdParamCtrl.OnDrdValueChange(index, allDropDown[index].index);
+                });
+            }
+            btnConfirm.UnregisterCallback<ClickEvent>(ConfirmCommand);
+            btnCancel.UnregisterCallback<ClickEvent>(CancelCommand);
+        }
+
+
+
+
+
+
+
         internal void Refresh_CallSignAndCmdName(ArrivalCommand rArrCmd) {
+            if (txtCallSign == null) {
+                Debug.Log("missing");
+            }
+            if (cmdParamCtrl.apController == null) {
+                Debug.Log("ASDASDAD");
+            }
+
             txtCallSign.text  = cmdParamCtrl.apController.callSign.ToString();
             txtCommandName.text = rArrCmd.commandName;  
         }
@@ -88,7 +116,7 @@ namespace ATC.Operator.CommandView {
         internal void Refresh_ParkingStandDropdown(ViaTaxiwayID rViaTaxiwayID) {
             for (int i = 0; i < cmdParamCtrl.allCmdParameter.Length; i++) {
                 if (cmdParamCtrl.allCmdParameter[i].arrParameterID == ArrParameterID.parkingStand) {
-                    cmdParamCtrl.resultParkingStandID = cmdParamCtrl.cmdController.parkingPathData.GetArrivalParkingStandList(rViaTaxiwayID);
+                    cmdParamCtrl.resultParkingStandID = cmdParamCtrl.cmdCtrl.parkingPathData.GetArrivalParkingStandList(rViaTaxiwayID);
                     string[] allAvailableParkingStand = new string[cmdParamCtrl.resultParkingStandID.Length];
                     for (int j = 0; j < allAvailableParkingStand.Length; j++) {
                         allAvailableParkingStand[j] = cmdParamCtrl.resultParkingStandID[j].ToString().ToUpper();

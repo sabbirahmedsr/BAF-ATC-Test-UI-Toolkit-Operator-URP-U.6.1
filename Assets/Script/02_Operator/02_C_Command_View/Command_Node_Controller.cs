@@ -1,18 +1,13 @@
 using ATC.Operator.Airplane;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace ATC.Operator.CommandView {
 
-    [System.Serializable]
-    public class Command_Node_Controller {
+    public class Command_Node_Controller {        
 
-        [SerializeField] internal VisualTreeAsset commandNodeTemplate;
         internal ScrollView scrlCommandNodeContainer;
-
         internal CommandController cmdController;
-
         internal CommandNodeReference commandNodeReference = new CommandNodeReference();
 
         internal void Initialize(CommandController rCmdController) {
